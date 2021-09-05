@@ -23,15 +23,9 @@ import string
 import pandas as pd
 import re
 import numpy as np
-from pathlib import Path
-from google.colab import drive
 import torch
 import stanfordnlp
-import itertools
-import sklearn
-from sklearn.model_selection import train_test_split
 from hazm import *
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from difflib import SequenceMatcher
 import warnings
@@ -42,71 +36,8 @@ from sklearn.feature_extraction.text import CountVectorizer
 import os.path
 
 nltk.download('punkt')
-
-refute_hedge_reporte_words = ['جعلی',
-                   'تقلب',
-                   'فریب',
-                   'حیله',
-                   'کلاهبرداری',
-                   'شیادی',
-                   'دست انداختن',
-                   'گول زدن',
-                   'نادرست',
-                   'غلط',
-                   'کذب',
-                   'ساختگی',
-                   'قلابی',
-                   'انکار',
-                   'رد',
-                   'تکذیب',
-                   'تکذیب کردن',
-                   'تکذیب شد',
-                   'انکار کردن'
-                   'انکار می کند',
-                   'نه',
-                   'با وجود',
-                   'علیرغم',
-                   'با اینکه',
-                   'شک داشتن',
-                   'تردید کردن',
-                   'مظنون بودن',
-                   'شک',
-                   'تردید',
-                   'دو دلی',
-                   'گمان',
-                   'به گزارش'
-                   ,'ادعا شده'
-                   ,'به قول معروف'
-                   ,'بنا به گفته'
-                   , 'ظاهرا'
-                   ,'به نظر می رسد'
-                   ,'ادعا'
-                   ,'میتوانست'
-                   ,'می تواند'
-                   ,'از قرار معلوم'
-                   ,'مشخصا'
-                   ,'تا حد زیادی'
-                   ,'احتمال دارد'
-                   ,'شاید'
-                   ,'به طور عمده'
-                   ,'ممکن است'
-                   ,'گویا'
-                   ,'ممکن'
-                   ,'اغلب'
-                   ,'غالبا'
-                   ,'احتمالا'
-                   ,'احتمالاً'
-                   ,'محتملا'
-                   ,'گفته شده'
-                   ,'گزارش داد'
-                   ,'طبق گزارش'
-                   ,'شایعه'
-                   ,'شایعات'
-                   ,'شایعه شده'
-                   ,'قدری'
-                   ,'تا حدی'
-                   ,'تأیید نشده'
-]
+with open('dataset/refute_words.txt','r') as refute_file:
+  refute_hedge_reporte_words = [w.replace('\n', '') for w in refute_file.readlines()]
 
 if __name__ == "__main__":
    # stuff only to run when not called via 'import' here
@@ -114,16 +45,14 @@ if __name__ == "__main__":
 
 """# Define Class"""
 
-# -------------------------------------
 class PSFeatureExtractor():
-  # -------------------------------------
+
   def __init__(self, dataset_path, stopWord_path, polarity_dataset_path, stanford_models_path , use_google_drive = True, important_words = None
-  	,claim_name="claim",headline_name="headline",label_name="label",question_name="question",part_name="part",load_data = True, data = None
+  	,claim_name="claim",headline_name="headline",label_name="label",question_name="question",part_name="parts",load_data = True, data = None
   	,uniq_claims={}):
     self.dataset_path = dataset_path
     self.stopWord_path = stopWord_path
     self.polarity_dataset_path = polarity_dataset_path
-    self.use_google_drive = use_google_drive
     self.stanford_models_path = stanford_models_path
     self.important_words = important_words
     self.clean_claims_headlines = []
@@ -145,8 +74,8 @@ class PSFeatureExtractor():
     print("after read")
     self.fa_punctuations = ['،','«','»',':','؛','ْ','ٌ','ٍ','ُ','ِ','َ','ّ','ٓ','ٰ','-','*']
     self.denied_words = self.fa_stop_words + list(string.punctuation) + list(self.fa_punctuations)
-  # -------------------------------------
-  def __get_stop_words(self):   
+
+  def __get_stop_words(self):
       normalizer = Normalizer()
       lineList = list()
       print(self.stopWord_path)
@@ -154,7 +83,7 @@ class PSFeatureExtractor():
         for line in f:
           lineList.append(normalizer.normalize(line.rstrip("\n\r")))
       return lineList
-  # ---------------------------------------------------
+
   def clean_sentence(self, sentence):
     normalizer = Normalizer()
     shayee = normalizer.normalize("شایعه")
@@ -179,7 +108,7 @@ class PSFeatureExtractor():
     clean_sentences = punc_regex.sub("", clean_sentences)
 
     return clean_sentences
-  # ---------------------------------------------
+
   def __generate_dataset(self,data):
     claims = data[self.claim_name]
     headline = data[self.headline_name]
@@ -188,7 +117,7 @@ class PSFeatureExtractor():
     isQuestion[np.where(b>0)] = 1
     hasTowParts = np.zeros(claims.shape[0])
     return claims, headlines,isQuestion,hasTowParts ,labels
-  # ---------------------------------------------
+
   def __read_dataset(self,uniq_claims):
     df = pd.read_csv(self.dataset_path, encoding = 'utf-8')
     df = self.__remove_from_dataset(df,uniq_claims)
@@ -203,7 +132,7 @@ class PSFeatureExtractor():
     assert (claims.shape == headlines.shape == isQuestion.shape == labels.shape == hasTowParts.shape), "The features size are not equal."
     print(claims.shape , headlines.shape ,isQuestion.shape,hasTowParts.shape ,labels.shape)
     return claims, headlines,isQuestion,hasTowParts ,labels
-  # ---------------------------------------
+
   def __remove_from_dataset(self,df,uniq_claims):
     uni_number = 0
     if bool(uniq_claims):
@@ -218,7 +147,6 @@ class PSFeatureExtractor():
       print(df['repeated'])
     self.uniq_number = uni_number
     return df
-  # ---------------------------------------
 
   def stanford_tokenize(self, root_model_path, just_get_tokenized_words = False): 
     
@@ -252,8 +180,7 @@ class PSFeatureExtractor():
       return self.tokens_claims , self.tokens_headlines 
 # ghaGH
     return claims_processors_result , headlines_processors_result
-  # ------------------------------------------------
-  
+
   
   def clean_tokens(self, target_list):
     assert isinstance(target_list, (list)) == True , "Type of target_list is not correct. It has to be list."
@@ -266,7 +193,7 @@ class PSFeatureExtractor():
       clean_words.append([i for i in item if normalizer.normalize(i) not in self.denied_words])
 
     return clean_words
-  # --------------------------------------------------
+
   def hazm_tokenize(self):
     claims_result = []
     headlines_result = []
@@ -285,7 +212,6 @@ class PSFeatureExtractor():
     self.tokens_claims , self.tokens_headlines = self.clean_tokens(target_list = claims_result), self.clean_tokens(target_list = headlines_result)
     return self.tokens_claims , self.tokens_headlines
 
-  # --------------------------------------------------
   def nltk_tokenize(self):
     claims_result = []
     headlines_result = []
@@ -303,7 +229,7 @@ class PSFeatureExtractor():
       self.clean_claims_headlines.append(clean_claim + ' ' + clean_headline)
     self.tokens_claims , self.tokens_headlines = self.clean_tokens(target_list = claims_result), self.clean_tokens(target_list = headlines_result)
     return self.tokens_claims , self.tokens_headlines
-  # --------------------------------------------------
+
   def clean_sentences(self):
     claims_result = []
     headlines_result = []
@@ -326,17 +252,17 @@ class PSFeatureExtractor():
       self.clean_headlines.append(new_sentence_h)
 
       self.clean_claims_headlines.append(new_sentence_c + ' ' + new_sentence_h)
-  # --------------------------------------------------
+
   def tf_idf(self):
     tfidf = TfidfVectorizer(sublinear_tf=True, min_df=10, norm='l2', ngram_range=(1, 2))
     features = tfidf.fit_transform(self.clean_claims_headlines).toarray() 
     return features
-  # --------------------------------------------------
+
   def tf_idf(self):
     tfidf = TfidfVectorizer(sublinear_tf=True, min_df=10, norm='l2', ngram_range=(1, 2))
     features = tfidf.fit_transform(self.clean_claims_headlines).toarray() 
     return features
-  # --------------------------------------------------
+
   def similarity(self):
     feature = []
     for i, (claim,headline) in enumerate(zip(self.clean_claims,self.clean_headlines)):
@@ -345,7 +271,7 @@ class PSFeatureExtractor():
       real_quick_ratio = SequenceMatcher(None, claim, headline).real_quick_ratio()
       feature.append([ratio,quick_ratio,real_quick_ratio])
     return feature    
-  # --------------------------------------------------
+
   def calc_important_words(self):
     assert (self.important_words != None), 'For calculating important words you should pass important words in initializer.'
     features = np.zeros((len(self.clean_claims_headlines), len(self.important_words)))
@@ -354,7 +280,7 @@ class PSFeatureExtractor():
         if self.important_words[j] in self.clean_claims_headlines[i]:
             features[i][j] = 1
     return features
-  # --------------------------------------------------
+
   def calculate_root_distance(self ,target_sentences = None): # target_sentences = clean_headlines
     
     if target_sentences == None:
@@ -378,7 +304,7 @@ class PSFeatureExtractor():
           root_distance_feature[index] = abs(word_index - root_index)
           break
     return root_distance_feature
-  # --------------------------------------------------
+
   def load_polarity_dataset(self):
     excel = load_workbook(filename = self.polarity_dataset_path)
     sheet = excel.active
@@ -388,7 +314,7 @@ class PSFeatureExtractor():
         continue
       words_polarity_fa[row[0].value] = row[2].value
     return words_polarity_fa  
-  # --------------------------------------------------
+
   def calculate_polarity(self, target_sentences = None):
     words_polarity_fa = self.load_polarity_dataset()
 
@@ -413,7 +339,7 @@ class PSFeatureExtractor():
           polarity_vector[i][j+15] = words_polarity_fa[headline[j]]          
         j += 1
     return polarity_vector
-  # --------------------------------------------------
+
   # Function to average all word vectors in a paragraph
   def __feature_vector_method(self, words, model, num_features):
     # Pre-initialising empty numpy array for speed
@@ -429,7 +355,7 @@ class PSFeatureExtractor():
     # Dividing the result by number of words to get average
     featureVec = np.divide(featureVec, nwords)
     return featureVec    
-  # --------------------------------------------------
+
   def get_w2v_feature(self, model, num_features, target_sentences = None):
     
     if target_sentences == None:
@@ -444,14 +370,14 @@ class PSFeatureExtractor():
       reviewFeatureVecs[counter] = self.__feature_vector_method(sentence, model, num_features)
         
     return reviewFeatureVecs
-  # --------------------------------------------------
+
   def get_bow(self, target_sentences = None):
     if target_sentences == None:
       target_sentences = self.clean_claims_headlines
     vectorizer = CountVectorizer(ngram_range=(1, 2))
     X = vectorizer.fit_transform(target_sentences)
     return X.toarray()
-  # --------------------------------------------------
+
   def generate_Features(self, w2v_model_path, save_path, load_path, save_feature = False, load_if_exist = True, similarity = True, important_words = True, is_question = True, more_than2_parts = True, root_distance = True, polarity = True , w2v = True , bow = True ,tfidf = True):
     features = self.isQuestion
     features = np.reshape(features,(len(features),1))
