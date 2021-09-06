@@ -16,10 +16,10 @@ import pandas as pd
 import re
 import os
 import numpy as np
-import stanfordnlp
 import joblib
 import os.path
 import warnings
+import stanza
 
 from hazm import *
 from hazm import word_tokenize as hazm_word_tokenize
@@ -44,6 +44,7 @@ Original file is located at
 warnings.filterwarnings('ignore')
 
 nltk.download('punkt')
+stanza.download('fa')
 with open('dataset/refute_words.txt', 'r') as refute_file:
     refute_hedge_reporte_words = [w.replace('\n', '') for w in refute_file.readlines()]
 
@@ -163,38 +164,33 @@ class PSFeatureExtractor():
         clean_words = [i for item in target_list for i in item if normalizer.normalize(i) not in self.denied_words]
         return clean_words
 
-    def stanford_tokenize(self, root_model_path, just_get_tokenized_words=False):
+    def stanford_tokenize(self, just_get_tokenized_words=False):
 
-        nlp = stanfordnlp.Pipeline(lang='fa', models_dir=self.cfg.stanford_models_path, treebank=None, use_gpu=True)
-        # nlp = stanfordnlp.Pipeline(processors='tokenize,lemma', lang='fa', treebank=None, use_gpu=True)
-
+        nlp = stanza.Pipeline(lang='fa')
         claims_processors_result = []
         headlines_processors_result = []
         claims_tokenize = []
         headlines_tokenize = []
 
-        for i, (claim, headline) in enumerate(zip(self.claims, self.headlines)):
-            clean_claim = self.clean_sentence(claim)
+        for i in range(0, self.claims.shape[0]):
+            clean_claim = self.clean_sentence(self.claims[i])
             self.clean_claims.append(clean_claim)
             doc = nlp(clean_claim)  # Run the pipeline on input text
             claims_processors_result.append(doc.sentences[0].words)
-            words = (obj.text for obj in doc.sentences[0].words)
-            claims_tokenize.append(words)
+            claims_tokenize.append((obj.text for obj in doc.sentences[0].words))
 
             # headline
-            clean_headline = self.clean_sentence(headline)
+            clean_headline = self.clean_sentence(self.headlines[i])
             self.clean_headlines.append(clean_headline)
             doc = nlp(clean_headline)  # Run the pipeline on input text
             headlines_processors_result.append(doc.sentences[0].words)
-            words = (obj.text for obj in doc.sentences[0].words)
-            headlines_tokenize.append(words)
+            headlines_tokenize.append((obj.text for obj in doc.sentences[0].words))
             self.clean_claims_headlines.append(clean_claim + ' ' + clean_headline)
 
-        self.tokens_claims, self.tokens_headlines = self.clean_tokens(target_list=claims_tokenize), self.clean_tokens(
-            target_list=headlines_tokenize)
+        self.tokens_claims = self.clean_tokens(target_list=claims_tokenize)
+        self.tokens_headlines = self.clean_tokens(target_list=headlines_tokenize)
         if just_get_tokenized_words:
             return self.tokens_claims, self.tokens_headlines
-        # ghaGH
         return claims_processors_result, headlines_processors_result
 
     def hazm_tokenize(self):
@@ -203,16 +199,18 @@ class PSFeatureExtractor():
         self.clean_claims_headlines = [
             ' '.join(hazm_word_tokenize(claims_result[i])+hazm_word_tokenize(headlines_result[i])) for i in
             range(0, self.claims.shape[0])]
-        self.tokens_claims = self.clean_tokens(target_list=claims_result)
-        self.tokens_headlines = self.clean_tokens(target_list=headlines_result)
+        self.tokens_claims = self.clean_tokens(target_list=[hazm_word_tokenize(claim_result) for claim_result in claims_result])
+        self.tokens_headlines = self.clean_tokens(target_list=[hazm_word_tokenize(headline_result) for headline_result in headlines_result])
         return self.tokens_claims, self.tokens_headlines
 
     def nltk_tokenize(self):
         claims_result = [self.clean_sentence(claim) for claim in self.claims]
-        headlines_result = [self.clean_sentence(headline) for headline in self.healines]
-        self.clean_claims_headlines = [ nltk_word_tokenize(claims_result[i]) + ' ' + nltk_word_tokenize(headlines_result[i]) for i in range(0,self.claims.shape[0])]
-        self.tokens_claims = self.clean_tokens(target_list=claims_result)
-        self.tokens_headlines = self.clean_tokens( target_list=headlines_result)
+        headlines_result = [self.clean_sentence(headline) for headline in self.headlines]
+        self.clean_claims_headlines = [
+            ' '.join(nltk_word_tokenize(claims_result[i]) + nltk_word_tokenize(headlines_result[i])) for i in
+            range(0, self.claims.shape[0])]
+        self.tokens_claims = self.clean_tokens(target_list=[nltk_word_tokenize(claim_result) for claim_result in claims_result])
+        self.tokens_headlines = self.clean_tokens( target_list=[nltk_word_tokenize(headline_result) for headline_result in headlines_result])
         return self.tokens_claims, self.tokens_headlines
 
     def tf_idf(self):
