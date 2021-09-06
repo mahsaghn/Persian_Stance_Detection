@@ -27,7 +27,7 @@ from sklearn.feature_selection import SelectKBest
 import os.path
 import joblib
 
-from feature_extractor import PSFeatureExtractor as FeatureExtractor
+from src.feature_extractor import PSFeatureExtractor as FeatureExtractor
 
 from imblearn.over_sampling import SMOTE
 from imblearn.over_sampling import RandomOverSampler
@@ -36,11 +36,22 @@ from imblearn.over_sampling import ADASYN
 from imblearn.over_sampling import (SMOTE, BorderlineSMOTE, SVMSMOTE, SMOTENC)
 from sklearn.metrics import f1_score
 from sklearn.metrics import accuracy_score
+import hydra
+from config.baseline_h2c import H2CBaselineConfig
+from hydra.core.config_store import ConfigStore
 
-stanford_models_path  = '/content/drive/My Drive/persian_stance_baseline_data'
+cs = ConfigStore.instance()
+cs.store(name="config", node=H2CBaselineConfig)
+cs.store(name="baseline_h2c", node=H2CBaselineConfig)
+
+@hydra.main(config_path="config", config_name="config")
+def main(cfg: H2CBaselineConfig):
+    psf_extractor = FeatureExtractor(cfg=cfg)
+    print("done")
+main()
+
+#stanford_models_path  = '/content/drive/My Drive/persian_stance_baseline_data'
 # dataset_path = '/content/drive/My Drive/multilingual_bert_dataset/dataset/HeadlineToClaim_multilingualBERT.csv'
-dataset_path = 'dataset/h2c_new_dataset.csv'
-stopWord_path = 'dataset/stop_words.txt'
 # polarity_dataset_path = '/content/drive/My Drive/persian_stance_baseline_data/dataset/PerSent.xlsx'
 # save_load_path = "/content/drive/My Drive/persian_stance_baseline_data/vectors"
 # w2v_model_path = "/content/drive/My Drive/persian_stance_baseline_data/vectors/w2v_persian.pkl"
@@ -49,6 +60,10 @@ stopWord_path = 'dataset/stop_words.txt'
 oversampling = 'ADASYN'
 N_neighbors = 9
 Random_state = 88
+
+
+tokens_claims, tokens_headlines = psf_extractor.nltk_tokenize()
+
 
 def k_fold_train_test(X, Y, k_fold, model, scoring='accuracy', additional_description=''):
     model_name = model.__class__.__name__
@@ -169,39 +184,29 @@ def common_train_test(model, X, Y, test_size=0.2
         print(additional_description)
     return y_pred
 
-psf_extractor = FeatureExtractor(dataset_path = dataset_path, stopWord_path = stopWord_path
-                                    , polarity_dataset_path = polarity_dataset_path,
-                                  stanford_models_path = stanford_models_path
-                                  ,use_google_drive = True, important_words = ['؟',
-             'تکذیب',
-             'تکذیب شد',
-             ':',
-             ])
-print("done")
-tokens_claims , tokens_headlines = psf_extractor.nltk_tokenize()
 
-features_tfidf, features_name_tfidf = psf_extractor.generate_Features(w2v_model_path = w2v_model_path,save_path = save_load_path
-                                                          , save_feature= False
-                                                          , load_path= save_load_path
-                                                          , root_distance = False
-                                                          , load_if_exist = False, bow = False, w2v = False, polarity= False)
-
-labels = np.reshape(psf_extractor.labels,(len(psf_extractor.labels),1))
-print(labels.shape)
-for l in range(labels.shape[0]):
-    if labels[l][0] == 'Disagree':
-        labels[l][0] = "Notagree"
-mydic={}
-for l in labels:
-    ll = l[0]
-    if ll in mydic:
-        mydic[ll]+=1
-    else:
-        mydic[ll]=1
-print(mydic)
-
-
-a = ["Discuss"]
-a = np.array(a*labels.shape[0])
-print(f1_score(labels,a,labels=['Discuss', 'Notagree', 'Agree', 'Unrelated'],average='weighted'))
-print(accuracy_score(labels,a))
+# features_tfidf, features_name_tfidf = psf_extractor.generate_Features(w2v_model_path = w2v_model_path,save_path = save_load_path
+#                                                           , save_feature= False
+#                                                           , load_path= save_load_path
+#                                                           , root_distance = False
+#                                                           , load_if_exist = False, bow = False, w2v = False, polarity= False)
+# #
+# labels = np.reshape(psf_extractor.labels,(len(psf_extractor.labels),1))
+# print(labels.shape)
+# for l in range(labels.shape[0]):
+#     if labels[l][0] == 'Disagree':
+#         labels[l][0] = "Notagree"
+# mydic={}
+# for l in labels:
+#     ll = l[0]
+#     if ll in mydic:
+#         mydic[ll]+=1
+#     else:
+#         mydic[ll]=1
+# print(mydic)
+#
+#
+# a = ["Discuss"]
+# a = np.array(a*labels.shape[0])
+# print(f1_score(labels,a,labels=['Discuss', 'Notagree', 'Agree', 'Unrelated'],average='weighted'))
+# print(accuracy_score(labels,a))
