@@ -8,9 +8,9 @@ class FeatureExtractorConf:
   stopWord_path: str = '/home/mahsa/Desktop/final_project/stance_detection/dataset/stop_words.txt'
   ponctuations_path: str = '/home/mahsa/Desktop/final_project/stance_detection/dataset/ponctuations.txt'
   uniq_claims_path: str = '/home/mahsa/Desktop/final_project/stance_detection/dataset/uniq_claims.txt'
-  bert_model_path:str = 'HooshvareLab/bert-base-parsbert-uncased'
-  polarity_dataset_path: str = ''
-  stanford_models_path: str = ''
+  bert_model_path:str = 'HooshvareLab/bert-fa-zwnj-base'
+  stanford_models_path: str = '/home/mahsa/Desktop/final_project/stance_detection/dataset'
+  polarity_dataset_path: str = '/home/mahsa/Desktop/final_project/stance_detection/dataset/PerSent.xlsx'
   clean_claims_headlines: str = ''
   clean_claims: str = ''
   clean_headlines: str = ''
@@ -28,7 +28,7 @@ class FeatureExtractorConf:
   bow: bool = False
   w2v: bool = False
   polarity: bool = False
-  tfidf: bool = False
+  tfidf: bool = True
   similarity: bool = False
   important_words: bool = False
   is_question: bool = False
@@ -36,6 +36,12 @@ class FeatureExtractorConf:
 
 @dataclass
 class H2CBaselineConfig:
+  save_path: str = '/models/'
+  save_datasets:bool = False
+  load_path: str = ''
+  load_if_exist: bool = False
+  test_size: float = 0.2
+  over_sample: bool = False
   oversampling: str = 'ADASYN'
   N_neighbors: int = 9
   Random_state: int = 88
