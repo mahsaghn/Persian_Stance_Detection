@@ -1,144 +1,141 @@
 import pandas as pd
-from sklearn.model_selection import KFold
-
-from sklearn.linear_model import LinearRegression
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.svm import LinearSVC
-from sklearn.svm import SVC
-
-import seaborn as sns
-from sklearn.metrics import confusion_matrix
-import matplotlib.pyplot as plt
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import f1_score
-from sklearn import metrics
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import cross_val_score
-from sklearn.utils import shuffle
-import stanfordnlp
 import numpy as np
-
-from sklearn.model_selection import GridSearchCV
-from sklearn.pipeline import Pipeline
-from sklearn.feature_selection import SelectKBest
-
+import logging
 import os.path
 import joblib
-
-from feature_extractor import PSFeatureExtractor as FeatureExtractor
-
-from imblearn.over_sampling import SMOTE
-from imblearn.over_sampling import RandomOverSampler
-from imblearn.over_sampling import SVMSMOTE
-from imblearn.over_sampling import ADASYN
-from imblearn.over_sampling import (SMOTE, BorderlineSMOTE, SVMSMOTE, SMOTENC)
-from sklearn.metrics import f1_score
-from sklearn.metrics import accuracy_score
 import hydra
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from sklearn.model_selection import KFold, learning_curve, ShuffleSplit, train_test_split, cross_val_score, GridSearchCV
+from sklearn.linear_model import LinearRegression, LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.svm import SVC, LinearSVC
+from sklearn.metrics import accuracy_score, f1_score, confusion_matrix
+from sklearn import metrics
+from sklearn.utils import shuffle
+from sklearn.pipeline import Pipeline
+from sklearn.feature_selection import SelectKBest
+from feature_extractor import PSFeatureExtractor as FeatureExtractor
 from config.baseline_h2c import H2CBaselineConfig, FeatureExtractorConf
 from hydra.core.config_store import ConfigStore
+
+logging.basicConfig(filename='main.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
 cs = ConfigStore.instance()
 cs.store(name="config", node=H2CBaselineConfig)
 cs.store(group="",name="baseline_h2c", node=H2CBaselineConfig)
 cs.store(group="features",name='features',node=FeatureExtractorConf)
+
+def plot_learning_curve(estimator, title, X, y, axes=None, ylim=None, cv=None,
+                        n_jobs=None, train_sizes=np.linspace(.1, 1.0, 5)):
+    if axes is None:
+        _, axes = plt.subplots(1, 3, figsize=(20, 5))
+
+    axes[0].set_title(title)
+    if ylim is not None:
+        axes[0].set_ylim(*ylim)
+    axes[0].set_xlabel("Training examples")
+    axes[0].set_ylabel("Score")
+
+    train_sizes, train_scores, test_scores, fit_times, _ = \
+        learning_curve(estimator, X, y, cv=cv, n_jobs=n_jobs,
+                       train_sizes=train_sizes,
+                       return_times=True)
+    train_scores_mean = np.mean(train_scores, axis=1)
+    train_scores_std = np.std(train_scores, axis=1)
+    test_scores_mean = np.mean(test_scores, axis=1)
+    test_scores_std = np.std(test_scores, axis=1)
+    fit_times_mean = np.mean(fit_times, axis=1)
+    fit_times_std = np.std(fit_times, axis=1)
+
+    # Plot learning curve
+    axes[0].grid()
+    axes[0].fill_between(train_sizes, train_scores_mean - train_scores_std,
+                         train_scores_mean + train_scores_std, alpha=0.1,
+                         color="r")
+    print(train_scores_mean - train_scores_std)
+    print(train_scores_mean + train_scores_std)
+    print(train_scores_mean)
+
+
+    axes[3].fill_between(train_sizes, test_scores_mean - test_scores_std,
+                         test_scores_mean + test_scores_std, alpha=0.1,
+                         color="g")
+    axes[0].plot(train_sizes, train_scores_mean, 'o-', color="r",
+                 label="Training score")
+    axes[3].plot(train_sizes, test_scores_mean, 'o-', color="g",
+                 label="Cross-validation score")
+    axes[0].legend(loc="best")
+    axes[3].legend(loc="best")
+
+    # Plot n_samples vs fit_times
+    axes[1].grid()
+    axes[1].plot(train_sizes, fit_times_mean, 'o-')
+    axes[1].fill_between(train_sizes, fit_times_mean - fit_times_std,
+                         fit_times_mean + fit_times_std, alpha=0.1)
+    axes[1].set_xlabel("Training examples")
+    axes[1].set_ylabel("fit_times")
+    axes[1].set_title("Scalability of the model")
+
+    # Plot fit_time vs score
+    axes[2].grid()
+    axes[2].plot(fit_times_mean, test_scores_mean, 'o-')
+    axes[2].fill_between(fit_times_mean, test_scores_mean - test_scores_std,
+                         test_scores_mean + test_scores_std, alpha=0.1)
+    axes[2].set_xlabel("fit_times")
+    axes[2].set_ylabel("Score")
+    axes[2].set_title("Performance of the model")
+
+    return plt
+
+
 def common_train_test(cfg:H2CBaselineConfig,model, X, Y, test_size=0.2
                       , save_datasets=True, save_path='', load_if_exist=True, load_path='', additional_description=''
                       , features_name=''):
     model_name = model.__class__.__name__
-    file_not_exist = False
-    if load_if_exist:
-        assert len(load_path) > 0, "Please enter load_path."
-        load_X_train = load_path + '/X_train_' + features_name + '.pkl'
-        load_X_test = load_path + '/X_test_' + features_name + '.pkl'
-        load_y_train = load_path + '/y_train_' + features_name + '.pkl'
-        load_y_test = load_path + '/y_test_' + features_name + '.pkl'
-        if os.path.isfile(load_X_train) == True:
-            X_train = joblib.load(load_X_train)
-            print('X_train loaded successfully.')
-        else:
-            print('X_train file is not exist.')
-            file_not_exist = True
-        if os.path.isfile(load_X_test) == True:
-            X_test = joblib.load(load_X_test)
-            print('X_test loaded successfully.')
-        else:
-            print('X_test file is not exist.')
-            file_not_exist = True
-        if os.path.isfile(load_y_train) == True:
-            y_train = joblib.load(load_y_train)
-            print('y_train loaded successfully.')
-        else:
-            print('y_train file is not exist.')
-            file_not_exist = True
-        if os.path.isfile(load_y_test) == True:
-            y_test = joblib.load(load_y_test)
-            print('y_test loaded successfully.')
-        else:
-            print('y_test file is not exist.')
-            file_not_exist = True
-    if load_if_exist == False or file_not_exist == True:
-        X_train, X_test, y_train, y_test = train_test_split(X, Y, shuffle=True, test_size=test_size, random_state=0)
-        print('Train and test sets created successfully.')
-        if save_datasets:
-            joblib.dump(X_train, load_path + '/X_train_' + features_name + '.pkl')
-            joblib.dump(X_test, load_path + '/X_test_' + features_name + '.pkl')
-            joblib.dump(y_train, load_path + '/y_train_' + features_name + '.pkl')
-            joblib.dump(y_test, load_path + '/y_test_' + features_name + '.pkl')
-            print('Train and test sets saved successfully.')
+    assert len(load_path) > 0, "Please enter load_path."
+    load_X = load_path + '/X_' + features_name + '.pkl'
+    load_y = load_path + '/y_' + features_name + '.pkl'
+    if load_if_exist and os.path.isfile(load_X) and os.path.isfile(load_y):
+        X_train = joblib.load(load_X)
+        y_train = joblib.load(load_y)
+        print('X,Y loaded successfully.')
     else:
-        print('Train and test sets loaded successfully.')
+        joblib.dump(X, load_path + '/X_' + features_name + '.pkl')
+        joblib.dump(Y, load_path + '/y_' + features_name + '.pkl')
+        print('X,Y saved successfully.')
 
-    if cfg.oversampling == 'BorderlineSMOTE':
-        sampling_strategy = "auto"
-        ada = BorderlineSMOTE(sampling_strategy=sampling_strategy, random_state=0)
-        X_train, y_train = ada.fit_resample(X_train, y_train)
+    X,Y = over_sample(cfg)
 
-    elif cfg.oversampling == 'SVMSMOTE':
-        sm = SVMSMOTE(random_state=0)
-        X_train, y_train = sm.fit_resample(X_train, y_train)
+    fig, axes = plt.subplots(4, 1, figsize=(10, 15))
 
-    elif cfg.oversampling == 'RandomOverSampler':
-        rndsampler = RandomOverSampler(random_state=0)
-        X_train, y_train = rndsampler.fit_resample(X_train, y_train)
-    elif cfg.oversampling == 'SMOTE':
-        sm = SMOTE(random_state=0)
-        X_train, y_train = sm.fit_resample(X_train, y_train)
-    elif cfg.oversampling == 'ADASYN':
-        adsn = ADASYN(sampling_strategy="minority"
-                      , n_neighbors=cfg.N_neighbors
-                      , random_state=cfg.Random_state
-                      )
-        X_train, y_train = adsn.fit_resample(X_train, y_train)
+    cv = ShuffleSplit(n_splits=10, test_size=0.2, random_state=0)
+    estimator = SVC(gamma=0.001)
+    plot_learning_curve(estimator, 'ME', X_train, y_train, axes=axes, ylim=(0.7, 1.01),
+                        cv=cv, n_jobs=4)
+    plt.savefig('output2.png',bbox_inches='tight')
 
-    mydic = {}
-    for ylabel in y_train.flatten():
-        if ylabel in mydic:
-            mydic[ylabel] += 1
-        else:
-            mydic[ylabel] = 1
-    print('After over smapling', mydic)
-    print('Number of sampels', y_train.shape)
-    model.fit(X_train, y_train)
-    y_pred = model.predict(X_test)
-
-    conf_mat = confusion_matrix(y_test, y_pred)
-    fig, ax = plt.subplots(figsize=(4, 4))
-    labels_name = np.unique(Y)
-    sns.heatmap(conf_mat, annot=True, fmt='d', xticklabels=labels_name, yticklabels=labels_name)
-    plt.ylabel('Actual')
-    plt.xlabel('Predicted')
-    print(model_name)
-    plt.savefig('output.png',bbox_inches='tight')
-
-    print(metrics.classification_report(y_test, y_pred, labels_name))
-    print('accuracy : ', accuracy_score(y_test, y_pred))
-    print('weighted f1 score : ', f1_score(y_test, y_pred, average='weighted'))
-    if len(additional_description) > 0:
-        print(additional_description)
-    return y_pred
+    # model.fit(X_train, y_train)
+    # y_pred = model.predict(X_test)
+    #
+    # conf_mat = confusion_matrix(y_test, y_pred)
+    # fig, ax = plt.subplots(figsize=(4, 4))
+    # labels_name = np.unique(Y)
+    # sns.heatmap(conf_mat, annot=True, fmt='d', xticklabels=labels_name, yticklabels=labels_name)
+    # plt.ylabel('Actual')
+    # plt.xlabel('Predicted')
+    # print(model_name)
+    # plt.savefig('output.png',bbox_inches='tight')
+    #
+    # print(metrics.classification_report(y_test, y_pred, labels_name))
+    # print('accuracy : ', accuracy_score(y_test, y_pred))
+    # print('weighted f1 score : ', f1_score(y_test, y_pred, average='weighted'))
+    # if len(additional_description) > 0:
+    #     print(additional_description)
+    # return y_pred
+    return  None
 
 @hydra.main(config_path="config", config_name="config")
 def main(cfg: H2CBaselineConfig):
@@ -150,15 +147,6 @@ def main(cfg: H2CBaselineConfig):
     for l in range(labels.shape[0]):
         if labels[l][0] == 'Disagree':
             labels[l][0] = "Notagree"
-    print(labels.shape)
-    mydic = {}
-    for l in labels:
-        ll = l[0]
-        if ll in mydic:
-            mydic[ll] += 1
-        else:
-            mydic[ll] = 1
-    print(mydic)
     print(metrics.SCORERS.keys())
     print("done")
     model = SVC(C=10, break_ties=False, cache_size=200, class_weight='balanced', coef0=0.0,
@@ -170,7 +158,6 @@ def main(cfg: H2CBaselineConfig):
                                , save_datasets=False, save_path=cfg.save_path
                                , load_if_exist=False, load_path=cfg.save_path
                                , features_name=features_name_tfidf)
-
 
 
 
