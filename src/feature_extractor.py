@@ -77,6 +77,14 @@ class PSFeatureExtractor():
             lineList = [normalizer.normalize(line.rstrip("\n\r")) for line in f]
         return lineList
 
+    def __get_polarity_ds(self):
+        excel = load_workbook(filename=self.cfg.polarity_dataset_path)
+        sheet = excel.active
+        words_polarity_fa = {}
+        for row in sheet.iter_rows(min_row=1):
+            words_polarity_fa[row[0].value] = row[2].value
+        return words_polarity_fa
+
     def __generate_dataset(self):
         data = pd.read_csv(self.cfg.dataset_path, encoding='utf-8')
         data = self.__remove_from_dataset(data)
@@ -118,6 +126,12 @@ class PSFeatureExtractor():
             print(df['repeated'])
         self.uniq_number = uni_number
         return df
+
+    def __feature_vector_method(self, words, model, num_features):
+        index2word_set = set(model.wv.index2word)
+        featureVec = np.sum([model[word] for word in words if word in index2word_set], axis=1)
+        featureVec = np.divide(featureVec, len(words))
+        return featureVec
 
     def clean_sentence(self, sentence):
         normalizer = Normalizer()
@@ -199,7 +213,24 @@ class PSFeatureExtractor():
         features = tfidf.fit_transform(self.clean_claims_headlines).toarray()
         return features
 
-    def similarity(self):
+    def w2v(self, model, num_features, target_sentences=None):
+        if target_sentences is None:
+            target_sentences = self.clean_claims_headlines
+        reviewFeatureVecs = np.zeros((len(target_sentences), num_features), dtype="float32")
+        for counter, sentence in enumerate(target_sentences):
+            if counter % 500 == 0:
+                print("data %d of %d" % (counter, len(target_sentences)))
+            reviewFeatureVecs[counter] = self.__feature_vector_method(sentence, model, num_features)
+        return reviewFeatureVecs
+
+    def bow(self, target_sentences=None):
+        if target_sentences is None:
+            target_sentences = self.clean_claims_headlines
+        vectorizer = CountVectorizer(ngram_range=(1, 2))
+        X = vectorizer.fit_transform(target_sentences)
+        return X.toarray()
+
+    def similarity_fea(self):
         feature = []
         for i in range(0,len(self.claims)):
             claim = ' '.join(self.tokens_claims[i])
@@ -211,9 +242,8 @@ class PSFeatureExtractor():
             feature.append([ratio, quick_ratio, real_quick_ratio])
         return feature
 
-    def calc_important_words(self):
-        assert (
-                self.important_words != None), 'For calculating important words you should pass important words in initializer.'
+    def important_words_fea(self):
+        assert (self.important_words != None), 'For calculating important words you should pass important words in initializer.'
         features = np.zeros((len(self.clean_claims_headlines), len(self.important_words)))
         for i in range(len(self.clean_claims_headlines)):
             for j in range(len(self.important_words)):
@@ -221,23 +251,20 @@ class PSFeatureExtractor():
                     features[i][j] = 1
         return features
 
-    def calculate_root_distance(self, target_sentences=None):  # target_sentences = clean_headlines
-
+    def root_distance_fea(self, target_sentences=None):  # target_sentences = clean_headlines
         if target_sentences == None:
-            target_sentences = self.clean_headlines
-
-        nlp = stanfordnlp.Pipeline(lang='fa', models_dir=self.cfg.stanford_models_path, treebank=None, use_gpu=True)
+            target_sentences = [' '.join(headline_tok) for headline_tok in self.tokens_headlines]
+        nlp = stanza.Pipeline(lang='fa', models_dir=self.cfg.stanford_models_path, treebank=None, use_gpu=True)
         root_distance_feature = np.zeros((len(target_sentences), 1))
         for index, headline in enumerate(target_sentences):
             root_distance_feature[index] = -1
             doc = nlp(headline)
             root = [(i, doc.sentences[0].words[i].text) for i in range(len(doc.sentences[0].words)) if
-                    doc.sentences[0].words[i].dependency_relation == 'root']
+                    doc.sentences[0].words[i].deprel == 'root']
             if (len(root) == 0):
                 continue
 
             root_index, root_word = root[0]
-
             for word_index, word in enumerate(headline.split()):
                 target = [(i, refute_hedge_reporte_words[i]) for i in range(len(refute_hedge_reporte_words)) if
                           refute_hedge_reporte_words[i] == word]
@@ -247,78 +274,37 @@ class PSFeatureExtractor():
                     break
         return root_distance_feature
 
-    def load_polarity_dataset(self):
-        excel = load_workbook(filename=self.cfg.polarity_dataset_path)
-        sheet = excel.active
-        words_polarity_fa = {}
-        for row in sheet.iter_rows():
-            if row[2].value == "Polarity" or row[2].value == None:
-                continue
-            words_polarity_fa[row[0].value] = row[2].value
-        return words_polarity_fa
-
-    def calculate_polarity(self, target_sentences=None):
-        words_polarity_fa = self.load_polarity_dataset()
+    def polarity_fea(self, target_sentences=None):
+        words_polarity_fa = self.__get_polarity_ds()
 
         if target_sentences == None:
-            target_sentences = zip(self.tokens_claims, self.tokens_headlines)
-
-        # unzipping values
-        mapped = list(target_sentences)
-        claims, headlines = zip(*mapped)
+            claims, headlines = self.tokens_claims, self.tokens_headlines
+        else:
+            mapped = list(target_sentences)
+            claims, headlines = zip(*mapped)
         claims_array = np.asarray(claims)
         polarity_vector = np.zeros((len(claims_array), 30))
-
         for i, (claim, headline) in enumerate(zip(claims, headlines)):
-            j = 0
-            while j < len(claim) and j < 15:
-                if claim[j] in words_polarity_fa:
-                    polarity_vector[i][j] = words_polarity_fa[claim[j]]
-                j += 1
-            j = 0
-            while j < len(headline) and j < 15:
-                if headline[j] in words_polarity_fa:
-                    polarity_vector[i][j + 15] = words_polarity_fa[headline[j]]
-                j += 1
+            polars = []
+            for j,word in enumerate(claim):
+                print(claim)
+                if word in words_polarity_fa and words_polarity_fa[word]!=0.:
+                    print(word,words_polarity_fa[word])
+                    polars.append(words_polarity_fa[word])
+                    if len(polars)==15:
+                        break
+            for j,word in enumerate(headline):
+                print(headline)
+                if word in words_polarity_fa and words_polarity_fa[word]!=0.:
+                    print(word,words_polarity_fa[word])
+                    polars.append(words_polarity_fa[word])
+                    if len(polars) == 30:
+                        break
+            if len(polars) < 30:
+                polars = polars + [0.0]*(30-len(polars))
+            polarity_vector[i] = polars
+            print(polars)
         return polarity_vector
-
-    # Function to average all word vectors in a paragraph
-    def __feature_vector_method(self, words, model, num_features):
-        # Pre-initialising empty numpy array for speed
-        featureVec = np.zeros(num_features, dtype="float32")
-        nwords = 0
-        # Converting Index2Word which is a list to a set for better speed in the execution.
-        index2word_set = set(model.wv.index2word)
-
-        for nwords, word in enumerate(words):
-            if word in index2word_set:
-                featureVec = np.add(featureVec, model[word])
-
-        # Dividing the result by number of words to get average
-        featureVec = np.divide(featureVec, nwords)
-        return featureVec
-
-    def get_w2v_feature(self, model, num_features, target_sentences=None):
-
-        if target_sentences is None:
-            target_sentences = self.clean_claims_headlines
-
-        reviewFeatureVecs = np.zeros((len(target_sentences), num_features), dtype="float32")
-        for counter, sentence in enumerate(target_sentences):
-            # Printing a status message every 10000th review
-            if counter % 1000 == 0:
-                print("data %d of %d" % (counter, len(target_sentences)))
-
-            reviewFeatureVecs[counter] = self.__feature_vector_method(sentence, model, num_features)
-
-        return reviewFeatureVecs
-
-    def get_bow(self, target_sentences=None):
-        if target_sentences is None:
-            target_sentences = self.clean_claims_headlines
-        vectorizer = CountVectorizer(ngram_range=(1, 2))
-        X = vectorizer.fit_transform(target_sentences)
-        return X.toarray()
 
     def generate_Features(self):
         features = self.isQuestion
@@ -398,14 +384,14 @@ class PSFeatureExtractor():
             print('Start to generate w2v feature')
             assert len(self.cfg.w2v_model_path) > 0, "Please enter w2v_model_path."
             w2v_model = joblib.load(self.cfg.w2v_model_path)
-            w2v_feature = self.get_w2v_feature(w2v_model, num_features=300)
+            w2v_feature = self.w2v(w2v_model, num_features=300)
             w2v_feature = (w2v_feature - np.min(w2v_feature)) / (np.max(w2v_feature) - np.min(w2v_feature))
             features = np.append(features, w2v_feature, axis=1)
             print('End of w2v feature')
             # -------------- bow ----------
         if self.cfg.bow:
             print('Start to generate bow feature')
-            bow_feature = self.get_bow()
+            bow_feature = self.bow()
             features = np.append(features, bow_feature, axis=1)
             print('End of bow feature')
 
