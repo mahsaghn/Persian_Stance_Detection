@@ -43,8 +43,8 @@ Original file is located at
 
 warnings.filterwarnings('ignore')
 
-nltk.download('punkt')
-stanza.download('fa')
+# nltk.download('punkt')
+# stanza.download('fa')
 with open('dataset/refute_words.txt', 'r') as refute_file:
     refute_hedge_reporte_words = [w.replace('\n', '') for w in refute_file.readlines()]
 
@@ -119,30 +119,6 @@ class PSFeatureExtractor():
         self.uniq_number = uni_number
         return df
 
-    def clean_sentences(self):
-        claims_result = []
-        headlines_result = []
-        parsbert_tokenizer = AutoTokenizer.from_pretrained(self.cfg.bert_model_path)
-        for claim, headline in zip(self.claims, self.headlines):
-            tokens = parsbert_tokenizer.tokenize(claim)
-            clean_words = []
-            for token in tokens:
-                if token not in self.denied_words:
-                    clean_words.append(token)
-            new_sentence_c = parsbert_tokenizer.convert_tokens_to_string(clean_words)
-            self.clean_claims.append(new_sentence_c)
-
-            # headline
-            tokens = parsbert_tokenizer.tokenize(headline)
-            clean_words = []
-            for token in tokens:
-                if token not in self.denied_words:
-                    clean_words.append(token)
-            new_sentence_h = parsbert_tokenizer.convert_tokens_to_string(clean_words)
-            self.clean_headlines.append(new_sentence_h)
-
-            self.clean_claims_headlines.append(new_sentence_c + ' ' + new_sentence_h)
-
     def clean_sentence(self, sentence):
         normalizer = Normalizer()
         shayee = normalizer.normalize("شایعه")
@@ -161,11 +137,23 @@ class PSFeatureExtractor():
     def clean_tokens(self, target_list):
         assert isinstance(target_list, (list)) == True, "Type of target_list is not correct. It has to be list."
         normalizer = Normalizer()
-        clean_words = [i for item in target_list for i in item if normalizer.normalize(i) not in self.denied_words]
+        clean_words = [[i for i in item if normalizer.normalize(i) not in self.denied_words] for item in target_list]
         return clean_words
 
-    def stanford_tokenize(self, just_get_tokenized_words=False):
+    def bert_tokenize(self):
+        parsbert_tokenizer = AutoTokenizer.from_pretrained(self.cfg.bert_model_path)
+        self.tokens_claims = [parsbert_tokenizer.tokenize(claim) for claim in self.claims]
+        self.tokens_claims = self.clean_tokens(target_list=[claim_result for claim_result in self.tokens_claims])
+        self.tokens_headlines = [parsbert_tokenizer.tokenize(headline) for headline in self.headlines]
+        self.tokens_headlines = self.clean_tokens(target_list=[headline_result for headline_result in self.tokens_headlines])
+        for i in range(0, len(self.headlines)):
+            clean_claim = parsbert_tokenizer.convert_tokens_to_string(self.tokens_claims[i])
+            clean_headline = parsbert_tokenizer.convert_tokens_to_string(self.tokens_headlines[i])
+            self.clean_claims_headlines.append(clean_claim + ' ' + clean_headline)
+        print(self.clean_claims_headlines)
+        return self.tokens_claims, self.tokens_headlines
 
+    def stanford_tokenize(self, just_get_tokenized_words=False):
         nlp = stanza.Pipeline(lang='fa')
         claims_processors_result = []
         headlines_processors_result = []
@@ -174,14 +162,11 @@ class PSFeatureExtractor():
 
         for i in range(0, self.claims.shape[0]):
             clean_claim = self.clean_sentence(self.claims[i])
-            self.clean_claims.append(clean_claim)
             doc = nlp(clean_claim)  # Run the pipeline on input text
             claims_processors_result.append(doc.sentences[0].words)
             claims_tokenize.append((obj.text for obj in doc.sentences[0].words))
 
-            # headline
             clean_headline = self.clean_sentence(self.headlines[i])
-            self.clean_headlines.append(clean_headline)
             doc = nlp(clean_headline)  # Run the pipeline on input text
             headlines_processors_result.append(doc.sentences[0].words)
             headlines_tokenize.append((obj.text for obj in doc.sentences[0].words))
@@ -195,28 +180,19 @@ class PSFeatureExtractor():
 
     def hazm_tokenize(self):
         claims_result = [self.clean_sentence(claim) for claim in self.claims]
-        headlines_result = [self.clean_sentence(headline) for headline in self.headlines]
-        self.clean_claims_headlines = [
-            ' '.join(hazm_word_tokenize(claims_result[i])+hazm_word_tokenize(headlines_result[i])) for i in
-            range(0, self.claims.shape[0])]
         self.tokens_claims = self.clean_tokens(target_list=[hazm_word_tokenize(claim_result) for claim_result in claims_result])
+        headlines_result = [self.clean_sentence(headline) for headline in self.headlines]
         self.tokens_headlines = self.clean_tokens(target_list=[hazm_word_tokenize(headline_result) for headline_result in headlines_result])
+        self.clean_claims_headlines = [ ' '.join(self.tokens_claims[i] + self.tokens_headlines[i]) for i in range(0, self.claims.shape[0])]
         return self.tokens_claims, self.tokens_headlines
 
     def nltk_tokenize(self):
         claims_result = [self.clean_sentence(claim) for claim in self.claims]
-        headlines_result = [self.clean_sentence(headline) for headline in self.headlines]
-        self.clean_claims_headlines = [
-            ' '.join(nltk_word_tokenize(claims_result[i]) + nltk_word_tokenize(headlines_result[i])) for i in
-            range(0, self.claims.shape[0])]
         self.tokens_claims = self.clean_tokens(target_list=[nltk_word_tokenize(claim_result) for claim_result in claims_result])
+        headlines_result = [self.clean_sentence(headline) for headline in self.headlines]
         self.tokens_headlines = self.clean_tokens( target_list=[nltk_word_tokenize(headline_result) for headline_result in headlines_result])
+        self.clean_claims_headlines = [ ' '.join(self.tokens_claims[i] + self.tokens_headlines[i]) for i in range(0, self.claims.shape[0])]
         return self.tokens_claims, self.tokens_headlines
-
-    def tf_idf(self):
-        tfidf = TfidfVectorizer(sublinear_tf=True, min_df=10, norm='l2', ngram_range=(1, 2))
-        features = tfidf.fit_transform(self.clean_claims_headlines).toarray()
-        return features
 
     def tf_idf(self):
         tfidf = TfidfVectorizer(sublinear_tf=True, min_df=10, norm='l2', ngram_range=(1, 2))
@@ -225,10 +201,13 @@ class PSFeatureExtractor():
 
     def similarity(self):
         feature = []
-        for i, (claim, headline) in enumerate(zip(self.clean_claims, self.clean_headlines)):
+        for i in range(0,len(self.claims)):
+            claim = ' '.join(self.tokens_claims[i])
+            headline = ' '.join(self.tokens_headlines[i])
             ratio = SequenceMatcher(None, claim, headline).ratio()
             quick_ratio = SequenceMatcher(None, claim, headline).quick_ratio()
             real_quick_ratio = SequenceMatcher(None, claim, headline).real_quick_ratio()
+            print(ratio, quick_ratio, real_quick_ratio)
             feature.append([ratio, quick_ratio, real_quick_ratio])
         return feature
 
