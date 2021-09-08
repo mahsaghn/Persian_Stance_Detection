@@ -4,13 +4,13 @@ from typing import List
 @dataclass
 class FeatureExtractorConf:
   # important_words: List = field(default_factory=['؟', 'تکذیب',  'تکذیب شد', ':'])
-  dataset_path: str = '/home/mahsa/Desktop/final_project/stance_detection/dataset/h2c_new_dataset.csv'
-  stopWord_path: str = '/home/mahsa/Desktop/final_project/stance_detection/dataset/stop_words.txt'
-  ponctuations_path: str = '/home/mahsa/Desktop/final_project/stance_detection/dataset/ponctuations.txt'
-  uniq_claims_path: str = '/home/mahsa/Desktop/final_project/stance_detection/dataset/uniq_claims.txt'
+  dataset_path: str = '/home/ubuntu/ghaderan/stc/stance_detection/dataset/h2c_new_dataset.csv'
+  stopWord_path: str = '/home/ubuntu/ghaderan/stc/stance_detection/dataset/stop_words.txt'
+  ponctuations_path: str = '/home/ubuntu/ghaderan/stc/stance_detection/dataset/ponctuations.txt'
+  uniq_claims_path: str = '/home/ubuntu/ghaderan/stc/stance_detection/dataset/uniq_claims.txt'
   bert_model_path:str = 'HooshvareLab/bert-fa-zwnj-base'
-  stanford_models_path: str = '/home/mahsa/Desktop/final_project/stance_detection/dataset'
-  polarity_dataset_path: str = '/home/mahsa/Desktop/final_project/stance_detection/dataset/PerSent.xlsx'
+  stanford_models_path: str = '/home/ubuntu/ghaderan/stc/stance_detection/dataset'
+  polarity_dataset_path: str = '/home/ubuntu/ghaderan/stc/stance_detection/dataset/PerSent.xlsx'
   clean_claims_headlines: str = ''
   clean_claims: str = ''
   clean_headlines: str = ''
@@ -38,7 +38,7 @@ class FeatureExtractorConf:
 class H2CBaselineConfig:
   save_path: str = '/models/'
   save_datasets:bool = False
-  load_path: str = ''
+  load_path: str = '/home/ubuntu/ghaderan/stc/stance_detection/dataset/seperated'
   load_if_exist: bool = False
   test_size: float = 0.2
   over_sample: bool = False

@@ -13,7 +13,7 @@ from sklearn.metrics import f1_score, accuracy_score, confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn import metrics
-from sklearn.linear_model import LinearRegression, linear_model, LogisticRegression
+from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import LinearSVC
@@ -100,7 +100,7 @@ def common_train_test(cfg:H2CBaselineConfig, model, X, Y, features_name=''):
     sns.heatmap(conf_mat, annot=True, fmt='d', xticklabels=labels_name, yticklabels=labels_name)
     plt.ylabel('Actual')
     plt.xlabel('Predicted')
-    plt.savefig('output'+features_name+'_'+cfg.oversampling+'.png',bbox_inches='tight')
+    plt.savefig('output'+model_name+'_'+features_name+'_'+cfg.oversampling+'.png',bbox_inches='tight')
     logging.info('Model:{}, Out_path:{}'.format(model_name,'output'+features_name+'_'+cfg.oversampling+'.png'))
     logging.info('{}'.format(metrics.classification_report(y_test, y_pred, labels_name)))
     logging.info('Accuracy : {}'.format(accuracy_score(y_test, y_pred)))
@@ -109,7 +109,7 @@ def common_train_test(cfg:H2CBaselineConfig, model, X, Y, features_name=''):
 @hydra.main(config_path="config", config_name="config")
 def main(cfg: H2CBaselineConfig):
     psf_extractor = FeatureExtractor(cfg=cfg.features)
-    tokens_claims, tokens_headlines = psf_extractor.hazm_tokenize()
+    tokens_claims, tokens_headlines = psf_extractor.stanford_tokenize()
     features, features_name = psf_extractor.generate_Features()
     logging.info('Feature set {}:{}'.format(features.shape,features_name))
     labels = np.reshape(psf_extractor.labels, (len(psf_extractor.labels), 1))
@@ -133,13 +133,13 @@ def main(cfg: H2CBaselineConfig):
                                    min_samples_split=2, min_weight_fraction_leaf=0.0,
                                    n_estimators=75, n_jobs=None, oob_score=False,
                                    random_state=None, verbose=0, warm_start=False)
-    common_train_test(model=model, X=features, Y=labels, features_name=features_name)
+    common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
 
     logging.info('LinearSVC')
     model = LinearSVC(C=0.5, class_weight='balanced', dual=True, fit_intercept=True,
                       intercept_scaling=1, loss='hinge', max_iter=1000, multi_class='ovr',
                       penalty='l2', random_state=None, tol=0.0001, verbose=0)
-    common_train_test(model=model, X=features, Y=labels, features_name=features_name)
+    common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
 
     logging.info('LogisticRegression')
     model = LogisticRegression(C=1, class_weight='balanced', dual=False, fit_intercept=True,
@@ -147,11 +147,11 @@ def main(cfg: H2CBaselineConfig):
                                multi_class='ovr', n_jobs=None, penalty='l1',
                                random_state=None, solver='saga', tol=0.0001, verbose=0,
                                warm_start=False)
-    common_train_test(model=model, X=features, Y=labels, features_name=features_name)
+    common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
 
     logging.info('GaussianNB')
     model = GaussianNB()
-    common_train_test(model=model, X=features, Y=labels, features_name=features_name)
+    common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
 
 
 

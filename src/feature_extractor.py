@@ -43,8 +43,8 @@ Original file is located at
 
 warnings.filterwarnings('ignore')
 
-# nltk.download('punkt')
-# stanza.download('fa')
+nltk.download('punkt')
+stanza.download('fa')
 with open('dataset/refute_words.txt', 'r') as refute_file:
     refute_hedge_reporte_words = [w.replace('\n', '') for w in refute_file.readlines()]
 
