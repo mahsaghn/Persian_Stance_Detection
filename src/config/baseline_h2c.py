@@ -19,7 +19,7 @@ class FeatureExtractorConf:
   question_name: str = 'question'
   label_name: str = 'label'
   part_name: str = 'parts'
-  w2v_model_path: str = ''
+  w2v_model_path: str = '/home/ubuntu/ghaderan/stc/stance_detection/dataset/cc.fa.300.vec'
   save_load_path: str = ''
   save_feature: bool = False
   load_path: bool = save_load_path,
@@ -41,7 +41,7 @@ class H2CBaselineConfig:
   load_path: str = '/home/ubuntu/ghaderan/stc/stance_detection/dataset/seperated'
   load_if_exist: bool = False
   test_size: float = 0.2
-  over_sample: bool = False
+  over_sample: bool = True
   oversampling: str = 'ADASYN'
   N_neighbors: int = 9
   Random_state: int = 88

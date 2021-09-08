@@ -109,7 +109,7 @@ def common_train_test(cfg:H2CBaselineConfig, model, X, Y, features_name=''):
 @hydra.main(config_path="config", config_name="config")
 def main(cfg: H2CBaselineConfig):
     psf_extractor = FeatureExtractor(cfg=cfg.features)
-    tokens_claims, tokens_headlines = psf_extractor.stanford_tokenize()
+    tokens_claims, tokens_headlines = psf_extractor.nltk_tokenize()
     features, features_name = psf_extractor.generate_Features()
     logging.info('Feature set {}:{}'.format(features.shape,features_name))
     labels = np.reshape(psf_extractor.labels, (len(psf_extractor.labels), 1))
