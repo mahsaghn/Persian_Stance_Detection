@@ -20,7 +20,6 @@ import os.path
 import warnings
 import stanza
 import logging 
-import fasttext
 
 from hazm import *
 from hazm import word_tokenize as hazm_word_tokenize
