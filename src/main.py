@@ -29,7 +29,7 @@ cs.store(name="config", node=H2CBaselineConfig)
 cs.store(group="",name="baseline_h2c", node=H2CBaselineConfig)
 cs.store(group="features",name='features',node=FeatureExtractorConf)
 
-def plot_learning_curves(estimator, title, X, y, cv=None,
+def plot_learning_curves(estimator, X, y, cv=None,
                         n_jobs=None, train_sizes=np.linspace(.1, 1.0, 5),name_conf=""):
     train_sizes, train_scores, test_scores, fit_times, _ = \
         learning_curve(estimator, X, y.ravel(), cv=cv, n_jobs=n_jobs,train_sizes=train_sizes,return_times=True)
@@ -42,11 +42,13 @@ def plot_learning_curves(estimator, title, X, y, cv=None,
 
     # Plot learning curve
     plt.grid()
-    plt.title(title)
+    plt.title('Learning Curve')
     plt.xlabel("Training examples")
     plt.ylabel("Score")
     plt.fill_between(train_sizes, train_scores_mean - train_scores_std,
                          train_scores_mean + train_scores_std, alpha=0.1,color="r")
+    plt.plot(train_sizes, test_scores_mean, 'o-', color="g",
+                 label="Cross-validation score")
     plt.plot(train_sizes, train_scores_mean, 'o-', color="r",
                  label="Training score")
     plt.legend(loc="best")
@@ -149,7 +151,7 @@ def common_train_test(cfg:H2CBaselineConfig, model, X, Y, features_name=''):
     else:
         cv = ShuffleSplit(n_splits=10, test_size=0.2, random_state=0)
         estimator = SVC(gamma=0.001)
-        plot_learning_curves(estimator, 'ME', X, Y, ylim=(0.7, 1.01),
+        plot_learning_curves(estimator, X, Y,
                             cv=cv, n_jobs=4,name_conf=model_name+'_'+features_name+'_'+cfg.oversampling)
 
     model.fit(X_train, y_train)
@@ -167,7 +169,7 @@ def common_train_test(cfg:H2CBaselineConfig, model, X, Y, features_name=''):
 @hydra.main(config_path="config", config_name="config")
 def main(cfg: H2CBaselineConfig):
     psf_extractor = FeatureExtractor(cfg=cfg.features)
-    tokens_claims, tokens_headlines = psf_extractor.nltk_tokenize()
+    tokens_claims, tokens_headlines = psf_extractor.tokenize()
     features, features_name = psf_extractor.generate_Features()
     logging.info('Feature set {}:{}'.format(features.shape,features_name))
     labels = np.reshape(psf_extractor.labels, (len(psf_extractor.labels), 1))
@@ -182,34 +184,34 @@ def main(cfg: H2CBaselineConfig):
                 tol=0.001, verbose=False)
     common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
 
-    # logging.info('RandomForestClassifier')
-    # model = RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
-    #                                class_weight='balanced_subsample', criterion='entropy',
-    #                                max_depth=None, max_features='auto', max_leaf_nodes=None,
-    #                                max_samples=None, min_impurity_decrease=0.0,
-    #                                min_impurity_split=None, min_samples_leaf=1,
-    #                                min_samples_split=2, min_weight_fraction_leaf=0.0,
-    #                                n_estimators=75, n_jobs=None, oob_score=False,
-    #                                random_state=None, verbose=0, warm_start=False)
-    # common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
-    #
-    # logging.info('LinearSVC')
-    # model = LinearSVC(C=0.5, class_weight='balanced', dual=True, fit_intercept=True,
-    #                   intercept_scaling=1, loss='hinge', max_iter=1000, multi_class='ovr',
-    #                   penalty='l2', random_state=None, tol=0.0001, verbose=0)
-    # common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
-    #
-    # logging.info('LogisticRegression')
-    # model = LogisticRegression(C=1, class_weight='balanced', dual=False, fit_intercept=True,
-    #                            intercept_scaling=1, l1_ratio=None, max_iter=1000,
-    #                            multi_class='ovr', n_jobs=None, penalty='l1',
-    #                            random_state=None, solver='saga', tol=0.0001, verbose=0,
-    #                            warm_start=False)
-    # common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
-    #
-    # logging.info('GaussianNB')
-    # model = GaussianNB()
-    # common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
+    logging.info('RandomForestClassifier')
+    model = RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
+                                   class_weight='balanced_subsample', criterion='entropy',
+                                   max_depth=None, max_features='auto', max_leaf_nodes=None,
+                                   max_samples=None, min_impurity_decrease=0.0,
+                                   min_impurity_split=None, min_samples_leaf=1,
+                                   min_samples_split=2, min_weight_fraction_leaf=0.0,
+                                   n_estimators=75, n_jobs=None, oob_score=False,
+                                   random_state=None, verbose=0, warm_start=False)
+    common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
+
+    logging.info('LinearSVC')
+    model = LinearSVC(C=0.5, class_weight='balanced', dual=True, fit_intercept=True,
+                      intercept_scaling=1, loss='hinge', max_iter=1000, multi_class='ovr',
+                      penalty='l2', random_state=None, tol=0.0001, verbose=0)
+    common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
+
+    logging.info('LogisticRegression')
+    model = LogisticRegression(C=1, class_weight='balanced', dual=False, fit_intercept=True,
+                               intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                               multi_class='ovr', n_jobs=None, penalty='l1',
+                               random_state=None, solver='saga', tol=0.0001, verbose=0,
+                               warm_start=False)
+    common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
+
+    logging.info('GaussianNB')
+    model = GaussianNB()
+    common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
 
 
 

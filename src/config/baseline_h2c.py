@@ -33,6 +33,7 @@ class FeatureExtractorConf:
   important_words: bool = False
   is_question: bool = False
   more_than2_parts: bool = False
+  tokenize_method: str = 'nltk'#nltk, stanford, bert, hazm
 
 @dataclass
 class H2CBaselineConfig:

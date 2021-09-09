@@ -154,6 +154,17 @@ class PSFeatureExtractor():
         clean_words = [[i for i in item if normalizer.normalize(i) not in self.denied_words] for item in target_list]
         return clean_words
 
+    def tokenize(self):
+        if self.cfg.tokenize_method=='nltk':
+            return self.nltk_tokenize()
+        elif self.cfg.tokenize_method=='stanford':
+            return self.stanford_tokenize()
+        elif self.cfg.tokenize_method=='hazm':
+            return self.hazm_tokenize()
+        elif self.cfg.tokenize_method=='bert':
+            return self.bert_tokenize()
+
+
     def bert_tokenize(self):
         parsbert_tokenizer = AutoTokenizer.from_pretrained(self.cfg.bert_model_path)
         self.tokens_claims = [parsbert_tokenizer.tokenize(claim) for claim in self.claims]
