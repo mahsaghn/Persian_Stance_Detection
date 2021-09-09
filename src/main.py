@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 from sklearn.model_selection import KFold, learning_curve, ShuffleSplit, train_test_split, cross_val_score, GridSearchCV
+from imblearn.over_sampling import RandomOverSampler, SMOTE, SVMSMOTE, ADASYN, BorderlineSMOTE
 from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
@@ -100,15 +101,56 @@ def get_train_test(cfg:H2CBaselineConfig,X, Y, features_name=''):
             logging.info('Train and test sets saved successfully. Path:' + cfg.load_path + '/***_' + features_name)
     return X_train,y_train, X_test, y_test
 
+def over_sample(cfg,X,Y):
+    mydic = {}
+    for ylabel in Y.flatten():
+        if ylabel in mydic:
+            mydic[ylabel] += 1
+        else:
+            mydic[ylabel] = 1
+    logging.info('Before oversmapling Y shape:{}, Class distribution:{}'.format(Y.shape,mydic))
+    logging.info('Oversampling Strategy: '+ cfg.oversampling)
+    if cfg.oversampling == 'BorderlineSMOTE':
+        sampling_strategy = "auto"
+        ada = BorderlineSMOTE(sampling_strategy=sampling_strategy, random_state=0)
+        X_n, Y_n = ada.fit_resample(X, Y)
+    elif cfg.oversampling == 'SVMSMOTE':
+        sm = SVMSMOTE(random_state=0)
+        X_n, Y_n = sm.fit_resample(X, Y)
+    elif cfg.oversampling == 'RandomOverSampler':
+        rndsampler = RandomOverSampler(random_state=0)
+        X_n, Y_n = rndsampler.fit_resample(X, Y)
+    elif cfg.oversampling == 'SMOTE':
+        sm = SMOTE(random_state=0)
+        X_n, Y_n = sm.fit_resample(X, Y)
+    elif cfg.oversampling == 'ADASYN':
+        adsn = ADASYN(sampling_strategy="minority"
+                      , n_neighbors=cfg.N_neighbors
+                      , random_state=cfg.Random_state
+                      )
+        X_n, Y_n = adsn.fit_resample(X, Y)
+
+    mydic = {}
+    for ylabel in Y_n.flatten():
+        if ylabel in mydic:
+            mydic[ylabel] += 1
+        else:
+            mydic[ylabel] = 1
+    logging.info('After oversmapling Y shape:{}, Class distribution:{}'.format(Y_n.shape,mydic))
+    return  X_n, Y_n
 
 def common_train_test(cfg:H2CBaselineConfig, model, X, Y, features_name=''):
     model_name = model.__class__.__name__
     X_train,y_train, X_test, y_test = get_train_test(cfg, X, Y)
 
-    cv = ShuffleSplit(n_splits=10, test_size=0.2, random_state=0)
-    estimator = SVC(gamma=0.001)
-    plot_learning_curves(estimator, 'ME', X, Y, ylim=(0.7, 1.01),
-                        cv=cv, n_jobs=4,name_conf=model_name+'_'+features_name+'_'+cfg.oversampling)
+    if cfg.over_sample:
+        X_train, y_train = over_sample(cfg,X_train,y_train)
+        features_name += 'os'
+    else:
+        cv = ShuffleSplit(n_splits=10, test_size=0.2, random_state=0)
+        estimator = SVC(gamma=0.001)
+        plot_learning_curves(estimator, 'ME', X, Y, ylim=(0.7, 1.01),
+                            cv=cv, n_jobs=4,name_conf=model_name+'_'+features_name+'_'+cfg.oversampling)
 
     model.fit(X_train, y_train)
     plot_confusion_matrix(estimator=model, X=X_test, y_true=y_test, cmap='OrRd')
