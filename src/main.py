@@ -87,6 +87,8 @@ def get_train_test(cfg:H2CBaselineConfig,X, Y, features_name=''):
     load_X_test = cfg.load_path + '/X_test_' + features_name + '.pkl'
     load_y_train = cfg.load_path + '/y_train_' + features_name + '.pkl'
     load_y_test = cfg.load_path + '/y_test_' + features_name + '.pkl'
+    print(cfg.load_if_exist)
+    print(load_X_train)
     if cfg.load_if_exist and os.path.isfile(load_X_train) == True:
         X_train = joblib.load(load_X_train)
         X_test = joblib.load(load_X_test)
