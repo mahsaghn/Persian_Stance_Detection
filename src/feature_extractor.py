@@ -157,12 +157,16 @@ class PSFeatureExtractor():
 
     def tokenize(self):
         if self.cfg.tokenize_method=='nltk':
+            logging.info('Hazm Tokenizer')
             return self.nltk_tokenize()
         elif self.cfg.tokenize_method=='stanford':
+            logging.info('Stanford tokenizer')
             return self.stanford_tokenize()
         elif self.cfg.tokenize_method=='hazm':
+            logging.info('hazm tokenizer')
             return self.hazm_tokenize()
         elif self.cfg.tokenize_method=='bert':
+            logging.info('bert tokenizer')
             return self.bert_tokenize()
 
 
@@ -200,9 +204,9 @@ class PSFeatureExtractor():
 
         self.tokens_claims = self.clean_tokens(target_list=claims_tokenize)
         self.tokens_headlines = self.clean_tokens(target_list=headlines_tokenize)
-        if just_get_tokenized_words:
-            return self.tokens_claims, self.tokens_headlines
-        return claims_processors_result, headlines_processors_result
+        #if just_get_tokenized_words:
+        return self.tokens_claims, self.tokens_headlines
+        #return claims_processors_result, headlines_processors_result
 
     def hazm_tokenize(self):
         claims_result = [self.clean_sentence(claim) for claim in self.claims]
