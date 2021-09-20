@@ -150,8 +150,9 @@ class PSFeatureExtractor():
 
     def clean_tokens(self, target_list):
         assert isinstance(target_list, (list)) == True, "Type of target_list is not correct. It has to be list."
-        normalizer = Normalizer()
-        clean_words = [[i for i in item if normalizer.normalize(i) not in self.denied_words] for item in target_list]
+        # normalizer = Normalizer()
+        # clean_words = [[i for i in item if normalizer.normalize(i) not in self.denied_words] for item in target_list]
+        clean_words = target_list
         return clean_words
 
     def tokenize(self):
@@ -417,7 +418,6 @@ class PSFeatureExtractor():
             bow_feature = self.bow()
             features = np.append(features, bow_feature, axis=1)
             logging.info('End of bow feature')
-
         if self.cfg.save_feature:
             joblib.dump(features, (self.cfg.save_path + '/' + file_name + '.pkl'))
             logging.info('Features saved successfully.')
