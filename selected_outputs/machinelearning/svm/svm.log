@@ -1,0 +1,776 @@
+[2021-09-21 17:19:27,469][root][INFO] - hazm tokenizer
+[2021-09-21 17:19:29,129][root][INFO] - End of tf_idf feature
+[2021-09-21 17:19:29,437][root][INFO] - End of similarity feature
+[2021-09-21 17:19:29,444][root][INFO] - End of important words feature
+[2021-09-21 17:19:29,449][root][INFO] - End of is_question feature
+[2021-09-21 17:19:29,454][root][INFO] - "more than tow parts" feature was added.
+[2021-09-21 17:19:29,582][root][INFO] - End of polarity feature
+[2021-09-21 17:19:29,583][root][INFO] - Feature set (2594, 839):
+[2021-09-21 17:19:29,584][root][INFO] - SVC Model kernel=rbf, c=1.0
+[2021-09-21 17:20:21,330][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:20:24,368][root][INFO] - Model:SVC, Out_path:outputc=1.0_ADASYN.png
+[2021-09-21 17:20:24,378][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.71      0.68       111
+     Discuss       0.82      0.60      0.70       163
+    Notagree       0.54      0.60      0.57        48
+   Unrelated       0.68      0.78      0.72       197
+
+    accuracy                           0.69       519
+   macro avg       0.67      0.67      0.67       519
+weighted avg       0.71      0.69      0.69       519
+
+[2021-09-21 17:20:24,379][root][INFO] - Accuracy : 0.6917148362235067
+[2021-09-21 17:20:24,381][root][INFO] - Weighted f1 score : 0.6917487745835319
+[2021-09-21 17:20:24,381][root][INFO] - SVC Model kernel=rbf, c=1.5
+[2021-09-21 17:21:14,184][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:21:16,931][root][INFO] - Model:SVC, Out_path:outputc=1.5_ADASYN.png
+[2021-09-21 17:21:16,940][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.71      0.68       111
+     Discuss       0.80      0.61      0.69       163
+    Notagree       0.53      0.60      0.56        48
+   Unrelated       0.68      0.76      0.72       197
+
+    accuracy                           0.69       519
+   macro avg       0.67      0.67      0.66       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 17:21:16,941][root][INFO] - Accuracy : 0.6878612716763006
+[2021-09-21 17:21:16,943][root][INFO] - Weighted f1 score : 0.6881132649579575
+[2021-09-21 17:21:16,943][root][INFO] - SVC Model kernel=rbf, c=2.0
+[2021-09-21 17:22:06,716][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:22:09,427][root][INFO] - Model:SVC, Out_path:outputc=2.0_ADASYN.png
+[2021-09-21 17:22:09,437][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.70      0.68       111
+     Discuss       0.77      0.61      0.68       163
+    Notagree       0.56      0.60      0.58        48
+   Unrelated       0.70      0.78      0.74       197
+
+    accuracy                           0.69       519
+   macro avg       0.67      0.67      0.67       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 17:22:09,437][root][INFO] - Accuracy : 0.6917148362235067
+[2021-09-21 17:22:09,439][root][INFO] - Weighted f1 score : 0.6908728470677591
+[2021-09-21 17:22:09,440][root][INFO] - SVC Model kernel=rbf, c=2.5
+[2021-09-21 17:22:59,796][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:23:02,273][root][INFO] - Model:SVC, Out_path:outputc=2.5_ADASYN.png
+[2021-09-21 17:23:02,283][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.72      0.69       111
+     Discuss       0.77      0.63      0.69       163
+    Notagree       0.59      0.60      0.60        48
+   Unrelated       0.70      0.78      0.74       197
+
+    accuracy                           0.70       519
+   macro avg       0.68      0.68      0.68       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 17:23:02,283][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-21 17:23:02,285][root][INFO] - Weighted f1 score : 0.7005021641696527
+[2021-09-21 17:23:02,286][root][INFO] - SVC Model kernel=rbf, c=3.0
+[2021-09-21 17:23:51,827][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:23:54,500][root][INFO] - Model:SVC, Out_path:outputc=3.0_ADASYN.png
+[2021-09-21 17:23:54,509][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.70      0.68       111
+     Discuss       0.77      0.63      0.70       163
+    Notagree       0.60      0.60      0.60        48
+   Unrelated       0.70      0.77      0.73       197
+
+    accuracy                           0.70       519
+   macro avg       0.68      0.68      0.68       519
+weighted avg       0.70      0.70      0.70       519
+
+[2021-09-21 17:23:54,509][root][INFO] - Accuracy : 0.697495183044316
+[2021-09-21 17:23:54,511][root][INFO] - Weighted f1 score : 0.6969338379290325
+[2021-09-21 17:23:54,512][root][INFO] - SVC Model kernel=rbf, c=3.5
+[2021-09-21 17:24:44,633][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:24:47,307][root][INFO] - Model:SVC, Out_path:outputc=3.5_ADASYN.png
+[2021-09-21 17:24:47,317][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.71      0.68       111
+     Discuss       0.78      0.64      0.70       163
+    Notagree       0.62      0.60      0.61        48
+   Unrelated       0.70      0.77      0.73       197
+
+    accuracy                           0.70       519
+   macro avg       0.68      0.68      0.68       519
+weighted avg       0.70      0.70      0.70       519
+
+[2021-09-21 17:24:47,317][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 17:24:47,319][root][INFO] - Weighted f1 score : 0.6990053956531879
+[2021-09-21 17:24:47,320][root][INFO] - SVC Model kernel=rbf, c=4.0
+[2021-09-21 17:25:37,449][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:25:40,286][root][INFO] - Model:SVC, Out_path:outputc=4.0_ADASYN.png
+[2021-09-21 17:25:40,296][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.64      0.69      0.66       111
+     Discuss       0.74      0.64      0.69       163
+    Notagree       0.64      0.60      0.62        48
+   Unrelated       0.70      0.76      0.73       197
+
+    accuracy                           0.69       519
+   macro avg       0.68      0.67      0.68       519
+weighted avg       0.69      0.69      0.69       519
+
+[2021-09-21 17:25:40,297][root][INFO] - Accuracy : 0.6917148362235067
+[2021-09-21 17:25:40,299][root][INFO] - Weighted f1 score : 0.691129621669227
+[2021-09-21 17:25:40,299][root][INFO] - SVC Model kernel=rbf, c=4.5
+[2021-09-21 17:26:30,897][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:26:33,546][root][INFO] - Model:SVC, Out_path:outputc=4.5_ADASYN.png
+[2021-09-21 17:26:33,556][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.64      0.68      0.66       111
+     Discuss       0.72      0.65      0.68       163
+    Notagree       0.65      0.58      0.62        48
+   Unrelated       0.70      0.75      0.73       197
+
+    accuracy                           0.69       519
+   macro avg       0.68      0.67      0.67       519
+weighted avg       0.69      0.69      0.69       519
+
+[2021-09-21 17:26:33,556][root][INFO] - Accuracy : 0.6897880539499036
+[2021-09-21 17:26:33,558][root][INFO] - Weighted f1 score : 0.6890324736089488
+[2021-09-21 17:26:33,559][root][INFO] - SVC Model kernel=poly, c=1.0, degree = 1
+[2021-09-21 17:27:24,131][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:27:26,372][root][INFO] - Model:SVC, Out_path:outputc=1.0_ADASYN.png
+[2021-09-21 17:27:26,382][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.72      0.69       111
+     Discuss       0.81      0.55      0.66       163
+    Notagree       0.53      0.65      0.58        48
+   Unrelated       0.68      0.78      0.72       197
+
+    accuracy                           0.68       519
+   macro avg       0.67      0.68      0.66       519
+weighted avg       0.70      0.68      0.68       519
+
+[2021-09-21 17:27:26,383][root][INFO] - Accuracy : 0.6840077071290944
+[2021-09-21 17:27:26,385][root][INFO] - Weighted f1 score : 0.6824897091414508
+[2021-09-21 17:27:26,386][root][INFO] - SVC Model kernel=poly, c=1.0, degree = 2
+[2021-09-21 17:28:21,147][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:28:23,146][root][INFO] - Model:SVC, Out_path:outputc=1.0_ADASYN.png
+[2021-09-21 17:28:23,156][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.71      0.69       111
+     Discuss       0.81      0.56      0.66       163
+    Notagree       0.53      0.60      0.56        48
+   Unrelated       0.67      0.79      0.72       197
+
+    accuracy                           0.68       519
+   macro avg       0.67      0.67      0.66       519
+weighted avg       0.70      0.68      0.68       519
+
+[2021-09-21 17:28:23,157][root][INFO] - Accuracy : 0.6820809248554913
+[2021-09-21 17:28:23,159][root][INFO] - Weighted f1 score : 0.6803912179428718
+[2021-09-21 17:28:23,159][root][INFO] - SVC Model kernel=poly, c=1.0, degree = 3
+[2021-09-21 17:29:13,473][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:29:15,733][root][INFO] - Model:SVC, Out_path:outputc=1.0_ADASYN.png
+[2021-09-21 17:29:15,742][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.73      0.69      0.71       111
+     Discuss       0.83      0.55      0.66       163
+    Notagree       0.54      0.56      0.55        48
+   Unrelated       0.64      0.83      0.72       197
+
+    accuracy                           0.69       519
+   macro avg       0.68      0.66      0.66       519
+weighted avg       0.71      0.69      0.68       519
+
+[2021-09-21 17:29:15,743][root][INFO] - Accuracy : 0.6859344894026975
+[2021-09-21 17:29:15,746][root][INFO] - Weighted f1 score : 0.6829534717254945
+[2021-09-21 17:29:15,746][root][INFO] - SVC Model kernel=poly, c=1.0, degree = 4
+[2021-09-21 17:30:05,147][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:30:07,244][root][INFO] - Model:SVC, Out_path:outputc=1.0_ADASYN.png
+[2021-09-21 17:30:07,254][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.76      0.64      0.69       111
+     Discuss       0.85      0.53      0.66       163
+    Notagree       0.58      0.52      0.55        48
+   Unrelated       0.62      0.88      0.73       197
+
+    accuracy                           0.69       519
+   macro avg       0.70      0.64      0.66       519
+weighted avg       0.72      0.69      0.68       519
+
+[2021-09-21 17:30:07,254][root][INFO] - Accuracy : 0.6859344894026975
+[2021-09-21 17:30:07,257][root][INFO] - Weighted f1 score : 0.6805108304029642
+[2021-09-21 17:30:07,257][root][INFO] - SVC Model kernel=poly, c=1.5, degree = 1
+[2021-09-21 17:30:56,266][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:30:58,320][root][INFO] - Model:SVC, Out_path:outputc=1.5_ADASYN.png
+[2021-09-21 17:30:58,330][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.74      0.70       111
+     Discuss       0.81      0.58      0.67       163
+    Notagree       0.53      0.65      0.58        48
+   Unrelated       0.69      0.77      0.72       197
+
+    accuracy                           0.69       519
+   macro avg       0.67      0.68      0.67       519
+weighted avg       0.71      0.69      0.69       519
+
+[2021-09-21 17:30:58,331][root][INFO] - Accuracy : 0.6897880539499036
+[2021-09-21 17:30:58,333][root][INFO] - Weighted f1 score : 0.6893709097825595
+[2021-09-21 17:30:58,333][root][INFO] - SVC Model kernel=poly, c=1.5, degree = 2
+[2021-09-21 17:31:48,316][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:31:50,315][root][INFO] - Model:SVC, Out_path:outputc=1.5_ADASYN.png
+[2021-09-21 17:31:50,324][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.69      0.68       111
+     Discuss       0.79      0.59      0.68       163
+    Notagree       0.54      0.62      0.58        48
+   Unrelated       0.67      0.77      0.72       197
+
+    accuracy                           0.68       519
+   macro avg       0.67      0.67      0.66       519
+weighted avg       0.70      0.68      0.68       519
+
+[2021-09-21 17:31:50,325][root][INFO] - Accuracy : 0.6840077071290944
+[2021-09-21 17:31:50,327][root][INFO] - Weighted f1 score : 0.6835682889236225
+[2021-09-21 17:31:50,327][root][INFO] - SVC Model kernel=poly, c=1.5, degree = 3
+[2021-09-21 17:32:39,384][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:32:41,608][root][INFO] - Model:SVC, Out_path:outputc=1.5_ADASYN.png
+[2021-09-21 17:32:41,617][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.72      0.68      0.70       111
+     Discuss       0.80      0.56      0.66       163
+    Notagree       0.54      0.54      0.54        48
+   Unrelated       0.64      0.82      0.72       197
+
+    accuracy                           0.68       519
+   macro avg       0.68      0.65      0.65       519
+weighted avg       0.70      0.68      0.68       519
+
+[2021-09-21 17:32:41,618][root][INFO] - Accuracy : 0.6820809248554913
+[2021-09-21 17:32:41,620][root][INFO] - Weighted f1 score : 0.6791656656489874
+[2021-09-21 17:32:41,620][root][INFO] - SVC Model kernel=poly, c=1.5, degree = 4
+[2021-09-21 17:33:31,361][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:33:33,332][root][INFO] - Model:SVC, Out_path:outputc=1.5_ADASYN.png
+[2021-09-21 17:33:33,342][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.75      0.68      0.71       111
+     Discuss       0.82      0.53      0.64       163
+    Notagree       0.57      0.52      0.54        48
+   Unrelated       0.63      0.86      0.73       197
+
+    accuracy                           0.69       519
+   macro avg       0.69      0.65      0.66       519
+weighted avg       0.71      0.69      0.68       519
+
+[2021-09-21 17:33:33,342][root][INFO] - Accuracy : 0.6859344894026975
+[2021-09-21 17:33:33,344][root][INFO] - Weighted f1 score : 0.6802215291404312
+[2021-09-21 17:33:33,344][root][INFO] - SVC Model kernel=poly, c=2.0, degree = 1
+[2021-09-21 17:34:22,156][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:34:24,069][root][INFO] - Model:SVC, Out_path:outputc=2.0_ADASYN.png
+[2021-09-21 17:34:24,078][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.74      0.70       111
+     Discuss       0.80      0.60      0.68       163
+    Notagree       0.51      0.62      0.56        48
+   Unrelated       0.69      0.75      0.72       197
+
+    accuracy                           0.69       519
+   macro avg       0.66      0.68      0.67       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 17:34:24,079][root][INFO] - Accuracy : 0.6878612716763006
+[2021-09-21 17:34:24,081][root][INFO] - Weighted f1 score : 0.6883598625101365
+[2021-09-21 17:34:24,081][root][INFO] - SVC Model kernel=poly, c=2.0, degree = 2
+[2021-09-21 17:35:13,691][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:35:15,696][root][INFO] - Model:SVC, Out_path:outputc=2.0_ADASYN.png
+[2021-09-21 17:35:15,705][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.68      0.67       111
+     Discuss       0.79      0.58      0.67       163
+    Notagree       0.54      0.65      0.59        48
+   Unrelated       0.67      0.77      0.72       197
+
+    accuracy                           0.68       519
+   macro avg       0.66      0.67      0.66       519
+weighted avg       0.69      0.68      0.68       519
+
+[2021-09-21 17:35:15,706][root][INFO] - Accuracy : 0.6801541425818882
+[2021-09-21 17:35:15,708][root][INFO] - Weighted f1 score : 0.6794517364871536
+[2021-09-21 17:35:15,708][root][INFO] - SVC Model kernel=poly, c=2.0, degree = 3
+[2021-09-21 17:36:03,812][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:36:05,808][root][INFO] - Model:SVC, Out_path:outputc=2.0_ADASYN.png
+[2021-09-21 17:36:05,818][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.68      0.69       111
+     Discuss       0.79      0.57      0.66       163
+    Notagree       0.56      0.52      0.54        48
+   Unrelated       0.65      0.81      0.72       197
+
+    accuracy                           0.68       519
+   macro avg       0.67      0.65      0.65       519
+weighted avg       0.70      0.68      0.68       519
+
+[2021-09-21 17:36:05,819][root][INFO] - Accuracy : 0.6820809248554913
+[2021-09-21 17:36:05,821][root][INFO] - Weighted f1 score : 0.6790729354156038
+[2021-09-21 17:36:05,821][root][INFO] - SVC Model kernel=poly, c=2.0, degree = 4
+[2021-09-21 17:36:56,833][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:36:58,847][root][INFO] - Model:SVC, Out_path:outputc=2.0_ADASYN.png
+[2021-09-21 17:36:58,856][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.74      0.67      0.70       111
+     Discuss       0.80      0.55      0.65       163
+    Notagree       0.59      0.50      0.54        48
+   Unrelated       0.63      0.85      0.72       197
+
+    accuracy                           0.68       519
+   macro avg       0.69      0.64      0.65       519
+weighted avg       0.70      0.68      0.68       519
+
+[2021-09-21 17:36:58,856][root][INFO] - Accuracy : 0.6840077071290944
+[2021-09-21 17:36:58,859][root][INFO] - Weighted f1 score : 0.6787883308619453
+[2021-09-21 17:36:58,859][root][INFO] - SVC Model kernel=poly, c=2.5, degree = 1
+[2021-09-21 17:37:47,523][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:37:49,579][root][INFO] - Model:SVC, Out_path:outputc=2.5_ADASYN.png
+[2021-09-21 17:37:49,589][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.73      0.69       111
+     Discuss       0.80      0.58      0.67       163
+    Notagree       0.49      0.67      0.57        48
+   Unrelated       0.69      0.74      0.71       197
+
+    accuracy                           0.68       519
+   macro avg       0.66      0.68      0.66       519
+weighted avg       0.70      0.68      0.68       519
+
+[2021-09-21 17:37:49,589][root][INFO] - Accuracy : 0.6820809248554913
+[2021-09-21 17:37:49,592][root][INFO] - Weighted f1 score : 0.6830446365360224
+[2021-09-21 17:37:49,592][root][INFO] - SVC Model kernel=poly, c=2.5, degree = 2
+[2021-09-21 17:38:40,369][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:38:42,346][root][INFO] - Model:SVC, Out_path:outputc=2.5_ADASYN.png
+[2021-09-21 17:38:42,356][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.68      0.67       111
+     Discuss       0.78      0.59      0.67       163
+    Notagree       0.57      0.65      0.61        48
+   Unrelated       0.67      0.78      0.72       197
+
+    accuracy                           0.68       519
+   macro avg       0.67      0.67      0.67       519
+weighted avg       0.69      0.68      0.68       519
+
+[2021-09-21 17:38:42,357][root][INFO] - Accuracy : 0.6840077071290944
+[2021-09-21 17:38:42,359][root][INFO] - Weighted f1 score : 0.6829345742096508
+[2021-09-21 17:38:42,359][root][INFO] - SVC Model kernel=poly, c=2.5, degree = 3
+[2021-09-21 17:39:32,595][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:39:34,567][root][INFO] - Model:SVC, Out_path:outputc=2.5_ADASYN.png
+[2021-09-21 17:39:34,576][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.69      0.69       111
+     Discuss       0.82      0.58      0.68       163
+    Notagree       0.61      0.58      0.60        48
+   Unrelated       0.66      0.82      0.73       197
+
+    accuracy                           0.70       519
+   macro avg       0.69      0.67      0.67       519
+weighted avg       0.71      0.70      0.69       519
+
+[2021-09-21 17:39:34,577][root][INFO] - Accuracy : 0.6955684007707129
+[2021-09-21 17:39:34,579][root][INFO] - Weighted f1 score : 0.6927975590302905
+[2021-09-21 17:39:34,579][root][INFO] - SVC Model kernel=poly, c=2.5, degree = 4
+[2021-09-21 17:40:25,156][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:40:27,221][root][INFO] - Model:SVC, Out_path:outputc=2.5_ADASYN.png
+[2021-09-21 17:40:27,230][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.74      0.68      0.71       111
+     Discuss       0.80      0.56      0.66       163
+    Notagree       0.57      0.50      0.53        48
+   Unrelated       0.64      0.85      0.73       197
+
+    accuracy                           0.69       519
+   macro avg       0.69      0.65      0.66       519
+weighted avg       0.70      0.69      0.68       519
+
+[2021-09-21 17:40:27,231][root][INFO] - Accuracy : 0.6878612716763006
+[2021-09-21 17:40:27,233][root][INFO] - Weighted f1 score : 0.6832099639700915
+[2021-09-21 17:40:27,233][root][INFO] - SVC Model kernel=poly, c=3.0, degree = 1
+[2021-09-21 17:41:16,656][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:41:18,504][root][INFO] - Model:SVC, Out_path:outputc=3.0_ADASYN.png
+[2021-09-21 17:41:18,514][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.74      0.69       111
+     Discuss       0.79      0.59      0.68       163
+    Notagree       0.49      0.67      0.57        48
+   Unrelated       0.70      0.74      0.72       197
+
+    accuracy                           0.69       519
+   macro avg       0.66      0.68      0.66       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 17:41:18,514][root][INFO] - Accuracy : 0.6859344894026975
+[2021-09-21 17:41:18,516][root][INFO] - Weighted f1 score : 0.6870003563162422
+[2021-09-21 17:41:18,517][root][INFO] - SVC Model kernel=poly, c=3.0, degree = 2
+[2021-09-21 17:42:08,431][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:42:10,354][root][INFO] - Model:SVC, Out_path:outputc=3.0_ADASYN.png
+[2021-09-21 17:42:10,364][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.68      0.68       111
+     Discuss       0.79      0.61      0.69       163
+    Notagree       0.59      0.67      0.63        48
+   Unrelated       0.68      0.77      0.72       197
+
+    accuracy                           0.69       519
+   macro avg       0.68      0.68      0.68       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 17:42:10,364][root][INFO] - Accuracy : 0.6917148362235067
+[2021-09-21 17:42:10,367][root][INFO] - Weighted f1 score : 0.6911247517399755
+[2021-09-21 17:42:10,367][root][INFO] - SVC Model kernel=poly, c=3.0, degree = 3
+[2021-09-21 17:43:00,077][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:43:02,038][root][INFO] - Model:SVC, Out_path:outputc=3.0_ADASYN.png
+[2021-09-21 17:43:02,048][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.68      0.69       111
+     Discuss       0.80      0.59      0.68       163
+    Notagree       0.58      0.58      0.58        48
+   Unrelated       0.66      0.81      0.73       197
+
+    accuracy                           0.69       519
+   macro avg       0.68      0.67      0.67       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 17:43:02,048][root][INFO] - Accuracy : 0.6936416184971098
+[2021-09-21 17:43:02,050][root][INFO] - Weighted f1 score : 0.6914400857035584
+[2021-09-21 17:43:02,051][root][INFO] - SVC Model kernel=poly, c=3.0, degree = 4
+[2021-09-21 17:43:54,052][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:43:56,188][root][INFO] - Model:SVC, Out_path:outputc=3.0_ADASYN.png
+[2021-09-21 17:43:56,197][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.73      0.68      0.70       111
+     Discuss       0.79      0.56      0.66       163
+    Notagree       0.57      0.50      0.53        48
+   Unrelated       0.63      0.83      0.72       197
+
+    accuracy                           0.68       519
+   macro avg       0.68      0.64      0.65       519
+weighted avg       0.70      0.68      0.68       519
+
+[2021-09-21 17:43:56,198][root][INFO] - Accuracy : 0.6820809248554913
+[2021-09-21 17:43:56,200][root][INFO] - Weighted f1 score : 0.678322155973631
+[2021-09-21 17:43:56,200][root][INFO] - SVC Model kernel=poly, c=3.5, degree = 1
+[2021-09-21 17:44:45,811][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:44:47,705][root][INFO] - Model:SVC, Out_path:outputc=3.5_ADASYN.png
+[2021-09-21 17:44:47,715][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.74      0.69       111
+     Discuss       0.79      0.59      0.67       163
+    Notagree       0.52      0.69      0.59        48
+   Unrelated       0.71      0.75      0.73       197
+
+    accuracy                           0.69       519
+   macro avg       0.67      0.69      0.67       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 17:44:47,716][root][INFO] - Accuracy : 0.6897880539499036
+[2021-09-21 17:44:47,718][root][INFO] - Weighted f1 score : 0.6901731174430195
+[2021-09-21 17:44:47,718][root][INFO] - SVC Model kernel=poly, c=3.5, degree = 2
+[2021-09-21 17:45:38,043][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:45:39,985][root][INFO] - Model:SVC, Out_path:outputc=3.5_ADASYN.png
+[2021-09-21 17:45:39,995][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.71      0.68       111
+     Discuss       0.80      0.62      0.70       163
+    Notagree       0.58      0.67      0.62        48
+   Unrelated       0.69      0.76      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.68      0.69      0.68       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 17:45:39,995][root][INFO] - Accuracy : 0.697495183044316
+[2021-09-21 17:45:39,997][root][INFO] - Weighted f1 score : 0.6976642679046093
+[2021-09-21 17:45:39,997][root][INFO] - SVC Model kernel=poly, c=3.5, degree = 3
+[2021-09-21 17:46:30,558][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:46:32,489][root][INFO] - Model:SVC, Out_path:outputc=3.5_ADASYN.png
+[2021-09-21 17:46:32,499][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.68      0.67       111
+     Discuss       0.79      0.59      0.68       163
+    Notagree       0.58      0.58      0.58        48
+   Unrelated       0.67      0.80      0.73       197
+
+    accuracy                           0.69       519
+   macro avg       0.68      0.66      0.66       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 17:46:32,499][root][INFO] - Accuracy : 0.6878612716763006
+[2021-09-21 17:46:32,502][root][INFO] - Weighted f1 score : 0.685869433942918
+[2021-09-21 17:46:32,502][root][INFO] - SVC Model kernel=poly, c=3.5, degree = 4
+[2021-09-21 17:47:24,277][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:47:26,429][root][INFO] - Model:SVC, Out_path:outputc=3.5_ADASYN.png
+[2021-09-21 17:47:26,439][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.71      0.68      0.69       111
+     Discuss       0.78      0.58      0.66       163
+    Notagree       0.57      0.50      0.53        48
+   Unrelated       0.63      0.81      0.71       197
+
+    accuracy                           0.68       519
+   macro avg       0.67      0.64      0.65       519
+weighted avg       0.69      0.68      0.68       519
+
+[2021-09-21 17:47:26,439][root][INFO] - Accuracy : 0.6782273603082851
+[2021-09-21 17:47:26,441][root][INFO] - Weighted f1 score : 0.67518220272179
+[2021-09-21 17:47:26,442][root][INFO] - SVC Model kernel=poly, c=4.0, degree = 1
+[2021-09-21 17:48:15,915][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:48:17,909][root][INFO] - Model:SVC, Out_path:outputc=4.0_ADASYN.png
+[2021-09-21 17:48:17,919][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.64      0.74      0.68       111
+     Discuss       0.78      0.60      0.67       163
+    Notagree       0.52      0.67      0.58        48
+   Unrelated       0.71      0.74      0.73       197
+
+    accuracy                           0.69       519
+   macro avg       0.66      0.68      0.67       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 17:48:17,920][root][INFO] - Accuracy : 0.6859344894026975
+[2021-09-21 17:48:17,922][root][INFO] - Weighted f1 score : 0.6867069052762694
+[2021-09-21 17:48:17,922][root][INFO] - SVC Model kernel=poly, c=4.0, degree = 2
+[2021-09-21 17:49:09,479][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:49:11,373][root][INFO] - Model:SVC, Out_path:outputc=4.0_ADASYN.png
+[2021-09-21 17:49:11,383][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.70      0.68       111
+     Discuss       0.80      0.61      0.69       163
+    Notagree       0.57      0.65      0.61        48
+   Unrelated       0.69      0.78      0.73       197
+
+    accuracy                           0.70       519
+   macro avg       0.68      0.68      0.68       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 17:49:11,383][root][INFO] - Accuracy : 0.6955684007707129
+[2021-09-21 17:49:11,386][root][INFO] - Weighted f1 score : 0.6951941854075778
+[2021-09-21 17:49:11,386][root][INFO] - SVC Model kernel=poly, c=4.0, degree = 3
+[2021-09-21 17:50:01,456][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:50:03,470][root][INFO] - Model:SVC, Out_path:outputc=4.0_ADASYN.png
+[2021-09-21 17:50:03,480][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.68      0.66       111
+     Discuss       0.77      0.60      0.67       163
+    Notagree       0.60      0.58      0.59        48
+   Unrelated       0.67      0.78      0.72       197
+
+    accuracy                           0.68       519
+   macro avg       0.67      0.66      0.66       519
+weighted avg       0.69      0.68      0.68       519
+
+[2021-09-21 17:50:03,480][root][INFO] - Accuracy : 0.6820809248554913
+[2021-09-21 17:50:03,483][root][INFO] - Weighted f1 score : 0.6804620428518221
+[2021-09-21 17:50:03,483][root][INFO] - SVC Model kernel=poly, c=4.0, degree = 4
+[2021-09-21 17:50:53,557][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:50:55,789][root][INFO] - Model:SVC, Out_path:outputc=4.0_ADASYN.png
+[2021-09-21 17:50:55,799][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.68      0.69       111
+     Discuss       0.77      0.59      0.67       163
+    Notagree       0.59      0.50      0.54        48
+   Unrelated       0.64      0.80      0.71       197
+
+    accuracy                           0.68       519
+   macro avg       0.67      0.64      0.65       519
+weighted avg       0.69      0.68      0.68       519
+
+[2021-09-21 17:50:55,800][root][INFO] - Accuracy : 0.6801541425818882
+[2021-09-21 17:50:55,802][root][INFO] - Weighted f1 score : 0.6771756376429642
+[2021-09-21 17:50:55,803][root][INFO] - SVC Model kernel=poly, c=4.5, degree = 1
+[2021-09-21 17:51:47,016][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:51:48,816][root][INFO] - Model:SVC, Out_path:outputc=4.5_ADASYN.png
+[2021-09-21 17:51:48,826][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.64      0.74      0.69       111
+     Discuss       0.77      0.60      0.67       163
+    Notagree       0.51      0.67      0.58        48
+   Unrelated       0.71      0.73      0.72       197
+
+    accuracy                           0.68       519
+   macro avg       0.66      0.68      0.66       519
+weighted avg       0.70      0.68      0.68       519
+
+[2021-09-21 17:51:48,827][root][INFO] - Accuracy : 0.6840077071290944
+[2021-09-21 17:51:48,829][root][INFO] - Weighted f1 score : 0.6848886580642077
+[2021-09-21 17:51:48,829][root][INFO] - SVC Model kernel=poly, c=4.5, degree = 2
+[2021-09-21 17:52:38,551][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:52:40,606][root][INFO] - Model:SVC, Out_path:outputc=4.5_ADASYN.png
+[2021-09-21 17:52:40,615][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.69      0.67       111
+     Discuss       0.79      0.61      0.69       163
+    Notagree       0.61      0.65      0.63        48
+   Unrelated       0.69      0.78      0.73       197
+
+    accuracy                           0.70       519
+   macro avg       0.68      0.68      0.68       519
+weighted avg       0.70      0.70      0.69       519
+
+[2021-09-21 17:52:40,616][root][INFO] - Accuracy : 0.6955684007707129
+[2021-09-21 17:52:40,618][root][INFO] - Weighted f1 score : 0.6949272832617847
+[2021-09-21 17:52:40,618][root][INFO] - SVC Model kernel=poly, c=4.5, degree = 3
+[2021-09-21 17:53:30,573][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:53:32,641][root][INFO] - Model:SVC, Out_path:outputc=4.5_ADASYN.png
+[2021-09-21 17:53:32,651][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.68      0.67       111
+     Discuss       0.77      0.61      0.68       163
+    Notagree       0.60      0.58      0.59        48
+   Unrelated       0.68      0.79      0.73       197
+
+    accuracy                           0.69       519
+   macro avg       0.68      0.67      0.67       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 17:53:32,651][root][INFO] - Accuracy : 0.6897880539499036
+[2021-09-21 17:53:32,654][root][INFO] - Weighted f1 score : 0.6882891371357163
+[2021-09-21 17:53:32,654][root][INFO] - SVC Model kernel=poly, c=4.5, degree = 4
+[2021-09-21 17:54:23,142][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:54:25,447][root][INFO] - Model:SVC, Out_path:outputc=4.5_ADASYN.png
+[2021-09-21 17:54:25,456][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.68      0.69       111
+     Discuss       0.76      0.59      0.66       163
+    Notagree       0.56      0.48      0.52        48
+   Unrelated       0.64      0.80      0.71       197
+
+    accuracy                           0.68       519
+   macro avg       0.67      0.64      0.64       519
+weighted avg       0.68      0.68      0.67       519
+
+[2021-09-21 17:54:25,457][root][INFO] - Accuracy : 0.6763005780346821
+[2021-09-21 17:54:25,459][root][INFO] - Weighted f1 score : 0.6732678598012062
+[2021-09-21 17:54:25,459][root][INFO] - SVC Model kernel=sigmoid, c=1.0
+[2021-09-21 17:55:14,957][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:55:17,219][root][INFO] - Model:SVC, Out_path:outputc=1.0_ADASYN.png
+[2021-09-21 17:55:17,229][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.55      0.75      0.63       111
+     Discuss       0.83      0.53      0.64       163
+    Notagree       0.52      0.60      0.56        48
+   Unrelated       0.69      0.72      0.70       197
+
+    accuracy                           0.66       519
+   macro avg       0.64      0.65      0.63       519
+weighted avg       0.68      0.66      0.66       519
+
+[2021-09-21 17:55:17,230][root][INFO] - Accuracy : 0.6551059730250481
+[2021-09-21 17:55:17,232][root][INFO] - Weighted f1 score : 0.6557205416268507
+[2021-09-21 17:55:17,232][root][INFO] - SVC Model kernel=sigmoid, c=1.5
+[2021-09-21 17:56:06,429][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:56:08,829][root][INFO] - Model:SVC, Out_path:outputc=1.5_ADASYN.png
+[2021-09-21 17:56:08,840][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.52      0.75      0.61       111
+     Discuss       0.84      0.54      0.66       163
+    Notagree       0.53      0.58      0.55        48
+   Unrelated       0.70      0.72      0.71       197
+
+    accuracy                           0.66       519
+   macro avg       0.65      0.65      0.63       519
+weighted avg       0.69      0.66      0.66       519
+
+[2021-09-21 17:56:08,840][root][INFO] - Accuracy : 0.6551059730250481
+[2021-09-21 17:56:08,843][root][INFO] - Weighted f1 score : 0.6572951149455741
+[2021-09-21 17:56:08,843][root][INFO] - SVC Model kernel=sigmoid, c=2.0
+[2021-09-21 17:56:59,216][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:57:01,436][root][INFO] - Model:SVC, Out_path:outputc=2.0_ADASYN.png
+[2021-09-21 17:57:01,446][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.54      0.77      0.63       111
+     Discuss       0.83      0.53      0.65       163
+    Notagree       0.47      0.56      0.51        48
+   Unrelated       0.69      0.70      0.69       197
+
+    accuracy                           0.65       519
+   macro avg       0.63      0.64      0.62       519
+weighted avg       0.68      0.65      0.65       519
+
+[2021-09-21 17:57:01,446][root][INFO] - Accuracy : 0.6473988439306358
+[2021-09-21 17:57:01,448][root][INFO] - Weighted f1 score : 0.649325080861097
+[2021-09-21 17:57:01,448][root][INFO] - SVC Model kernel=sigmoid, c=2.5
+[2021-09-21 17:57:50,237][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:57:52,413][root][INFO] - Model:SVC, Out_path:outputc=2.5_ADASYN.png
+[2021-09-21 17:57:52,424][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.52      0.77      0.62       111
+     Discuss       0.84      0.50      0.63       163
+    Notagree       0.48      0.60      0.53        48
+   Unrelated       0.70      0.69      0.69       197
+
+    accuracy                           0.64       519
+   macro avg       0.63      0.64      0.62       519
+weighted avg       0.68      0.64      0.64       519
+
+[2021-09-21 17:57:52,424][root][INFO] - Accuracy : 0.6396917148362236
+[2021-09-21 17:57:52,426][root][INFO] - Weighted f1 score : 0.6416689462635429
+[2021-09-21 17:57:52,427][root][INFO] - SVC Model kernel=sigmoid, c=3.0
+[2021-09-21 17:58:43,620][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:58:45,762][root][INFO] - Model:SVC, Out_path:outputc=3.0_ADASYN.png
+[2021-09-21 17:58:45,771][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.52      0.76      0.62       111
+     Discuss       0.79      0.49      0.61       163
+    Notagree       0.47      0.62      0.54        48
+   Unrelated       0.69      0.68      0.68       197
+
+    accuracy                           0.63       519
+   macro avg       0.62      0.64      0.61       519
+weighted avg       0.67      0.63      0.63       519
+
+[2021-09-21 17:58:45,772][root][INFO] - Accuracy : 0.630057803468208
+[2021-09-21 17:58:45,774][root][INFO] - Weighted f1 score : 0.6310585132523703
+[2021-09-21 17:58:45,775][root][INFO] - SVC Model kernel=sigmoid, c=3.5
+[2021-09-21 17:59:36,292][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 17:59:38,338][root][INFO] - Model:SVC, Out_path:outputc=3.5_ADASYN.png
+[2021-09-21 17:59:38,350][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.52      0.77      0.62       111
+     Discuss       0.79      0.52      0.63       163
+    Notagree       0.47      0.60      0.53        48
+   Unrelated       0.72      0.68      0.70       197
+
+    accuracy                           0.64       519
+   macro avg       0.62      0.64      0.62       519
+weighted avg       0.68      0.64      0.64       519
+
+[2021-09-21 17:59:38,350][root][INFO] - Accuracy : 0.6396917148362236
+[2021-09-21 17:59:38,353][root][INFO] - Weighted f1 score : 0.6425554840603391
+[2021-09-21 17:59:38,353][root][INFO] - SVC Model kernel=sigmoid, c=4.0
+[2021-09-21 18:00:28,964][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 18:00:31,226][root][INFO] - Model:SVC, Out_path:outputc=4.0_ADASYN.png
+[2021-09-21 18:00:31,236][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.52      0.77      0.62       111
+     Discuss       0.77      0.52      0.62       163
+    Notagree       0.46      0.60      0.52        48
+   Unrelated       0.72      0.67      0.69       197
+
+    accuracy                           0.64       519
+   macro avg       0.62      0.64      0.62       519
+weighted avg       0.67      0.64      0.64       519
+
+[2021-09-21 18:00:31,236][root][INFO] - Accuracy : 0.6377649325626205
+[2021-09-21 18:00:31,239][root][INFO] - Weighted f1 score : 0.6402980416499722
+[2021-09-21 18:00:31,239][root][INFO] - SVC Model kernel=sigmoid, c=4.5
+[2021-09-21 18:01:21,075][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-21 18:01:22,972][root][INFO] - Model:SVC, Out_path:outputc=4.5_ADASYN.png
+[2021-09-21 18:01:22,982][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.52      0.76      0.61       111
+     Discuss       0.73      0.51      0.60       163
+    Notagree       0.45      0.58      0.51        48
+   Unrelated       0.73      0.67      0.70       197
+
+    accuracy                           0.63       519
+   macro avg       0.61      0.63      0.61       519
+weighted avg       0.66      0.63      0.63       519
+
+[2021-09-21 18:01:22,983][root][INFO] - Accuracy : 0.630057803468208
+[2021-09-21 18:01:22,985][root][INFO] - Weighted f1 score : 0.6322337628288467

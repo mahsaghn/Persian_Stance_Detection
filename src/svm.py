@@ -137,19 +137,19 @@ def main(cfg: H2CBaselineConfig):
         if labels[l][0] == 'Disagree':
             labels[l][0] = "Notagree"
 
-    kernels = ['rbf']#, 'poly', 'sigmoid']
+    kernels = ['rbf', 'poly', 'sigmoid']
     for kernel in kernels:
         ranges =  np.arange(1.0, 5.0, 0.5)
         for c in ranges:
             if kernel == 'poly':
                 for degree in range(1,5):
-                    logging.info('SVC Model')
+                    logging.info('SVC Model kernel={}, c={}, degree = {}'.format(kernel, c, degree))
                     model = SVC(C=c, class_weight='balanced', coef0=cfg.svc.coef0,
                                 decision_function_shape='ovo', degree=degree, gamma='scale', kernel=kernel,
                                 max_iter=-1, shrinking=True, tol=cfg.svc.tol)
                     common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name+'c={}'.format(c))
             else:
-                logging.info('SVC Model')
+                logging.info('SVC Model kernel={}, c={}'.format(kernel, c))
                 model = SVC(C=c, class_weight='balanced', coef0=cfg.svc.coef0,
                             decision_function_shape='ovo', degree=cfg.svc.degree, gamma='scale', kernel=kernel,
                             max_iter=-1, shrinking=True, tol=cfg.svc.tol)
