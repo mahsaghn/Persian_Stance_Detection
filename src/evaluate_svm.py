@@ -57,7 +57,7 @@ def common_train_test(cfg:H2CBaselineConfig, model, X, Y, features_name=''):
     X_train,y_train, X_test, y_test = get_train_test(cfg, X, Y)
     model.fit(X_train, y_train)
     plot_confusion_matrix(estimator=model, X=X_test, y_true=y_test, cmap='OrRd')
-    plt.savefig('output'+model_name+'_'+features_name+'_'+cfg.oversampling+'.png',bbox_inches='tight')
+    plt.savefig('output'+model_name+'_'+features_name+'_'+'.png',bbox_inches='tight')
 
     y_pred = model.predict(X_test)
     labels_name = np.unique(Y)
@@ -79,7 +79,7 @@ def main(cfg: H2CBaselineConfig):
             labels[l][0] = "Notagree"
     # print(metrics.SCORERS.keys())
     logging.info('SVC Model')
-    model = SVC(C=10, break_ties=False, cache_size=200, class_weight='balanced', coef0=0.0,
+    model = SVC(C=3.0, break_ties=False, cache_size=200, class_weight='balanced', coef0=0.0,
                 decision_function_shape='ovo', degree=3, gamma='scale', kernel='rbf',
                 max_iter=-1, probability=False, random_state=None, shrinking=True,
                 tol=0.001, verbose=False)
