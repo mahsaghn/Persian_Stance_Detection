@@ -265,6 +265,20 @@ class PSFeatureExtractor():
                     features[i][j] = 1
         return features
 
+    def is_question_fea(self):
+        features = np.zeros((len(self.clean_claims_headlines), 1))
+        for i in range(len(self.claims)):
+            if '?' in self.claims[i] or '؟' in self.claims[i]:
+                features[i][0] = 1.0
+        return features
+
+    def more_part_fea(self):
+        features = np.zeros((len(self.clean_claims_headlines), 1))
+        for i in range(len(self.claims)):
+            if '.' in self.claims[i] :
+                features[i][0] = 1.0
+        return features
+
     def root_distance_fea(self, target_sentences=None):  # target_sentences = clean_headlines
         if target_sentences == None:
             target_sentences = [' '.join(headline_tok) for headline_tok in self.tokens_headlines]
@@ -378,10 +392,11 @@ class PSFeatureExtractor():
             features = np.append(features, important_words_feature, axis=1)
             logging.info('End of important words feature')
         # -------------- is question ----------
-        if not self.cfg.is_question:
-            features = features[:, 1:]
-        else:
-            logging.info('"is question" feature was added.')
+        if  self.cfg.is_question:
+            print('Start to generate is_question feature')
+            is_question_feature = self.is_question_fea()
+            features = np.append(features, is_question_feature, axis=1)
+            logging.info('End of is_question feature')
         # -------------- more than tow parts ----------
         if self.cfg.more_than2_parts:
             features = np.append(features, np.reshape(self.hasTowParts, (len(self.hasTowParts), 1)), axis=1)
