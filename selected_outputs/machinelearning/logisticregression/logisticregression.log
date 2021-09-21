@@ -1,0 +1,1763 @@
+[2021-09-21 18:58:28,636][root][INFO] - hazm tokenizer
+[2021-09-21 18:58:30,447][root][INFO] - End of tf_idf feature
+[2021-09-21 18:58:30,769][root][INFO] - End of similarity feature
+[2021-09-21 18:58:30,776][root][INFO] - End of important words feature
+[2021-09-21 18:58:30,781][root][INFO] - End of is_question feature
+[2021-09-21 18:58:30,786][root][INFO] - "more than tow parts" feature was added.
+[2021-09-21 18:58:30,919][root][INFO] - End of polarity feature
+[2021-09-21 18:58:30,920][root][INFO] - Feature set (2594, 839):
+[2021-09-21 18:58:30,921][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=0.5---erange0.0
+[2021-09-21 18:58:31,812][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c0.5_e0.0_ADASYN.png
+[2021-09-21 18:58:31,821][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.71      0.68       111
+     Discuss       0.78      0.63      0.70       163
+    Notagree       0.92      0.25      0.39        48
+   Unrelated       0.65      0.84      0.74       197
+
+    accuracy                           0.69       519
+   macro avg       0.75      0.61      0.63       519
+weighted avg       0.72      0.69      0.68       519
+
+[2021-09-21 18:58:31,822][root][INFO] - Accuracy : 0.6917148362235067
+[2021-09-21 18:58:31,824][root][INFO] - Weighted f1 score : 0.6795060547771566
+[2021-09-21 18:58:31,824][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=0.5---erange0.1
+[2021-09-21 18:58:33,269][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c0.5_e0.1_ADASYN.png
+[2021-09-21 18:58:33,278][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.72      0.69       111
+     Discuss       0.80      0.63      0.71       163
+    Notagree       0.92      0.23      0.37        48
+   Unrelated       0.65      0.85      0.74       197
+
+    accuracy                           0.70       519
+   macro avg       0.76      0.61      0.63       519
+weighted avg       0.73      0.70      0.68       519
+
+[2021-09-21 18:58:33,279][root][INFO] - Accuracy : 0.697495183044316
+[2021-09-21 18:58:33,281][root][INFO] - Weighted f1 score : 0.6838964000983745
+[2021-09-21 18:58:33,281][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=0.5---erange0.2
+[2021-09-21 18:58:34,866][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c0.5_e0.2_ADASYN.png
+[2021-09-21 18:58:34,875][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.72      0.68       111
+     Discuss       0.80      0.61      0.69       163
+    Notagree       0.85      0.23      0.36        48
+   Unrelated       0.65      0.85      0.73       197
+
+    accuracy                           0.69       519
+   macro avg       0.73      0.60      0.62       519
+weighted avg       0.71      0.69      0.67       519
+
+[2021-09-21 18:58:34,876][root][INFO] - Accuracy : 0.6878612716763006
+[2021-09-21 18:58:34,878][root][INFO] - Weighted f1 score : 0.674277252752226
+[2021-09-21 18:58:34,878][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=0.5---erange0.30000000000000004
+[2021-09-21 18:58:36,591][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c0.5_e0.30000000000000004_ADASYN.png
+[2021-09-21 18:58:36,601][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.73      0.70       111
+     Discuss       0.80      0.61      0.69       163
+    Notagree       0.85      0.23      0.36        48
+   Unrelated       0.66      0.87      0.75       197
+
+    accuracy                           0.70       519
+   macro avg       0.74      0.61      0.62       519
+weighted avg       0.72      0.70      0.68       519
+
+[2021-09-21 18:58:36,602][root][INFO] - Accuracy : 0.697495183044316
+[2021-09-21 18:58:36,604][root][INFO] - Weighted f1 score : 0.6827882439113618
+[2021-09-21 18:58:36,604][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=0.5---erange0.4
+[2021-09-21 18:58:38,359][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c0.5_e0.4_ADASYN.png
+[2021-09-21 18:58:38,381][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.75      0.71       111
+     Discuss       0.82      0.59      0.69       163
+    Notagree       0.86      0.25      0.39        48
+   Unrelated       0.66      0.88      0.75       197
+
+    accuracy                           0.70       519
+   macro avg       0.75      0.62      0.63       519
+weighted avg       0.73      0.70      0.69       519
+
+[2021-09-21 18:58:38,382][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-21 18:58:38,388][root][INFO] - Weighted f1 score : 0.6871241181942527
+[2021-09-21 18:58:38,388][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=0.5---erange0.5
+[2021-09-21 18:58:40,339][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c0.5_e0.5_ADASYN.png
+[2021-09-21 18:58:40,349][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.75      0.70       111
+     Discuss       0.82      0.57      0.67       163
+    Notagree       0.86      0.25      0.39        48
+   Unrelated       0.65      0.87      0.74       197
+
+    accuracy                           0.69       519
+   macro avg       0.75      0.61      0.63       519
+weighted avg       0.72      0.69      0.68       519
+
+[2021-09-21 18:58:40,349][root][INFO] - Accuracy : 0.6936416184971098
+[2021-09-21 18:58:40,351][root][INFO] - Weighted f1 score : 0.6792536069353688
+[2021-09-21 18:58:40,351][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=0.5---erange0.6000000000000001
+[2021-09-21 18:58:42,460][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c0.5_e0.6000000000000001_ADASYN.png
+[2021-09-21 18:58:42,470][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.74      0.69       111
+     Discuss       0.82      0.56      0.66       163
+    Notagree       0.85      0.23      0.36        48
+   Unrelated       0.64      0.88      0.74       197
+
+    accuracy                           0.69       519
+   macro avg       0.74      0.60      0.62       519
+weighted avg       0.72      0.69      0.67       519
+
+[2021-09-21 18:58:42,470][root][INFO] - Accuracy : 0.6878612716763006
+[2021-09-21 18:58:42,472][root][INFO] - Weighted f1 score : 0.6718194895383686
+[2021-09-21 18:58:42,472][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=0.5---erange0.7000000000000001
+[2021-09-21 18:58:44,709][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c0.5_e0.7000000000000001_ADASYN.png
+[2021-09-21 18:58:44,719][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.64      0.75      0.69       111
+     Discuss       0.81      0.56      0.66       163
+    Notagree       0.86      0.25      0.39        48
+   Unrelated       0.65      0.86      0.74       197
+
+    accuracy                           0.69       519
+   macro avg       0.74      0.61      0.62       519
+weighted avg       0.72      0.69      0.67       519
+
+[2021-09-21 18:58:44,719][root][INFO] - Accuracy : 0.6859344894026975
+[2021-09-21 18:58:44,721][root][INFO] - Weighted f1 score : 0.6718642611150268
+[2021-09-21 18:58:44,721][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=0.5---erange0.8
+[2021-09-21 18:58:47,477][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c0.5_e0.8_ADASYN.png
+[2021-09-21 18:58:47,486][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.75      0.70       111
+     Discuss       0.81      0.56      0.66       163
+    Notagree       0.87      0.27      0.41        48
+   Unrelated       0.64      0.86      0.74       197
+
+    accuracy                           0.69       519
+   macro avg       0.74      0.61      0.63       519
+weighted avg       0.72      0.69      0.67       519
+
+[2021-09-21 18:58:47,487][root][INFO] - Accuracy : 0.6878612716763006
+[2021-09-21 18:58:47,489][root][INFO] - Weighted f1 score : 0.6743892885774905
+[2021-09-21 18:58:47,489][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=0.5---erange0.9
+[2021-09-21 18:58:51,615][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c0.5_e0.9_ADASYN.png
+[2021-09-21 18:58:51,625][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.76      0.70       111
+     Discuss       0.80      0.56      0.66       163
+    Notagree       0.81      0.27      0.41        48
+   Unrelated       0.65      0.85      0.74       197
+
+    accuracy                           0.69       519
+   macro avg       0.73      0.61      0.62       519
+weighted avg       0.71      0.69      0.67       519
+
+[2021-09-21 18:58:51,626][root][INFO] - Accuracy : 0.6859344894026975
+[2021-09-21 18:58:51,628][root][INFO] - Weighted f1 score : 0.6727032004277952
+[2021-09-21 18:58:51,628][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.0---erange0.0
+[2021-09-21 18:58:52,933][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.0_e0.0_ADASYN.png
+[2021-09-21 18:58:52,942][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.71      0.69       111
+     Discuss       0.78      0.66      0.72       163
+    Notagree       0.95      0.40      0.56        48
+   Unrelated       0.68      0.84      0.75       197
+
+    accuracy                           0.71       519
+   macro avg       0.77      0.65      0.68       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 18:58:52,943][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 18:58:52,945][root][INFO] - Weighted f1 score : 0.7092062120840288
+[2021-09-21 18:58:52,945][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.0---erange0.1
+[2021-09-21 18:58:55,231][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.0_e0.1_ADASYN.png
+[2021-09-21 18:58:55,241][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.71      0.69       111
+     Discuss       0.77      0.65      0.71       163
+    Notagree       0.95      0.40      0.56        48
+   Unrelated       0.67      0.83      0.75       197
+
+    accuracy                           0.71       519
+   macro avg       0.77      0.65      0.67       519
+weighted avg       0.73      0.71      0.70       519
+
+[2021-09-21 18:58:55,244][root][INFO] - Accuracy : 0.7090558766859345
+[2021-09-21 18:58:55,246][root][INFO] - Weighted f1 score : 0.7035008004740276
+[2021-09-21 18:58:55,246][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.0---erange0.2
+[2021-09-21 18:58:57,641][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.0_e0.2_ADASYN.png
+[2021-09-21 18:58:57,664][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.72      0.70       111
+     Discuss       0.79      0.66      0.72       163
+    Notagree       0.90      0.40      0.55        48
+   Unrelated       0.67      0.84      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.76      0.65      0.68       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 18:58:57,666][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 18:58:57,671][root][INFO] - Weighted f1 score : 0.709311457402472
+[2021-09-21 18:58:57,671][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.0---erange0.30000000000000004
+[2021-09-21 18:59:00,325][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.0_e0.30000000000000004_ADASYN.png
+[2021-09-21 18:59:00,335][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.72      0.70       111
+     Discuss       0.80      0.64      0.71       163
+    Notagree       0.90      0.38      0.53        48
+   Unrelated       0.67      0.84      0.75       197
+
+    accuracy                           0.71       519
+   macro avg       0.76      0.65      0.67       519
+weighted avg       0.73      0.71      0.70       519
+
+[2021-09-21 18:59:00,335][root][INFO] - Accuracy : 0.7109826589595376
+[2021-09-21 18:59:00,337][root][INFO] - Weighted f1 score : 0.7045054628404457
+[2021-09-21 18:59:00,338][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.0---erange0.4
+[2021-09-21 18:59:03,371][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.0_e0.4_ADASYN.png
+[2021-09-21 18:59:03,382][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.73      0.70       111
+     Discuss       0.80      0.65      0.72       163
+    Notagree       0.90      0.40      0.55        48
+   Unrelated       0.67      0.84      0.75       197
+
+    accuracy                           0.72       519
+   macro avg       0.76      0.65      0.68       519
+weighted avg       0.74      0.72      0.71       519
+
+[2021-09-21 18:59:03,383][root][INFO] - Accuracy : 0.7167630057803468
+[2021-09-21 18:59:03,385][root][INFO] - Weighted f1 score : 0.7109816199088491
+[2021-09-21 18:59:03,385][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.0---erange0.5
+[2021-09-21 18:59:06,490][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.0_e0.5_ADASYN.png
+[2021-09-21 18:59:06,499][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.74      0.70       111
+     Discuss       0.80      0.65      0.72       163
+    Notagree       0.89      0.35      0.51        48
+   Unrelated       0.68      0.84      0.75       197
+
+    accuracy                           0.71       519
+   macro avg       0.76      0.65      0.67       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 18:59:06,500][root][INFO] - Accuracy : 0.7129094412331407
+[2021-09-21 18:59:06,502][root][INFO] - Weighted f1 score : 0.7058097918799637
+[2021-09-21 18:59:06,502][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.0---erange0.6000000000000001
+[2021-09-21 18:59:10,033][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.0_e0.6000000000000001_ADASYN.png
+[2021-09-21 18:59:10,042][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.74      0.70       111
+     Discuss       0.80      0.64      0.71       163
+    Notagree       0.86      0.38      0.52        48
+   Unrelated       0.68      0.84      0.75       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.65      0.67       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 18:59:10,043][root][INFO] - Accuracy : 0.7129094412331407
+[2021-09-21 18:59:10,045][root][INFO] - Weighted f1 score : 0.7062215966300271
+[2021-09-21 18:59:10,045][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.0---erange0.7000000000000001
+[2021-09-21 18:59:14,223][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.0_e0.7000000000000001_ADASYN.png
+[2021-09-21 18:59:14,233][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.74      0.69       111
+     Discuss       0.79      0.63      0.70       163
+    Notagree       0.86      0.38      0.52        48
+   Unrelated       0.68      0.84      0.75       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.65      0.67       519
+weighted avg       0.73      0.71      0.70       519
+
+[2021-09-21 18:59:14,233][root][INFO] - Accuracy : 0.7109826589595376
+[2021-09-21 18:59:14,236][root][INFO] - Weighted f1 score : 0.7040948142977259
+[2021-09-21 18:59:14,236][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.0---erange0.8
+[2021-09-21 18:59:19,344][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.0_e0.8_ADASYN.png
+[2021-09-21 18:59:19,354][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.76      0.71       111
+     Discuss       0.79      0.63      0.70       163
+    Notagree       0.78      0.38      0.51        48
+   Unrelated       0.69      0.84      0.76       197
+
+    accuracy                           0.71       519
+   macro avg       0.73      0.65      0.67       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 18:59:19,355][root][INFO] - Accuracy : 0.7129094412331407
+[2021-09-21 18:59:19,357][root][INFO] - Weighted f1 score : 0.7056309936701747
+[2021-09-21 18:59:19,357][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.0---erange0.9
+[2021-09-21 18:59:24,743][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.0_e0.9_ADASYN.png
+[2021-09-21 18:59:24,753][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.75      0.71       111
+     Discuss       0.77      0.61      0.68       163
+    Notagree       0.73      0.40      0.51        48
+   Unrelated       0.68      0.83      0.74       197
+
+    accuracy                           0.70       519
+   macro avg       0.71      0.64      0.66       519
+weighted avg       0.71      0.70      0.69       519
+
+[2021-09-21 18:59:24,753][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-21 18:59:24,756][root][INFO] - Weighted f1 score : 0.694778317067529
+[2021-09-21 18:59:24,756][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.5---erange0.0
+[2021-09-21 18:59:26,331][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.5_e0.0_ADASYN.png
+[2021-09-21 18:59:26,340][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.71      0.70       111
+     Discuss       0.77      0.67      0.72       163
+    Notagree       0.95      0.42      0.58        48
+   Unrelated       0.68      0.83      0.75       197
+
+    accuracy                           0.72       519
+   macro avg       0.77      0.66      0.69       519
+weighted avg       0.74      0.72      0.71       519
+
+[2021-09-21 18:59:26,341][root][INFO] - Accuracy : 0.7186897880539499
+[2021-09-21 18:59:26,343][root][INFO] - Weighted f1 score : 0.7139414068867384
+[2021-09-21 18:59:26,343][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.5---erange0.1
+[2021-09-21 18:59:29,219][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.5_e0.1_ADASYN.png
+[2021-09-21 18:59:29,228][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.70      0.69       111
+     Discuss       0.77      0.66      0.71       163
+    Notagree       0.95      0.44      0.60        48
+   Unrelated       0.67      0.82      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.77      0.66      0.69       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 18:59:29,229][root][INFO] - Accuracy : 0.7109826589595376
+[2021-09-21 18:59:29,231][root][INFO] - Weighted f1 score : 0.7070545007658827
+[2021-09-21 18:59:29,231][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.5---erange0.2
+[2021-09-21 18:59:32,221][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.5_e0.2_ADASYN.png
+[2021-09-21 18:59:32,231][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.71      0.70       111
+     Discuss       0.76      0.66      0.71       163
+    Notagree       0.92      0.46      0.61        48
+   Unrelated       0.67      0.82      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.76      0.66      0.69       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 18:59:32,232][root][INFO] - Accuracy : 0.7109826589595376
+[2021-09-21 18:59:32,234][root][INFO] - Weighted f1 score : 0.7075263644063601
+[2021-09-21 18:59:32,234][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.5---erange0.30000000000000004
+[2021-09-21 18:59:35,434][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.5_e0.30000000000000004_ADASYN.png
+[2021-09-21 18:59:35,443][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.72      0.70       111
+     Discuss       0.78      0.66      0.72       163
+    Notagree       0.88      0.46      0.60        48
+   Unrelated       0.68      0.82      0.74       197
+
+    accuracy                           0.72       519
+   macro avg       0.76      0.67      0.69       519
+weighted avg       0.73      0.72      0.71       519
+
+[2021-09-21 18:59:35,444][root][INFO] - Accuracy : 0.7167630057803468
+[2021-09-21 18:59:35,446][root][INFO] - Weighted f1 score : 0.7131793056476542
+[2021-09-21 18:59:35,446][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.5---erange0.4
+[2021-09-21 18:59:39,160][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.5_e0.4_ADASYN.png
+[2021-09-21 18:59:39,170][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.77      0.65      0.71       163
+    Notagree       0.85      0.46      0.59        48
+   Unrelated       0.68      0.82      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.67      0.69       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 18:59:39,170][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 18:59:39,173][root][INFO] - Weighted f1 score : 0.7109484762181402
+[2021-09-21 18:59:39,173][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.5---erange0.5
+[2021-09-21 18:59:43,380][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.5_e0.5_ADASYN.png
+[2021-09-21 18:59:43,402][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.73      0.70       111
+     Discuss       0.78      0.65      0.71       163
+    Notagree       0.84      0.44      0.58        48
+   Unrelated       0.68      0.82      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.74      0.66      0.68       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 18:59:43,403][root][INFO] - Accuracy : 0.7129094412331407
+[2021-09-21 18:59:43,406][root][INFO] - Weighted f1 score : 0.7086039476284695
+[2021-09-21 18:59:43,406][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.5---erange0.6000000000000001
+[2021-09-21 18:59:48,137][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.5_e0.6000000000000001_ADASYN.png
+[2021-09-21 18:59:48,159][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.77      0.65      0.71       163
+    Notagree       0.84      0.44      0.58        48
+   Unrelated       0.68      0.83      0.75       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.66      0.68       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 18:59:48,160][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 18:59:48,165][root][INFO] - Weighted f1 score : 0.7102606698028799
+[2021-09-21 18:59:48,165][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.5---erange0.7000000000000001
+[2021-09-21 18:59:53,482][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.5_e0.7000000000000001_ADASYN.png
+[2021-09-21 18:59:53,503][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.73      0.70       111
+     Discuss       0.76      0.64      0.70       163
+    Notagree       0.84      0.44      0.58        48
+   Unrelated       0.68      0.81      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.74      0.66      0.68       519
+weighted avg       0.72      0.71      0.70       519
+
+[2021-09-21 18:59:53,504][root][INFO] - Accuracy : 0.7071290944123314
+[2021-09-21 18:59:53,509][root][INFO] - Weighted f1 score : 0.7028332157659575
+[2021-09-21 18:59:53,509][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.5---erange0.8
+[2021-09-21 18:59:58,983][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.5_e0.8_ADASYN.png
+[2021-09-21 18:59:58,992][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.73      0.70       111
+     Discuss       0.77      0.65      0.70       163
+    Notagree       0.81      0.46      0.59        48
+   Unrelated       0.68      0.81      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 18:59:58,993][root][INFO] - Accuracy : 0.7090558766859345
+[2021-09-21 18:59:58,995][root][INFO] - Weighted f1 score : 0.7055076889845117
+[2021-09-21 18:59:58,995][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=1.5---erange0.9
+[2021-09-21 19:00:04,472][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c1.5_e0.9_ADASYN.png
+[2021-09-21 19:00:04,493][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.76      0.64      0.70       163
+    Notagree       0.80      0.50      0.62        48
+   Unrelated       0.68      0.81      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.73      0.67      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:00:04,494][root][INFO] - Accuracy : 0.7109826589595376
+[2021-09-21 19:00:04,499][root][INFO] - Weighted f1 score : 0.7080381143184814
+[2021-09-21 19:00:04,499][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.0---erange0.0
+[2021-09-21 19:00:06,398][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.0_e0.0_ADASYN.png
+[2021-09-21 19:00:06,417][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.71      0.70       111
+     Discuss       0.75      0.67      0.71       163
+    Notagree       0.92      0.46      0.61        48
+   Unrelated       0.67      0.80      0.73       197
+
+    accuracy                           0.71       519
+   macro avg       0.76      0.66      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:00:06,418][root][INFO] - Accuracy : 0.7090558766859345
+[2021-09-21 19:00:06,422][root][INFO] - Weighted f1 score : 0.7059318219766805
+[2021-09-21 19:00:06,422][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.0---erange0.1
+[2021-09-21 19:00:09,812][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.0_e0.1_ADASYN.png
+[2021-09-21 19:00:09,830][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.72      0.70       111
+     Discuss       0.76      0.67      0.71       163
+    Notagree       0.92      0.46      0.61        48
+   Unrelated       0.68      0.81      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.76      0.66      0.69       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 19:00:09,831][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 19:00:09,836][root][INFO] - Weighted f1 score : 0.7115304746668167
+[2021-09-21 19:00:09,836][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.0---erange0.2
+[2021-09-21 19:00:13,286][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.0_e0.2_ADASYN.png
+[2021-09-21 19:00:13,308][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.72      0.70       111
+     Discuss       0.76      0.67      0.71       163
+    Notagree       0.88      0.46      0.60        48
+   Unrelated       0.68      0.81      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.66      0.69       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 19:00:13,309][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 19:00:13,314][root][INFO] - Weighted f1 score : 0.7114055900661503
+[2021-09-21 19:00:13,314][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.0---erange0.30000000000000004
+[2021-09-21 19:00:17,297][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.0_e0.30000000000000004_ADASYN.png
+[2021-09-21 19:00:17,316][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.71      0.70       111
+     Discuss       0.76      0.67      0.71       163
+    Notagree       0.88      0.46      0.60        48
+   Unrelated       0.68      0.81      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.66      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:00:17,317][root][INFO] - Accuracy : 0.7109826589595376
+[2021-09-21 19:00:17,322][root][INFO] - Weighted f1 score : 0.7076938227138162
+[2021-09-21 19:00:17,322][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.0---erange0.4
+[2021-09-21 19:00:21,703][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.0_e0.4_ADASYN.png
+[2021-09-21 19:00:21,712][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.77      0.66      0.71       163
+    Notagree       0.85      0.46      0.59        48
+   Unrelated       0.68      0.81      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.67      0.69       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 19:00:21,712][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 19:00:21,715][root][INFO] - Weighted f1 score : 0.7112617507544633
+[2021-09-21 19:00:21,715][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.0---erange0.5
+[2021-09-21 19:00:26,574][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.0_e0.5_ADASYN.png
+[2021-09-21 19:00:26,583][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.76      0.66      0.71       163
+    Notagree       0.85      0.46      0.59        48
+   Unrelated       0.68      0.81      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.67      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:00:26,583][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 19:00:26,586][root][INFO] - Weighted f1 score : 0.7111936961985269
+[2021-09-21 19:00:26,586][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.0---erange0.6000000000000001
+[2021-09-21 19:00:32,452][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.0_e0.6000000000000001_ADASYN.png
+[2021-09-21 19:00:32,461][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.76      0.66      0.71       163
+    Notagree       0.85      0.46      0.59        48
+   Unrelated       0.68      0.81      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.67      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:00:32,461][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 19:00:32,464][root][INFO] - Weighted f1 score : 0.7111936961985269
+[2021-09-21 19:00:32,464][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.0---erange0.7000000000000001
+[2021-09-21 19:00:38,535][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.0_e0.7000000000000001_ADASYN.png
+[2021-09-21 19:00:38,546][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.76      0.66      0.70       163
+    Notagree       0.85      0.46      0.59        48
+   Unrelated       0.69      0.82      0.75       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.67      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:00:38,546][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 19:00:38,548][root][INFO] - Weighted f1 score : 0.7109640570496466
+[2021-09-21 19:00:38,549][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.0---erange0.8
+[2021-09-21 19:00:44,607][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.0_e0.8_ADASYN.png
+[2021-09-21 19:00:44,618][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.77      0.66      0.71       163
+    Notagree       0.82      0.48      0.61        48
+   Unrelated       0.69      0.81      0.74       197
+
+    accuracy                           0.72       519
+   macro avg       0.74      0.67      0.69       519
+weighted avg       0.73      0.72      0.71       519
+
+[2021-09-21 19:00:44,618][root][INFO] - Accuracy : 0.7167630057803468
+[2021-09-21 19:00:44,621][root][INFO] - Weighted f1 score : 0.7135674244085816
+[2021-09-21 19:00:44,621][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.0---erange0.9
+[2021-09-21 19:00:50,315][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.0_e0.9_ADASYN.png
+[2021-09-21 19:00:50,324][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.75      0.72       111
+     Discuss       0.73      0.67      0.70       163
+    Notagree       0.82      0.48      0.61        48
+   Unrelated       0.70      0.78      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.74      0.67      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:00:50,325][root][INFO] - Accuracy : 0.7129094412331407
+[2021-09-21 19:00:50,327][root][INFO] - Weighted f1 score : 0.7101068404197878
+[2021-09-21 19:00:50,327][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.5---erange0.0
+[2021-09-21 19:00:52,452][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.5_e0.0_ADASYN.png
+[2021-09-21 19:00:52,462][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.71      0.70       111
+     Discuss       0.72      0.66      0.69       163
+    Notagree       0.92      0.48      0.63        48
+   Unrelated       0.68      0.78      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.75      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:00:52,463][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-21 19:00:52,465][root][INFO] - Weighted f1 score : 0.6989579365384648
+[2021-09-21 19:00:52,465][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.5---erange0.1
+[2021-09-21 19:00:56,460][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.5_e0.1_ADASYN.png
+[2021-09-21 19:00:56,469][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.71      0.70       111
+     Discuss       0.72      0.67      0.69       163
+    Notagree       0.88      0.48      0.62        48
+   Unrelated       0.68      0.78      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.74      0.66      0.68       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:00:56,470][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-21 19:00:56,472][root][INFO] - Weighted f1 score : 0.6989864992784677
+[2021-09-21 19:00:56,472][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.5---erange0.2
+[2021-09-21 19:01:00,533][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.5_e0.2_ADASYN.png
+[2021-09-21 19:01:00,543][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.71      0.69       111
+     Discuss       0.74      0.67      0.70       163
+    Notagree       0.88      0.46      0.60        48
+   Unrelated       0.68      0.79      0.73       197
+
+    accuracy                           0.70       519
+   macro avg       0.74      0.66      0.68       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:01:00,544][root][INFO] - Accuracy : 0.7032755298651252
+[2021-09-21 19:01:00,546][root][INFO] - Weighted f1 score : 0.7003210052395361
+[2021-09-21 19:01:00,546][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.5---erange0.30000000000000004
+[2021-09-21 19:01:04,981][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.5_e0.30000000000000004_ADASYN.png
+[2021-09-21 19:01:04,990][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.72      0.70       111
+     Discuss       0.74      0.67      0.70       163
+    Notagree       0.88      0.46      0.60        48
+   Unrelated       0.68      0.79      0.73       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.66      0.68       519
+weighted avg       0.72      0.71      0.70       519
+
+[2021-09-21 19:01:04,991][root][INFO] - Accuracy : 0.7071290944123314
+[2021-09-21 19:01:04,993][root][INFO] - Weighted f1 score : 0.704033889392315
+[2021-09-21 19:01:04,993][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.5---erange0.4
+[2021-09-21 19:01:09,837][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.5_e0.4_ADASYN.png
+[2021-09-21 19:01:09,852][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.74      0.67      0.70       163
+    Notagree       0.85      0.46      0.59        48
+   Unrelated       0.69      0.80      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.74      0.66      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:01:09,853][root][INFO] - Accuracy : 0.7109826589595376
+[2021-09-21 19:01:09,857][root][INFO] - Weighted f1 score : 0.7075400812494023
+[2021-09-21 19:01:09,857][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.5---erange0.5
+[2021-09-21 19:01:16,285][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.5_e0.5_ADASYN.png
+[2021-09-21 19:01:16,295][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.74      0.71       111
+     Discuss       0.74      0.66      0.70       163
+    Notagree       0.81      0.46      0.59        48
+   Unrelated       0.69      0.80      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:01:16,296][root][INFO] - Accuracy : 0.7109826589595376
+[2021-09-21 19:01:16,298][root][INFO] - Weighted f1 score : 0.7074009308164437
+[2021-09-21 19:01:16,298][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.5---erange0.6000000000000001
+[2021-09-21 19:01:23,067][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.5_e0.6000000000000001_ADASYN.png
+[2021-09-21 19:01:23,083][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.74      0.72       111
+     Discuss       0.75      0.67      0.71       163
+    Notagree       0.81      0.46      0.59        48
+   Unrelated       0.69      0.80      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.74      0.67      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:01:23,084][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 19:01:23,088][root][INFO] - Weighted f1 score : 0.7112244848812173
+[2021-09-21 19:01:23,088][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.5---erange0.7000000000000001
+[2021-09-21 19:01:29,444][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.5_e0.7000000000000001_ADASYN.png
+[2021-09-21 19:01:29,453][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.74      0.66      0.70       163
+    Notagree       0.81      0.46      0.59        48
+   Unrelated       0.68      0.80      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:01:29,454][root][INFO] - Accuracy : 0.7090558766859345
+[2021-09-21 19:01:29,456][root][INFO] - Weighted f1 score : 0.7053933892497231
+[2021-09-21 19:01:29,456][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.5---erange0.8
+[2021-09-21 19:01:35,419][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.5_e0.8_ADASYN.png
+[2021-09-21 19:01:35,430][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.75      0.72       111
+     Discuss       0.72      0.66      0.69       163
+    Notagree       0.81      0.46      0.59        48
+   Unrelated       0.70      0.79      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.73      0.67      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:01:35,430][root][INFO] - Accuracy : 0.7109826589595376
+[2021-09-21 19:01:35,433][root][INFO] - Weighted f1 score : 0.7073511459638626
+[2021-09-21 19:01:35,433][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=2.5---erange0.9
+[2021-09-21 19:01:40,805][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c2.5_e0.9_ADASYN.png
+[2021-09-21 19:01:40,814][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.75      0.72       111
+     Discuss       0.73      0.66      0.69       163
+    Notagree       0.80      0.50      0.62        48
+   Unrelated       0.70      0.79      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.73      0.67      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:01:40,815][root][INFO] - Accuracy : 0.7129094412331407
+[2021-09-21 19:01:40,817][root][INFO] - Weighted f1 score : 0.710235642019827
+[2021-09-21 19:01:40,817][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.0---erange0.0
+[2021-09-21 19:01:42,963][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.0_e0.0_ADASYN.png
+[2021-09-21 19:01:42,972][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.72      0.70       111
+     Discuss       0.71      0.67      0.69       163
+    Notagree       0.89      0.50      0.64        48
+   Unrelated       0.68      0.77      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.74      0.67      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:01:42,972][root][INFO] - Accuracy : 0.7032755298651252
+[2021-09-21 19:01:42,974][root][INFO] - Weighted f1 score : 0.7013443713711731
+[2021-09-21 19:01:42,975][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.0---erange0.1
+[2021-09-21 19:01:47,394][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.0_e0.1_ADASYN.png
+[2021-09-21 19:01:47,403][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.72      0.70       111
+     Discuss       0.71      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.77      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:01:47,403][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-21 19:01:47,405][root][INFO] - Weighted f1 score : 0.6994094325346193
+[2021-09-21 19:01:47,405][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.0---erange0.2
+[2021-09-21 19:01:51,717][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.0_e0.2_ADASYN.png
+[2021-09-21 19:01:51,726][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.72      0.70       111
+     Discuss       0.71      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.75      0.71       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.70      0.70      0.69       519
+
+[2021-09-21 19:01:51,726][root][INFO] - Accuracy : 0.6955684007707129
+[2021-09-21 19:01:51,729][root][INFO] - Weighted f1 score : 0.6939076854982164
+[2021-09-21 19:01:51,729][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.0---erange0.30000000000000004
+[2021-09-21 19:01:56,531][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.0_e0.30000000000000004_ADASYN.png
+[2021-09-21 19:01:56,544][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.72      0.70       111
+     Discuss       0.72      0.67      0.69       163
+    Notagree       0.85      0.48      0.61        48
+   Unrelated       0.68      0.77      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:01:56,545][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 19:01:56,547][root][INFO] - Weighted f1 score : 0.6970972389226114
+[2021-09-21 19:01:56,547][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.0---erange0.4
+[2021-09-21 19:02:01,647][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.0_e0.4_ADASYN.png
+[2021-09-21 19:02:01,656][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.73      0.70       111
+     Discuss       0.72      0.67      0.69       163
+    Notagree       0.85      0.48      0.61        48
+   Unrelated       0.69      0.78      0.73       197
+
+    accuracy                           0.71       519
+   macro avg       0.74      0.66      0.69       519
+weighted avg       0.71      0.71      0.70       519
+
+[2021-09-21 19:02:01,657][root][INFO] - Accuracy : 0.7052023121387283
+[2021-09-21 19:02:01,659][root][INFO] - Weighted f1 score : 0.70261914356372
+[2021-09-21 19:02:01,659][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.0---erange0.5
+[2021-09-21 19:02:07,732][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.0_e0.5_ADASYN.png
+[2021-09-21 19:02:07,742][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.72      0.70       111
+     Discuss       0.72      0.67      0.70       163
+    Notagree       0.85      0.48      0.61        48
+   Unrelated       0.70      0.79      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.74      0.67      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:02:07,742][root][INFO] - Accuracy : 0.7090558766859345
+[2021-09-21 19:02:07,745][root][INFO] - Weighted f1 score : 0.7063213267594162
+[2021-09-21 19:02:07,745][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.0---erange0.6000000000000001
+[2021-09-21 19:02:14,104][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.0_e0.6000000000000001_ADASYN.png
+[2021-09-21 19:02:14,113][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.72      0.70       111
+     Discuss       0.72      0.67      0.69       163
+    Notagree       0.85      0.48      0.61        48
+   Unrelated       0.69      0.78      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.74      0.66      0.68       519
+weighted avg       0.71      0.71      0.70       519
+
+[2021-09-21 19:02:14,114][root][INFO] - Accuracy : 0.7052023121387283
+[2021-09-21 19:02:14,116][root][INFO] - Weighted f1 score : 0.7025286901858248
+[2021-09-21 19:02:14,116][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.0---erange0.7000000000000001
+[2021-09-21 19:02:20,284][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.0_e0.7000000000000001_ADASYN.png
+[2021-09-21 19:02:20,293][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.75      0.72       111
+     Discuss       0.72      0.66      0.69       163
+    Notagree       0.82      0.48      0.61        48
+   Unrelated       0.69      0.78      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.73      0.67      0.69       519
+weighted avg       0.71      0.71      0.71       519
+
+[2021-09-21 19:02:20,293][root][INFO] - Accuracy : 0.7090558766859345
+[2021-09-21 19:02:20,297][root][INFO] - Weighted f1 score : 0.7061203757968986
+[2021-09-21 19:02:20,297][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.0---erange0.8
+[2021-09-21 19:02:26,202][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.0_e0.8_ADASYN.png
+[2021-09-21 19:02:26,211][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.75      0.72       111
+     Discuss       0.73      0.67      0.70       163
+    Notagree       0.82      0.48      0.61        48
+   Unrelated       0.70      0.79      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.73      0.67      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:02:26,212][root][INFO] - Accuracy : 0.7129094412331407
+[2021-09-21 19:02:26,214][root][INFO] - Weighted f1 score : 0.7099287885358551
+[2021-09-21 19:02:26,214][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.0---erange0.9
+[2021-09-21 19:02:31,881][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.0_e0.9_ADASYN.png
+[2021-09-21 19:02:31,890][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.76      0.71       111
+     Discuss       0.73      0.67      0.70       163
+    Notagree       0.83      0.50      0.62        48
+   Unrelated       0.71      0.78      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.74      0.68      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:02:31,890][root][INFO] - Accuracy : 0.7129094412331407
+[2021-09-21 19:02:31,892][root][INFO] - Weighted f1 score : 0.7105491150378405
+[2021-09-21 19:02:31,892][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.5---erange0.0
+[2021-09-21 19:02:34,352][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.5_e0.0_ADASYN.png
+[2021-09-21 19:02:34,361][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.72      0.71       111
+     Discuss       0.70      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.76      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:02:34,362][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 19:02:34,364][root][INFO] - Weighted f1 score : 0.6975521357293577
+[2021-09-21 19:02:34,364][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.5---erange0.1
+[2021-09-21 19:02:39,137][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.5_e0.1_ADASYN.png
+[2021-09-21 19:02:39,146][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.72      0.70       111
+     Discuss       0.71      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.76      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:02:39,147][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 19:02:39,149][root][INFO] - Weighted f1 score : 0.6976640854477454
+[2021-09-21 19:02:39,150][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.5---erange0.2
+[2021-09-21 19:02:43,874][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.5_e0.2_ADASYN.png
+[2021-09-21 19:02:43,883][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.71      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.76      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.67      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:02:43,884][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-21 19:02:43,886][root][INFO] - Weighted f1 score : 0.6995601125847638
+[2021-09-21 19:02:43,886][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.5---erange0.30000000000000004
+[2021-09-21 19:02:48,991][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.5_e0.30000000000000004_ADASYN.png
+[2021-09-21 19:02:49,000][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.73      0.70       111
+     Discuss       0.71      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.69      0.76      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.67      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:02:49,001][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-21 19:02:49,003][root][INFO] - Weighted f1 score : 0.6995522661540857
+[2021-09-21 19:02:49,003][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.5---erange0.4
+[2021-09-21 19:02:54,543][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.5_e0.4_ADASYN.png
+[2021-09-21 19:02:54,553][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.74      0.71       111
+     Discuss       0.71      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.69      0.75      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.67      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:02:54,553][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-21 19:02:54,555][root][INFO] - Weighted f1 score : 0.6995810845762467
+[2021-09-21 19:02:54,555][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.5---erange0.5
+[2021-09-21 19:03:00,431][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.5_e0.5_ADASYN.png
+[2021-09-21 19:03:00,441][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.74      0.71       111
+     Discuss       0.70      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.69      0.75      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.67      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:03:00,441][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-21 19:03:00,443][root][INFO] - Weighted f1 score : 0.6995410978375001
+[2021-09-21 19:03:00,443][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.5---erange0.6000000000000001
+[2021-09-21 19:03:06,390][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.5_e0.6000000000000001_ADASYN.png
+[2021-09-21 19:03:06,399][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.73      0.70       111
+     Discuss       0.70      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.69      0.76      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:03:06,399][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 19:03:06,402][root][INFO] - Weighted f1 score : 0.6975770113704548
+[2021-09-21 19:03:06,402][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.5---erange0.7000000000000001
+[2021-09-21 19:03:12,347][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.5_e0.7000000000000001_ADASYN.png
+[2021-09-21 19:03:12,357][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.74      0.71       111
+     Discuss       0.71      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.70      0.77      0.73       197
+
+    accuracy                           0.71       519
+   macro avg       0.74      0.67      0.69       519
+weighted avg       0.71      0.71      0.71       519
+
+[2021-09-21 19:03:12,358][root][INFO] - Accuracy : 0.7071290944123314
+[2021-09-21 19:03:12,360][root][INFO] - Weighted f1 score : 0.7051046756834453
+[2021-09-21 19:03:12,360][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.5---erange0.8
+[2021-09-21 19:03:18,108][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.5_e0.8_ADASYN.png
+[2021-09-21 19:03:18,117][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.74      0.71       111
+     Discuss       0.69      0.67      0.68       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.70      0.75      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:03:18,118][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 19:03:18,120][root][INFO] - Weighted f1 score : 0.6976948915131675
+[2021-09-21 19:03:18,120][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=3.5---erange0.9
+[2021-09-21 19:03:23,745][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c3.5_e0.9_ADASYN.png
+[2021-09-21 19:03:23,754][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.76      0.72       111
+     Discuss       0.70      0.69      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.70      0.74      0.72       197
+
+    accuracy                           0.71       519
+   macro avg       0.74      0.67      0.69       519
+weighted avg       0.71      0.71      0.70       519
+
+[2021-09-21 19:03:23,755][root][INFO] - Accuracy : 0.7052023121387283
+[2021-09-21 19:03:23,757][root][INFO] - Weighted f1 score : 0.7034352846729192
+[2021-09-21 19:03:23,757][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.0---erange0.0
+[2021-09-21 19:03:26,343][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.0_e0.0_ADASYN.png
+[2021-09-21 19:03:26,363][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.72      0.71       111
+     Discuss       0.71      0.66      0.68       163
+    Notagree       0.83      0.50      0.62        48
+   Unrelated       0.68      0.77      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:03:26,364][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 19:03:26,369][root][INFO] - Weighted f1 score : 0.6973301034646358
+[2021-09-21 19:03:26,369][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.0---erange0.1
+[2021-09-21 19:03:31,925][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.0_e0.1_ADASYN.png
+[2021-09-21 19:03:31,934][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.71      0.66      0.68       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.67      0.76      0.71       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.70      0.70      0.70       519
+
+[2021-09-21 19:03:31,935][root][INFO] - Accuracy : 0.697495183044316
+[2021-09-21 19:03:31,937][root][INFO] - Weighted f1 score : 0.6956587825083973
+[2021-09-21 19:03:31,937][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.0---erange0.2
+[2021-09-21 19:03:38,115][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.0_e0.2_ADASYN.png
+[2021-09-21 19:03:38,125][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.70      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.76      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:03:38,126][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 19:03:38,128][root][INFO] - Weighted f1 score : 0.6975764668007098
+[2021-09-21 19:03:38,128][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.0---erange0.30000000000000004
+[2021-09-21 19:03:44,105][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.0_e0.30000000000000004_ADASYN.png
+[2021-09-21 19:03:44,115][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.74      0.71       111
+     Discuss       0.70      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.69      0.76      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.67      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:03:44,115][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-21 19:03:44,117][root][INFO] - Weighted f1 score : 0.6994367751301934
+[2021-09-21 19:03:44,118][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.0---erange0.4
+[2021-09-21 19:03:50,268][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.0_e0.4_ADASYN.png
+[2021-09-21 19:03:50,278][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.74      0.71       111
+     Discuss       0.70      0.67      0.68       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.75      0.71       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.70      0.70      0.70       519
+
+[2021-09-21 19:03:50,279][root][INFO] - Accuracy : 0.697495183044316
+[2021-09-21 19:03:50,281][root][INFO] - Weighted f1 score : 0.6957427817178655
+[2021-09-21 19:03:50,281][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.0---erange0.5
+[2021-09-21 19:03:57,044][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.0_e0.5_ADASYN.png
+[2021-09-21 19:03:57,054][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.74      0.71       111
+     Discuss       0.69      0.67      0.68       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.75      0.71       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.70      0.70      0.70       519
+
+[2021-09-21 19:03:57,054][root][INFO] - Accuracy : 0.697495183044316
+[2021-09-21 19:03:57,057][root][INFO] - Weighted f1 score : 0.6957322455945151
+[2021-09-21 19:03:57,057][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.0---erange0.6000000000000001
+[2021-09-21 19:04:04,253][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.0_e0.6000000000000001_ADASYN.png
+[2021-09-21 19:04:04,263][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.74      0.70       111
+     Discuss       0.69      0.66      0.67       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.74      0.71       197
+
+    accuracy                           0.69       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 19:04:04,263][root][INFO] - Accuracy : 0.6917148362235067
+[2021-09-21 19:04:04,265][root][INFO] - Weighted f1 score : 0.6899757982610267
+[2021-09-21 19:04:04,265][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.0---erange0.7000000000000001
+[2021-09-21 19:04:10,437][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.0_e0.7000000000000001_ADASYN.png
+[2021-09-21 19:04:10,447][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.74      0.71       111
+     Discuss       0.69      0.66      0.67       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.69      0.74      0.71       197
+
+    accuracy                           0.69       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 19:04:10,447][root][INFO] - Accuracy : 0.6936416184971098
+[2021-09-21 19:04:10,450][root][INFO] - Weighted f1 score : 0.6919243655866161
+[2021-09-21 19:04:10,450][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.0---erange0.8
+[2021-09-21 19:04:16,475][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.0_e0.8_ADASYN.png
+[2021-09-21 19:04:16,484][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.75      0.71       111
+     Discuss       0.68      0.66      0.67       163
+    Notagree       0.86      0.52      0.65        48
+   Unrelated       0.69      0.73      0.71       197
+
+    accuracy                           0.69       519
+   macro avg       0.73      0.67      0.69       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 19:04:16,485][root][INFO] - Accuracy : 0.6936416184971098
+[2021-09-21 19:04:16,487][root][INFO] - Weighted f1 score : 0.6923755774723355
+[2021-09-21 19:04:16,487][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.0---erange0.9
+[2021-09-21 19:04:22,358][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.0_e0.9_ADASYN.png
+[2021-09-21 19:04:22,368][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.75      0.71       111
+     Discuss       0.68      0.67      0.68       163
+    Notagree       0.83      0.50      0.62        48
+   Unrelated       0.69      0.73      0.71       197
+
+    accuracy                           0.69       519
+   macro avg       0.72      0.66      0.68       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 19:04:22,368][root][INFO] - Accuracy : 0.6936416184971098
+[2021-09-21 19:04:22,370][root][INFO] - Weighted f1 score : 0.6920060339580923
+[2021-09-21 19:04:22,371][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.5---erange0.0
+[2021-09-21 19:04:25,302][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.5_e0.0_ADASYN.png
+[2021-09-21 19:04:25,311][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.72      0.70       111
+     Discuss       0.69      0.64      0.67       163
+    Notagree       0.83      0.50      0.62        48
+   Unrelated       0.67      0.76      0.71       197
+
+    accuracy                           0.69       519
+   macro avg       0.72      0.66      0.68       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 19:04:25,312][root][INFO] - Accuracy : 0.6897880539499036
+[2021-09-21 19:04:25,314][root][INFO] - Weighted f1 score : 0.687723424869759
+[2021-09-21 19:04:25,314][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.5---erange0.1
+[2021-09-21 19:04:31,192][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.5_e0.1_ADASYN.png
+[2021-09-21 19:04:31,201][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.69      0.66      0.68       163
+    Notagree       0.83      0.50      0.62        48
+   Unrelated       0.68      0.75      0.71       197
+
+    accuracy                           0.69       519
+   macro avg       0.72      0.66      0.68       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 19:04:31,202][root][INFO] - Accuracy : 0.6936416184971098
+[2021-09-21 19:04:31,204][root][INFO] - Weighted f1 score : 0.6917048047252615
+[2021-09-21 19:04:31,204][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.5---erange0.2
+[2021-09-21 19:04:37,157][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.5_e0.2_ADASYN.png
+[2021-09-21 19:04:37,167][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.73      0.71       111
+     Discuss       0.70      0.66      0.68       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.75      0.71       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.70      0.70      0.69       519
+
+[2021-09-21 19:04:37,167][root][INFO] - Accuracy : 0.6955684007707129
+[2021-09-21 19:04:37,170][root][INFO] - Weighted f1 score : 0.6937719295693691
+[2021-09-21 19:04:37,170][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.5---erange0.30000000000000004
+[2021-09-21 19:04:44,192][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.5_e0.30000000000000004_ADASYN.png
+[2021-09-21 19:04:44,202][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.74      0.71       111
+     Discuss       0.70      0.67      0.68       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.69      0.75      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:04:44,202][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 19:04:44,204][root][INFO] - Weighted f1 score : 0.6975852570007698
+[2021-09-21 19:04:44,204][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.5---erange0.4
+[2021-09-21 19:04:50,165][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.5_e0.4_ADASYN.png
+[2021-09-21 19:04:50,174][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.74      0.71       111
+     Discuss       0.70      0.67      0.68       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.69      0.75      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:04:50,175][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 19:04:50,177][root][INFO] - Weighted f1 score : 0.6975852570007698
+[2021-09-21 19:04:50,177][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.5---erange0.5
+[2021-09-21 19:04:56,362][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.5_e0.5_ADASYN.png
+[2021-09-21 19:04:56,372][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.74      0.71       111
+     Discuss       0.70      0.66      0.68       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.75      0.71       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.70      0.70      0.69       519
+
+[2021-09-21 19:04:56,373][root][INFO] - Accuracy : 0.6955684007707129
+[2021-09-21 19:04:56,375][root][INFO] - Weighted f1 score : 0.693787972543452
+[2021-09-21 19:04:56,375][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.5---erange0.6000000000000001
+[2021-09-21 19:05:02,452][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.5_e0.6000000000000001_ADASYN.png
+[2021-09-21 19:05:02,462][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.74      0.70       111
+     Discuss       0.69      0.66      0.67       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.74      0.71       197
+
+    accuracy                           0.69       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 19:05:02,462][root][INFO] - Accuracy : 0.6917148362235067
+[2021-09-21 19:05:02,464][root][INFO] - Weighted f1 score : 0.6899757982610267
+[2021-09-21 19:05:02,464][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.5---erange0.7000000000000001
+[2021-09-21 19:05:09,056][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.5_e0.7000000000000001_ADASYN.png
+[2021-09-21 19:05:09,066][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.74      0.70       111
+     Discuss       0.68      0.66      0.67       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.69      0.74      0.71       197
+
+    accuracy                           0.69       519
+   macro avg       0.72      0.66      0.68       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 19:05:09,067][root][INFO] - Accuracy : 0.6897880539499036
+[2021-09-21 19:05:09,069][root][INFO] - Weighted f1 score : 0.6881337592918643
+[2021-09-21 19:05:09,069][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.5---erange0.8
+[2021-09-21 19:05:16,035][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.5_e0.8_ADASYN.png
+[2021-09-21 19:05:16,045][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.74      0.70       111
+     Discuss       0.68      0.65      0.66       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.73      0.71       197
+
+    accuracy                           0.69       519
+   macro avg       0.72      0.66      0.68       519
+weighted avg       0.69      0.69      0.68       519
+
+[2021-09-21 19:05:16,046][root][INFO] - Accuracy : 0.6859344894026975
+[2021-09-21 19:05:16,048][root][INFO] - Weighted f1 score : 0.6843101826550438
+[2021-09-21 19:05:16,048][root][INFO] - LogisticRegression---penalty=elasticnet----solver=saga c=4.5---erange0.9
+[2021-09-21 19:05:22,160][root][INFO] - Model:LogisticRegression, Out_path:outputelsticnet_c4.5_e0.9_ADASYN.png
+[2021-09-21 19:05:22,170][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.74      0.70       111
+     Discuss       0.67      0.65      0.66       163
+    Notagree       0.83      0.52      0.64        48
+   Unrelated       0.69      0.73      0.71       197
+
+    accuracy                           0.69       519
+   macro avg       0.71      0.66      0.68       519
+weighted avg       0.69      0.69      0.68       519
+
+[2021-09-21 19:05:22,170][root][INFO] - Accuracy : 0.6859344894026975
+[2021-09-21 19:05:22,173][root][INFO] - Weighted f1 score : 0.6846652577842811
+[2021-09-21 19:05:22,173][root][INFO] - LogisticRegression---penalty=l2----solver=newton-cg c=0.5
+[2021-09-21 19:05:22,847][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvnewton-cg_c0.5_ADASYN.png
+[2021-09-21 19:05:22,869][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.71      0.68       111
+     Discuss       0.78      0.63      0.70       163
+    Notagree       0.92      0.25      0.39        48
+   Unrelated       0.65      0.84      0.74       197
+
+    accuracy                           0.69       519
+   macro avg       0.75      0.61      0.63       519
+weighted avg       0.72      0.69      0.68       519
+
+[2021-09-21 19:05:22,870][root][INFO] - Accuracy : 0.6917148362235067
+[2021-09-21 19:05:22,875][root][INFO] - Weighted f1 score : 0.6795060547771566
+[2021-09-21 19:05:22,875][root][INFO] - LogisticRegression---penalty=l2----solver=newton-cg c=1.0
+[2021-09-21 19:05:23,752][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvnewton-cg_c1.0_ADASYN.png
+[2021-09-21 19:05:23,775][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.71      0.69       111
+     Discuss       0.78      0.66      0.72       163
+    Notagree       0.95      0.40      0.56        48
+   Unrelated       0.68      0.84      0.75       197
+
+    accuracy                           0.71       519
+   macro avg       0.77      0.65      0.68       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 19:05:23,776][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 19:05:23,782][root][INFO] - Weighted f1 score : 0.7092062120840288
+[2021-09-21 19:05:23,782][root][INFO] - LogisticRegression---penalty=l2----solver=newton-cg c=1.5
+[2021-09-21 19:05:24,660][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvnewton-cg_c1.5_ADASYN.png
+[2021-09-21 19:05:24,682][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.71      0.70       111
+     Discuss       0.77      0.67      0.72       163
+    Notagree       0.95      0.42      0.58        48
+   Unrelated       0.68      0.83      0.75       197
+
+    accuracy                           0.72       519
+   macro avg       0.77      0.66      0.69       519
+weighted avg       0.74      0.72      0.71       519
+
+[2021-09-21 19:05:24,683][root][INFO] - Accuracy : 0.7186897880539499
+[2021-09-21 19:05:24,689][root][INFO] - Weighted f1 score : 0.7139414068867384
+[2021-09-21 19:05:24,689][root][INFO] - LogisticRegression---penalty=l2----solver=newton-cg c=2.0
+[2021-09-21 19:05:25,566][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvnewton-cg_c2.0_ADASYN.png
+[2021-09-21 19:05:25,588][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.71      0.70       111
+     Discuss       0.75      0.67      0.71       163
+    Notagree       0.92      0.46      0.61        48
+   Unrelated       0.67      0.80      0.73       197
+
+    accuracy                           0.71       519
+   macro avg       0.76      0.66      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:05:25,589][root][INFO] - Accuracy : 0.7090558766859345
+[2021-09-21 19:05:25,595][root][INFO] - Weighted f1 score : 0.7059318219766805
+[2021-09-21 19:05:25,595][root][INFO] - LogisticRegression---penalty=l2----solver=newton-cg c=2.5
+[2021-09-21 19:05:26,456][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvnewton-cg_c2.5_ADASYN.png
+[2021-09-21 19:05:26,465][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.71      0.70       111
+     Discuss       0.72      0.66      0.69       163
+    Notagree       0.92      0.48      0.63        48
+   Unrelated       0.68      0.78      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.75      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:05:26,466][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-21 19:05:26,468][root][INFO] - Weighted f1 score : 0.6989579365384648
+[2021-09-21 19:05:26,469][root][INFO] - LogisticRegression---penalty=l2----solver=newton-cg c=3.0
+[2021-09-21 19:05:27,220][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvnewton-cg_c3.0_ADASYN.png
+[2021-09-21 19:05:27,231][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.72      0.70       111
+     Discuss       0.71      0.67      0.69       163
+    Notagree       0.89      0.50      0.64        48
+   Unrelated       0.68      0.77      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.74      0.67      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:05:27,231][root][INFO] - Accuracy : 0.7032755298651252
+[2021-09-21 19:05:27,233][root][INFO] - Weighted f1 score : 0.7013443713711731
+[2021-09-21 19:05:27,233][root][INFO] - LogisticRegression---penalty=l2----solver=newton-cg c=3.5
+[2021-09-21 19:05:28,011][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvnewton-cg_c3.5_ADASYN.png
+[2021-09-21 19:05:28,020][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.72      0.71       111
+     Discuss       0.70      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.76      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:05:28,021][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 19:05:28,023][root][INFO] - Weighted f1 score : 0.6975521357293577
+[2021-09-21 19:05:28,023][root][INFO] - LogisticRegression---penalty=l2----solver=newton-cg c=4.0
+[2021-09-21 19:05:28,807][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvnewton-cg_c4.0_ADASYN.png
+[2021-09-21 19:05:28,817][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.72      0.71       111
+     Discuss       0.71      0.66      0.68       163
+    Notagree       0.83      0.50      0.62        48
+   Unrelated       0.68      0.77      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:05:28,818][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 19:05:28,820][root][INFO] - Weighted f1 score : 0.6973301034646358
+[2021-09-21 19:05:28,820][root][INFO] - LogisticRegression---penalty=l2----solver=newton-cg c=4.5
+[2021-09-21 19:05:29,575][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvnewton-cg_c4.5_ADASYN.png
+[2021-09-21 19:05:29,585][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.72      0.70       111
+     Discuss       0.69      0.64      0.67       163
+    Notagree       0.83      0.50      0.62        48
+   Unrelated       0.67      0.76      0.71       197
+
+    accuracy                           0.69       519
+   macro avg       0.72      0.66      0.68       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 19:05:29,586][root][INFO] - Accuracy : 0.6897880539499036
+[2021-09-21 19:05:29,588][root][INFO] - Weighted f1 score : 0.687723424869759
+[2021-09-21 19:05:29,588][root][INFO] - LogisticRegression---penalty=l2----solver=sag c=0.5
+[2021-09-21 19:05:30,796][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvsag_c0.5_ADASYN.png
+[2021-09-21 19:05:30,805][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.71      0.68       111
+     Discuss       0.78      0.63      0.70       163
+    Notagree       0.92      0.25      0.39        48
+   Unrelated       0.65      0.84      0.74       197
+
+    accuracy                           0.69       519
+   macro avg       0.75      0.61      0.63       519
+weighted avg       0.72      0.69      0.68       519
+
+[2021-09-21 19:05:30,806][root][INFO] - Accuracy : 0.6917148362235067
+[2021-09-21 19:05:30,808][root][INFO] - Weighted f1 score : 0.6795060547771566
+[2021-09-21 19:05:30,809][root][INFO] - LogisticRegression---penalty=l2----solver=sag c=1.0
+[2021-09-21 19:05:31,895][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvsag_c1.0_ADASYN.png
+[2021-09-21 19:05:31,905][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.71      0.69       111
+     Discuss       0.78      0.66      0.72       163
+    Notagree       0.95      0.40      0.56        48
+   Unrelated       0.68      0.84      0.75       197
+
+    accuracy                           0.71       519
+   macro avg       0.77      0.65      0.68       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 19:05:31,905][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 19:05:31,908][root][INFO] - Weighted f1 score : 0.7092062120840288
+[2021-09-21 19:05:31,908][root][INFO] - LogisticRegression---penalty=l2----solver=sag c=1.5
+[2021-09-21 19:05:33,168][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvsag_c1.5_ADASYN.png
+[2021-09-21 19:05:33,178][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.71      0.70       111
+     Discuss       0.77      0.67      0.72       163
+    Notagree       0.95      0.42      0.58        48
+   Unrelated       0.68      0.83      0.75       197
+
+    accuracy                           0.72       519
+   macro avg       0.77      0.66      0.69       519
+weighted avg       0.74      0.72      0.71       519
+
+[2021-09-21 19:05:33,179][root][INFO] - Accuracy : 0.7186897880539499
+[2021-09-21 19:05:33,181][root][INFO] - Weighted f1 score : 0.7139414068867384
+[2021-09-21 19:05:33,181][root][INFO] - LogisticRegression---penalty=l2----solver=sag c=2.0
+[2021-09-21 19:05:34,330][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvsag_c2.0_ADASYN.png
+[2021-09-21 19:05:34,339][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.71      0.70       111
+     Discuss       0.75      0.67      0.71       163
+    Notagree       0.92      0.46      0.61        48
+   Unrelated       0.67      0.80      0.73       197
+
+    accuracy                           0.71       519
+   macro avg       0.76      0.66      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:05:34,340][root][INFO] - Accuracy : 0.7090558766859345
+[2021-09-21 19:05:34,342][root][INFO] - Weighted f1 score : 0.7059318219766805
+[2021-09-21 19:05:34,342][root][INFO] - LogisticRegression---penalty=l2----solver=sag c=2.5
+[2021-09-21 19:05:35,459][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvsag_c2.5_ADASYN.png
+[2021-09-21 19:05:35,468][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.71      0.70       111
+     Discuss       0.72      0.66      0.69       163
+    Notagree       0.92      0.48      0.63        48
+   Unrelated       0.68      0.78      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.75      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:05:35,469][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-21 19:05:35,471][root][INFO] - Weighted f1 score : 0.6989579365384648
+[2021-09-21 19:05:35,471][root][INFO] - LogisticRegression---penalty=l2----solver=sag c=3.0
+[2021-09-21 19:05:36,756][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvsag_c3.0_ADASYN.png
+[2021-09-21 19:05:36,765][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.72      0.70       111
+     Discuss       0.71      0.67      0.69       163
+    Notagree       0.89      0.50      0.64        48
+   Unrelated       0.68      0.77      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.74      0.67      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:05:36,766][root][INFO] - Accuracy : 0.7032755298651252
+[2021-09-21 19:05:36,768][root][INFO] - Weighted f1 score : 0.7013443713711731
+[2021-09-21 19:05:36,768][root][INFO] - LogisticRegression---penalty=l2----solver=sag c=3.5
+[2021-09-21 19:05:38,084][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvsag_c3.5_ADASYN.png
+[2021-09-21 19:05:38,107][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.72      0.71       111
+     Discuss       0.70      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.76      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:05:38,108][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 19:05:38,114][root][INFO] - Weighted f1 score : 0.6975521357293577
+[2021-09-21 19:05:38,115][root][INFO] - LogisticRegression---penalty=l2----solver=sag c=4.0
+[2021-09-21 19:05:39,655][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvsag_c4.0_ADASYN.png
+[2021-09-21 19:05:39,676][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.72      0.71       111
+     Discuss       0.71      0.66      0.68       163
+    Notagree       0.83      0.50      0.62        48
+   Unrelated       0.68      0.77      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:05:39,678][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 19:05:39,683][root][INFO] - Weighted f1 score : 0.6973301034646358
+[2021-09-21 19:05:39,683][root][INFO] - LogisticRegression---penalty=l2----solver=sag c=4.5
+[2021-09-21 19:05:41,179][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvsag_c4.5_ADASYN.png
+[2021-09-21 19:05:41,201][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.72      0.70       111
+     Discuss       0.69      0.64      0.67       163
+    Notagree       0.83      0.50      0.62        48
+   Unrelated       0.67      0.76      0.71       197
+
+    accuracy                           0.69       519
+   macro avg       0.72      0.66      0.68       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 19:05:41,202][root][INFO] - Accuracy : 0.6897880539499036
+[2021-09-21 19:05:41,207][root][INFO] - Weighted f1 score : 0.687723424869759
+[2021-09-21 19:05:41,207][root][INFO] - LogisticRegression---penalty=l2----solver=lbfgs c=0.5
+[2021-09-21 19:05:41,773][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvlbfgs_c0.5_ADASYN.png
+[2021-09-21 19:05:41,782][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.71      0.68       111
+     Discuss       0.78      0.63      0.70       163
+    Notagree       0.92      0.25      0.39        48
+   Unrelated       0.65      0.84      0.74       197
+
+    accuracy                           0.69       519
+   macro avg       0.75      0.61      0.63       519
+weighted avg       0.72      0.69      0.68       519
+
+[2021-09-21 19:05:41,783][root][INFO] - Accuracy : 0.6917148362235067
+[2021-09-21 19:05:41,785][root][INFO] - Weighted f1 score : 0.6795060547771566
+[2021-09-21 19:05:41,785][root][INFO] - LogisticRegression---penalty=l2----solver=lbfgs c=1.0
+[2021-09-21 19:05:42,403][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvlbfgs_c1.0_ADASYN.png
+[2021-09-21 19:05:42,413][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.71      0.69       111
+     Discuss       0.78      0.66      0.72       163
+    Notagree       0.95      0.40      0.56        48
+   Unrelated       0.68      0.84      0.75       197
+
+    accuracy                           0.71       519
+   macro avg       0.77      0.65      0.68       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 19:05:42,413][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 19:05:42,415][root][INFO] - Weighted f1 score : 0.7092062120840288
+[2021-09-21 19:05:42,415][root][INFO] - LogisticRegression---penalty=l2----solver=lbfgs c=1.5
+[2021-09-21 19:05:43,113][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvlbfgs_c1.5_ADASYN.png
+[2021-09-21 19:05:43,135][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.71      0.70       111
+     Discuss       0.77      0.67      0.72       163
+    Notagree       0.95      0.42      0.58        48
+   Unrelated       0.68      0.83      0.75       197
+
+    accuracy                           0.72       519
+   macro avg       0.77      0.66      0.69       519
+weighted avg       0.74      0.72      0.71       519
+
+[2021-09-21 19:05:43,136][root][INFO] - Accuracy : 0.7186897880539499
+[2021-09-21 19:05:43,141][root][INFO] - Weighted f1 score : 0.7139414068867384
+[2021-09-21 19:05:43,141][root][INFO] - LogisticRegression---penalty=l2----solver=lbfgs c=2.0
+[2021-09-21 19:05:43,800][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvlbfgs_c2.0_ADASYN.png
+[2021-09-21 19:05:43,810][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.70      0.70       111
+     Discuss       0.74      0.67      0.70       163
+    Notagree       0.92      0.46      0.61        48
+   Unrelated       0.67      0.80      0.73       197
+
+    accuracy                           0.71       519
+   macro avg       0.76      0.66      0.69       519
+weighted avg       0.72      0.71      0.70       519
+
+[2021-09-21 19:05:43,810][root][INFO] - Accuracy : 0.7071290944123314
+[2021-09-21 19:05:43,812][root][INFO] - Weighted f1 score : 0.7039779635170896
+[2021-09-21 19:05:43,812][root][INFO] - LogisticRegression---penalty=l2----solver=lbfgs c=2.5
+[2021-09-21 19:05:44,406][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvlbfgs_c2.5_ADASYN.png
+[2021-09-21 19:05:44,416][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.71      0.70       111
+     Discuss       0.72      0.66      0.69       163
+    Notagree       0.92      0.48      0.63        48
+   Unrelated       0.68      0.78      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.75      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:05:44,416][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-21 19:05:44,418][root][INFO] - Weighted f1 score : 0.6989579365384648
+[2021-09-21 19:05:44,419][root][INFO] - LogisticRegression---penalty=l2----solver=lbfgs c=3.0
+[2021-09-21 19:05:45,062][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvlbfgs_c3.0_ADASYN.png
+[2021-09-21 19:05:45,071][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.72      0.70       111
+     Discuss       0.71      0.67      0.69       163
+    Notagree       0.89      0.50      0.64        48
+   Unrelated       0.68      0.77      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.74      0.67      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:05:45,072][root][INFO] - Accuracy : 0.7032755298651252
+[2021-09-21 19:05:45,074][root][INFO] - Weighted f1 score : 0.7013443713711731
+[2021-09-21 19:05:45,074][root][INFO] - LogisticRegression---penalty=l2----solver=lbfgs c=3.5
+[2021-09-21 19:05:45,679][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvlbfgs_c3.5_ADASYN.png
+[2021-09-21 19:05:45,688][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.72      0.71       111
+     Discuss       0.70      0.67      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.68      0.76      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 19:05:45,689][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 19:05:45,691][root][INFO] - Weighted f1 score : 0.6975521357293577
+[2021-09-21 19:05:45,691][root][INFO] - LogisticRegression---penalty=l2----solver=lbfgs c=4.0
+[2021-09-21 19:05:46,436][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvlbfgs_c4.0_ADASYN.png
+[2021-09-21 19:05:46,459][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.72      0.71       111
+     Discuss       0.70      0.66      0.68       163
+    Notagree       0.83      0.50      0.62        48
+   Unrelated       0.68      0.76      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.66      0.68       519
+weighted avg       0.70      0.70      0.70       519
+
+[2021-09-21 19:05:46,460][root][INFO] - Accuracy : 0.697495183044316
+[2021-09-21 19:05:46,465][root][INFO] - Weighted f1 score : 0.6954912419728956
+[2021-09-21 19:05:46,466][root][INFO] - LogisticRegression---penalty=l2----solver=lbfgs c=4.5
+[2021-09-21 19:05:47,241][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvlbfgs_c4.5_ADASYN.png
+[2021-09-21 19:05:47,262][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.73      0.71       111
+     Discuss       0.70      0.66      0.68       163
+    Notagree       0.83      0.50      0.62        48
+   Unrelated       0.67      0.76      0.71       197
+
+    accuracy                           0.70       519
+   macro avg       0.72      0.66      0.68       519
+weighted avg       0.70      0.70      0.69       519
+
+[2021-09-21 19:05:47,263][root][INFO] - Accuracy : 0.6955684007707129
+[2021-09-21 19:05:47,268][root][INFO] - Weighted f1 score : 0.6935818670112467
