@@ -1,0 +1,22 @@
+[2021-09-21 06:24:45,744][root][INFO] - hazm tokenizer
+[2021-09-21 06:24:47,483][root][INFO] - End of tf_idf feature
+[2021-09-21 06:24:47,807][root][INFO] - End of similarity feature
+[2021-09-21 06:24:47,814][root][INFO] - End of important words feature
+[2021-09-21 06:24:47,815][root][INFO] - "is question" feature was added.
+[2021-09-21 06:26:28,866][root][INFO] - End of w2v feature
+[2021-09-21 06:26:29,485][root][INFO] - Feature set (2594, 1107):
+[2021-09-21 06:26:29,486][root][INFO] - SVC Model
+[2021-09-21 06:26:33,084][root][INFO] - Model:SVC, Out_path:output_ADASYN.png
+[2021-09-21 06:26:33,093][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.70      0.68       111
+     Discuss       0.85      0.50      0.63       163
+    Notagree       0.58      0.69      0.63        48
+   Unrelated       0.66      0.83      0.74       197
+
+    accuracy                           0.69       519
+   macro avg       0.69      0.68      0.67       519
+weighted avg       0.71      0.69      0.68       519
+
+[2021-09-21 06:26:33,094][root][INFO] - Accuracy : 0.6859344894026975
+[2021-09-21 06:26:33,096][root][INFO] - Weighted f1 score : 0.6801828710434769
