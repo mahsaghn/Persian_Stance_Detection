@@ -1,0 +1,278 @@
+[2021-09-21 18:40:31,594][root][INFO] - hazm tokenizer
+[2021-09-21 18:40:33,328][root][INFO] - End of tf_idf feature
+[2021-09-21 18:40:33,652][root][INFO] - End of similarity feature
+[2021-09-21 18:40:33,659][root][INFO] - End of important words feature
+[2021-09-21 18:40:33,665][root][INFO] - End of is_question feature
+[2021-09-21 18:40:33,669][root][INFO] - "more than tow parts" feature was added.
+[2021-09-21 18:40:33,802][root][INFO] - End of polarity feature
+[2021-09-21 18:40:33,804][root][INFO] - Feature set (2594, 839):
+[2021-09-21 18:40:33,804][root][INFO] - LinearSVC---loss=hinge---c=0.5
+[2021-09-21 18:40:34,087][root][INFO] - Model:LinearSVC, Out_path:outputlosshinge_c0.5_ADASYN.png
+[2021-09-21 18:40:34,097][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.74      0.71       111
+     Discuss       0.78      0.60      0.68       163
+    Notagree       0.58      0.67      0.62        48
+   Unrelated       0.68      0.77      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.68      0.69      0.68       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 18:40:34,097][root][INFO] - Accuracy : 0.697495183044316
+[2021-09-21 18:40:34,100][root][INFO] - Weighted f1 score : 0.6965017283527215
+[2021-09-21 18:40:34,100][root][INFO] - LinearSVC---loss=hinge---c=1.0
+[2021-09-21 18:40:34,382][root][INFO] - Model:LinearSVC, Out_path:outputlosshinge_c1.0_ADASYN.png
+[2021-09-21 18:40:34,392][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.75      0.72       111
+     Discuss       0.77      0.64      0.70       163
+    Notagree       0.58      0.67      0.62        48
+   Unrelated       0.70      0.74      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.69      0.70      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 18:40:34,392][root][INFO] - Accuracy : 0.7032755298651252
+[2021-09-21 18:40:34,394][root][INFO] - Weighted f1 score : 0.7035455740883035
+[2021-09-21 18:40:34,394][root][INFO] - LinearSVC---loss=hinge---c=1.5
+[2021-09-21 18:40:34,684][root][INFO] - Model:LinearSVC, Out_path:outputlosshinge_c1.5_ADASYN.png
+[2021-09-21 18:40:34,694][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.75      0.71       111
+     Discuss       0.75      0.64      0.69       163
+    Notagree       0.57      0.65      0.61        48
+   Unrelated       0.69      0.72      0.70       197
+
+    accuracy                           0.69       519
+   macro avg       0.67      0.69      0.68       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 18:40:34,694][root][INFO] - Accuracy : 0.6917148362235067
+[2021-09-21 18:40:34,697][root][INFO] - Weighted f1 score : 0.6919009392149545
+[2021-09-21 18:40:34,697][root][INFO] - LinearSVC---loss=hinge---c=2.0
+[2021-09-21 18:40:34,985][root][INFO] - Model:LinearSVC, Out_path:outputlosshinge_c2.0_ADASYN.png
+[2021-09-21 18:40:35,032][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.74      0.70       111
+     Discuss       0.76      0.64      0.69       163
+    Notagree       0.58      0.62      0.60        48
+   Unrelated       0.68      0.72      0.70       197
+
+    accuracy                           0.69       519
+   macro avg       0.67      0.68      0.67       519
+weighted avg       0.69      0.69      0.69       519
+
+[2021-09-21 18:40:35,035][root][INFO] - Accuracy : 0.6878612716763006
+[2021-09-21 18:40:35,044][root][INFO] - Weighted f1 score : 0.6881084388167197
+[2021-09-21 18:40:35,044][root][INFO] - LinearSVC---loss=hinge---c=2.5
+[2021-09-21 18:40:35,447][root][INFO] - Model:LinearSVC, Out_path:outputlosshinge_c2.5_ADASYN.png
+[2021-09-21 18:40:35,470][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.74      0.69       111
+     Discuss       0.74      0.64      0.68       163
+    Notagree       0.59      0.67      0.63        48
+   Unrelated       0.69      0.70      0.69       197
+
+    accuracy                           0.68       519
+   macro avg       0.67      0.68      0.67       519
+weighted avg       0.69      0.68      0.68       519
+
+[2021-09-21 18:40:35,471][root][INFO] - Accuracy : 0.6840077071290944
+[2021-09-21 18:40:35,477][root][INFO] - Weighted f1 score : 0.6841765643096666
+[2021-09-21 18:40:35,477][root][INFO] - LinearSVC---loss=hinge---c=3.0
+[2021-09-21 18:40:35,863][root][INFO] - Model:LinearSVC, Out_path:outputlosshinge_c3.0_ADASYN.png
+[2021-09-21 18:40:35,886][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.75      0.71       111
+     Discuss       0.74      0.66      0.69       163
+    Notagree       0.60      0.67      0.63        48
+   Unrelated       0.70      0.70      0.70       197
+
+    accuracy                           0.69       519
+   macro avg       0.68      0.69      0.68       519
+weighted avg       0.69      0.69      0.69       519
+
+[2021-09-21 18:40:35,887][root][INFO] - Accuracy : 0.6917148362235067
+[2021-09-21 18:40:35,892][root][INFO] - Weighted f1 score : 0.6918643525543411
+[2021-09-21 18:40:35,892][root][INFO] - LinearSVC---loss=hinge---c=3.5
+[2021-09-21 18:40:36,375][root][INFO] - Model:LinearSVC, Out_path:outputlosshinge_c3.5_ADASYN.png
+[2021-09-21 18:40:36,385][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.75      0.70       111
+     Discuss       0.73      0.66      0.69       163
+    Notagree       0.64      0.67      0.65        48
+   Unrelated       0.70      0.70      0.70       197
+
+    accuracy                           0.69       519
+   macro avg       0.68      0.69      0.69       519
+weighted avg       0.69      0.69      0.69       519
+
+[2021-09-21 18:40:36,385][root][INFO] - Accuracy : 0.6917148362235067
+[2021-09-21 18:40:36,387][root][INFO] - Weighted f1 score : 0.691647312856677
+[2021-09-21 18:40:36,387][root][INFO] - LinearSVC---loss=hinge---c=4.0
+[2021-09-21 18:40:36,703][root][INFO] - Model:LinearSVC, Out_path:outputlosshinge_c4.0_ADASYN.png
+[2021-09-21 18:40:36,712][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.76      0.70       111
+     Discuss       0.71      0.66      0.69       163
+    Notagree       0.68      0.67      0.67        48
+   Unrelated       0.71      0.69      0.70       197
+
+    accuracy                           0.69       519
+   macro avg       0.69      0.69      0.69       519
+weighted avg       0.70      0.69      0.69       519
+
+[2021-09-21 18:40:36,713][root][INFO] - Accuracy : 0.6936416184971098
+[2021-09-21 18:40:36,715][root][INFO] - Weighted f1 score : 0.6934131931765638
+[2021-09-21 18:40:36,715][root][INFO] - LinearSVC---loss=hinge---c=4.5
+[2021-09-21 18:40:37,034][root][INFO] - Model:LinearSVC, Out_path:outputlosshinge_c4.5_ADASYN.png
+[2021-09-21 18:40:37,044][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.65      0.75      0.69       111
+     Discuss       0.70      0.66      0.68       163
+    Notagree       0.66      0.65      0.65        48
+   Unrelated       0.70      0.69      0.69       197
+
+    accuracy                           0.69       519
+   macro avg       0.68      0.68      0.68       519
+weighted avg       0.69      0.69      0.69       519
+
+[2021-09-21 18:40:37,045][root][INFO] - Accuracy : 0.6859344894026975
+[2021-09-21 18:40:37,047][root][INFO] - Weighted f1 score : 0.6857307833229335
+[2021-09-21 18:40:37,047][root][INFO] - LinearSVC---loss=squared_hinge---c=0.5
+[2021-09-21 18:40:37,298][root][INFO] - Model:LinearSVC, Out_path:outputlosssquared_hinge_c0.5_ADASYN.png
+[2021-09-21 18:40:37,308][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.74      0.70       111
+     Discuss       0.74      0.63      0.68       163
+    Notagree       0.67      0.67      0.67        48
+   Unrelated       0.70      0.74      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.69      0.69      0.69       519
+weighted avg       0.70      0.70      0.70       519
+
+[2021-09-21 18:40:37,308][root][INFO] - Accuracy : 0.6994219653179191
+[2021-09-21 18:40:37,311][root][INFO] - Weighted f1 score : 0.6987491236319698
+[2021-09-21 18:40:37,311][root][INFO] - LinearSVC---loss=squared_hinge---c=1.0
+[2021-09-21 18:40:37,572][root][INFO] - Model:LinearSVC, Out_path:outputlosssquared_hinge_c1.0_ADASYN.png
+[2021-09-21 18:40:37,582][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.63      0.73      0.68       111
+     Discuss       0.73      0.64      0.68       163
+    Notagree       0.67      0.65      0.66        48
+   Unrelated       0.68      0.71      0.69       197
+
+    accuracy                           0.68       519
+   macro avg       0.68      0.68      0.68       519
+weighted avg       0.69      0.68      0.68       519
+
+[2021-09-21 18:40:37,582][root][INFO] - Accuracy : 0.6840077071290944
+[2021-09-21 18:40:37,585][root][INFO] - Weighted f1 score : 0.6839570788625037
+[2021-09-21 18:40:37,585][root][INFO] - LinearSVC---loss=squared_hinge---c=1.5
+[2021-09-21 18:40:37,860][root][INFO] - Model:LinearSVC, Out_path:outputlosssquared_hinge_c1.5_ADASYN.png
+[2021-09-21 18:40:37,881][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.62      0.72      0.67       111
+     Discuss       0.70      0.63      0.66       163
+    Notagree       0.65      0.62      0.64        48
+   Unrelated       0.68      0.69      0.69       197
+
+    accuracy                           0.67       519
+   macro avg       0.67      0.67      0.66       519
+weighted avg       0.67      0.67      0.67       519
+
+[2021-09-21 18:40:37,882][root][INFO] - Accuracy : 0.6705202312138728
+[2021-09-21 18:40:37,887][root][INFO] - Weighted f1 score : 0.670291430550631
+[2021-09-21 18:40:37,887][root][INFO] - LinearSVC---loss=squared_hinge---c=2.0
+[2021-09-21 18:40:38,256][root][INFO] - Model:LinearSVC, Out_path:outputlosssquared_hinge_c2.0_ADASYN.png
+[2021-09-21 18:40:38,279][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.63      0.71      0.67       111
+     Discuss       0.69      0.62      0.65       163
+    Notagree       0.64      0.62      0.63        48
+   Unrelated       0.68      0.69      0.69       197
+
+    accuracy                           0.67       519
+   macro avg       0.66      0.66      0.66       519
+weighted avg       0.67      0.67      0.67       519
+
+[2021-09-21 18:40:38,280][root][INFO] - Accuracy : 0.6666666666666666
+[2021-09-21 18:40:38,285][root][INFO] - Weighted f1 score : 0.6663674681489925
+[2021-09-21 18:40:38,286][root][INFO] - LinearSVC---loss=squared_hinge---c=2.5
+[2021-09-21 18:40:38,706][root][INFO] - Model:LinearSVC, Out_path:outputlosssquared_hinge_c2.5_ADASYN.png
+[2021-09-21 18:40:38,724][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.63      0.69      0.66       111
+     Discuss       0.68      0.62      0.65       163
+    Notagree       0.64      0.62      0.63        48
+   Unrelated       0.69      0.70      0.69       197
+
+    accuracy                           0.66       519
+   macro avg       0.66      0.66      0.66       519
+weighted avg       0.67      0.66      0.66       519
+
+[2021-09-21 18:40:38,725][root][INFO] - Accuracy : 0.6647398843930635
+[2021-09-21 18:40:38,730][root][INFO] - Weighted f1 score : 0.6644775690238734
+[2021-09-21 18:40:38,731][root][INFO] - LinearSVC---loss=squared_hinge---c=3.0
+[2021-09-21 18:40:39,108][root][INFO] - Model:LinearSVC, Out_path:outputlosssquared_hinge_c3.0_ADASYN.png
+[2021-09-21 18:40:39,130][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.63      0.69      0.66       111
+     Discuss       0.67      0.61      0.64       163
+    Notagree       0.64      0.62      0.63        48
+   Unrelated       0.69      0.70      0.69       197
+
+    accuracy                           0.66       519
+   macro avg       0.66      0.66      0.66       519
+weighted avg       0.66      0.66      0.66       519
+
+[2021-09-21 18:40:39,131][root][INFO] - Accuracy : 0.6628131021194605
+[2021-09-21 18:40:39,136][root][INFO] - Weighted f1 score : 0.6624252148161806
+[2021-09-21 18:40:39,136][root][INFO] - LinearSVC---loss=squared_hinge---c=3.5
+[2021-09-21 18:40:39,545][root][INFO] - Model:LinearSVC, Out_path:outputlosssquared_hinge_c3.5_ADASYN.png
+[2021-09-21 18:40:39,567][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.62      0.70      0.66       111
+     Discuss       0.66      0.61      0.64       163
+    Notagree       0.63      0.60      0.62        48
+   Unrelated       0.69      0.69      0.69       197
+
+    accuracy                           0.66       519
+   macro avg       0.65      0.65      0.65       519
+weighted avg       0.66      0.66      0.66       519
+
+[2021-09-21 18:40:39,568][root][INFO] - Accuracy : 0.6589595375722543
+[2021-09-21 18:40:39,573][root][INFO] - Weighted f1 score : 0.6586618110157484
+[2021-09-21 18:40:39,574][root][INFO] - LinearSVC---loss=squared_hinge---c=4.0
+[2021-09-21 18:40:39,963][root][INFO] - Model:LinearSVC, Out_path:outputlosssquared_hinge_c4.0_ADASYN.png
+[2021-09-21 18:40:39,973][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.62      0.69      0.65       111
+     Discuss       0.67      0.61      0.64       163
+    Notagree       0.64      0.62      0.63        48
+   Unrelated       0.69      0.69      0.69       197
+
+    accuracy                           0.66       519
+   macro avg       0.65      0.65      0.65       519
+weighted avg       0.66      0.66      0.66       519
+
+[2021-09-21 18:40:39,973][root][INFO] - Accuracy : 0.6589595375722543
+[2021-09-21 18:40:39,975][root][INFO] - Weighted f1 score : 0.6587694556764984
+[2021-09-21 18:40:39,976][root][INFO] - LinearSVC---loss=squared_hinge---c=4.5
+[2021-09-21 18:40:40,421][root][INFO] - Model:LinearSVC, Out_path:outputlosssquared_hinge_c4.5_ADASYN.png
+[2021-09-21 18:40:40,455][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.61      0.69      0.65       111
+     Discuss       0.67      0.62      0.64       163
+    Notagree       0.64      0.62      0.63        48
+   Unrelated       0.69      0.68      0.68       197
+
+    accuracy                           0.66       519
+   macro avg       0.65      0.65      0.65       519
+weighted avg       0.66      0.66      0.66       519
+
+[2021-09-21 18:40:40,456][root][INFO] - Accuracy : 0.6570327552986512
+[2021-09-21 18:40:40,464][root][INFO] - Weighted f1 score : 0.6570706201444511
