@@ -83,15 +83,15 @@ def main(cfg: H2CBaselineConfig):
 
     estimators = np.arange(25,200,25)
     # min_samples_split = np.arange(2,10,1)
-    criterions = ['gini','criterion']
-    max_featureses = ['None', 'sqrt', 'log2']
+    criterions = ['gini','entropy']
+    max_featureses = [None, 'sqrt', 'log2']
     for criterion in criterions:
         for max_features in max_featureses:
             for estimator in estimators:
-                logging.info('RandomForestClassifier--criterion{}---max_featureses{}...estimator{}'.format(criterion,max_featureses,estimator))
+                logging.info('RandomForestClassifier--criterion{}---max_featureses{}...estimator{}'.format(criterion,max_features,estimator))
                 model = RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight='balanced',n_jobs=-1,
                                                criterion=criterion,
-                                               max_features=max_featureses,
+                                               max_features=max_features,
                                                # min_samples_split=0.01,
                                                n_estimators=estimator
                                                )

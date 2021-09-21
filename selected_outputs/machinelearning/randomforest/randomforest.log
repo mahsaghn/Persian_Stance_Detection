@@ -1,0 +1,638 @@
+[2021-09-21 19:49:29,377][root][INFO] - hazm tokenizer
+[2021-09-21 19:49:31,113][root][INFO] - End of tf_idf feature
+[2021-09-21 19:49:31,444][root][INFO] - End of similarity feature
+[2021-09-21 19:49:31,451][root][INFO] - End of important words feature
+[2021-09-21 19:49:31,457][root][INFO] - End of is_question feature
+[2021-09-21 19:49:31,462][root][INFO] - "more than tow parts" feature was added.
+[2021-09-21 19:49:31,595][root][INFO] - End of polarity feature
+[2021-09-21 19:49:31,596][root][INFO] - Feature set (2594, 839):
+[2021-09-21 19:49:31,597][root][INFO] - RandomForestClassifier--criteriongini---max_featuresesNone...estimator25
+[2021-09-21 19:49:32,598][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim25_ADASYN.png
+[2021-09-21 19:49:32,611][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.75      0.77      0.76       111
+     Discuss       0.76      0.64      0.70       163
+    Notagree       0.84      0.56      0.68        48
+   Unrelated       0.69      0.83      0.76       197
+
+    accuracy                           0.73       519
+   macro avg       0.76      0.70      0.72       519
+weighted avg       0.74      0.73      0.73       519
+
+[2021-09-21 19:49:32,612][root][INFO] - Accuracy : 0.7341040462427746
+[2021-09-21 19:49:32,616][root][INFO] - Weighted f1 score : 0.7313885145944594
+[2021-09-21 19:49:32,617][root][INFO] - RandomForestClassifier--criteriongini---max_featuresesNone...estimator50
+[2021-09-21 19:49:34,173][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim50_ADASYN.png
+[2021-09-21 19:49:34,184][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.77      0.74       111
+     Discuss       0.79      0.56      0.66       163
+    Notagree       0.76      0.58      0.66        48
+   Unrelated       0.68      0.84      0.75       197
+
+    accuracy                           0.71       519
+   macro avg       0.73      0.69      0.70       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 19:49:34,185][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 19:49:34,188][root][INFO] - Weighted f1 score : 0.7098800178981514
+[2021-09-21 19:49:34,188][root][INFO] - RandomForestClassifier--criteriongini---max_featuresesNone...estimator75
+[2021-09-21 19:49:36,088][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim75_ADASYN.png
+[2021-09-21 19:49:36,100][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.76      0.77      0.76       111
+     Discuss       0.80      0.60      0.69       163
+    Notagree       0.83      0.62      0.71        48
+   Unrelated       0.68      0.85      0.76       197
+
+    accuracy                           0.73       519
+   macro avg       0.77      0.71      0.73       519
+weighted avg       0.75      0.73      0.73       519
+
+[2021-09-21 19:49:36,100][root][INFO] - Accuracy : 0.7341040462427746
+[2021-09-21 19:49:36,103][root][INFO] - Weighted f1 score : 0.7309381685712059
+[2021-09-21 19:49:36,103][root][INFO] - RandomForestClassifier--criteriongini---max_featuresesNone...estimator100
+[2021-09-21 19:49:38,398][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim100_ADASYN.png
+[2021-09-21 19:49:38,408][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.78      0.76      0.77       111
+     Discuss       0.77      0.63      0.69       163
+    Notagree       0.81      0.60      0.69        48
+   Unrelated       0.67      0.83      0.74       197
+
+    accuracy                           0.73       519
+   macro avg       0.76      0.70      0.72       519
+weighted avg       0.74      0.73      0.73       519
+
+[2021-09-21 19:49:38,409][root][INFO] - Accuracy : 0.7283236994219653
+[2021-09-21 19:49:38,412][root][INFO] - Weighted f1 score : 0.726341574279868
+[2021-09-21 19:49:38,412][root][INFO] - RandomForestClassifier--criteriongini---max_featuresesNone...estimator125
+[2021-09-21 19:49:41,061][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim125_ADASYN.png
+[2021-09-21 19:49:41,082][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.77      0.77      0.77       111
+     Discuss       0.81      0.61      0.70       163
+    Notagree       0.78      0.60      0.68        48
+   Unrelated       0.68      0.85      0.76       197
+
+    accuracy                           0.74       519
+   macro avg       0.76      0.71      0.73       519
+weighted avg       0.75      0.74      0.73       519
+
+[2021-09-21 19:49:41,083][root][INFO] - Accuracy : 0.7379576107899807
+[2021-09-21 19:49:41,087][root][INFO] - Weighted f1 score : 0.7348241779382422
+[2021-09-21 19:49:41,088][root][INFO] - RandomForestClassifier--criteriongini---max_featuresesNone...estimator150
+[2021-09-21 19:49:43,934][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim150_ADASYN.png
+[2021-09-21 19:49:43,944][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.72      0.76      0.74       111
+     Discuss       0.78      0.60      0.67       163
+    Notagree       0.81      0.60      0.69        48
+   Unrelated       0.68      0.83      0.75       197
+
+    accuracy                           0.72       519
+   macro avg       0.75      0.70      0.71       519
+weighted avg       0.73      0.72      0.72       519
+
+[2021-09-21 19:49:43,945][root][INFO] - Accuracy : 0.720616570327553
+[2021-09-21 19:49:43,947][root][INFO] - Weighted f1 score : 0.7173031099207641
+[2021-09-21 19:49:43,947][root][INFO] - RandomForestClassifier--criteriongini---max_featuresesNone...estimator175
+[2021-09-21 19:49:46,973][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim175_ADASYN.png
+[2021-09-21 19:49:46,983][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.77      0.75      0.76       111
+     Discuss       0.78      0.61      0.69       163
+    Notagree       0.81      0.60      0.69        48
+   Unrelated       0.68      0.85      0.76       197
+
+    accuracy                           0.73       519
+   macro avg       0.76      0.70      0.72       519
+weighted avg       0.74      0.73      0.73       519
+
+[2021-09-21 19:49:46,983][root][INFO] - Accuracy : 0.7321772639691715
+[2021-09-21 19:49:46,985][root][INFO] - Weighted f1 score : 0.7290720923588493
+[2021-09-21 19:49:46,985][root][INFO] - RandomForestClassifier--criteriongini---max_featuresessqrt...estimator25
+[2021-09-21 19:49:47,378][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim25_ADASYN.png
+[2021-09-21 19:49:47,389][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.76      0.74      0.75       111
+     Discuss       0.75      0.60      0.67       163
+    Notagree       0.83      0.60      0.70        48
+   Unrelated       0.66      0.82      0.73       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.69      0.71       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:49:47,390][root][INFO] - Accuracy : 0.7129094412331407
+[2021-09-21 19:49:47,392][root][INFO] - Weighted f1 score : 0.710689711207458
+[2021-09-21 19:49:47,392][root][INFO] - RandomForestClassifier--criteriongini---max_featuresessqrt...estimator50
+[2021-09-21 19:49:47,928][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim50_ADASYN.png
+[2021-09-21 19:49:47,940][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.76      0.70      0.73       111
+     Discuss       0.79      0.64      0.71       163
+    Notagree       0.84      0.54      0.66        48
+   Unrelated       0.66      0.84      0.74       197
+
+    accuracy                           0.72       519
+   macro avg       0.76      0.68      0.71       519
+weighted avg       0.74      0.72      0.72       519
+
+[2021-09-21 19:49:47,941][root][INFO] - Accuracy : 0.7225433526011561
+[2021-09-21 19:49:47,943][root][INFO] - Weighted f1 score : 0.7202671304959329
+[2021-09-21 19:49:47,943][root][INFO] - RandomForestClassifier--criteriongini---max_featuresessqrt...estimator75
+[2021-09-21 19:49:48,637][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim75_ADASYN.png
+[2021-09-21 19:49:48,649][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.72      0.72      0.72       111
+     Discuss       0.81      0.62      0.70       163
+    Notagree       0.84      0.54      0.66        48
+   Unrelated       0.66      0.85      0.74       197
+
+    accuracy                           0.72       519
+   macro avg       0.76      0.68      0.71       519
+weighted avg       0.74      0.72      0.72       519
+
+[2021-09-21 19:49:48,649][root][INFO] - Accuracy : 0.720616570327553
+[2021-09-21 19:49:48,652][root][INFO] - Weighted f1 score : 0.7176584883272594
+[2021-09-21 19:49:48,652][root][INFO] - RandomForestClassifier--criteriongini---max_featuresessqrt...estimator100
+[2021-09-21 19:49:49,524][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim100_ADASYN.png
+[2021-09-21 19:49:49,537][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.77      0.71      0.74       111
+     Discuss       0.80      0.64      0.71       163
+    Notagree       0.83      0.52      0.64        48
+   Unrelated       0.66      0.86      0.75       197
+
+    accuracy                           0.73       519
+   macro avg       0.77      0.68      0.71       519
+weighted avg       0.74      0.73      0.72       519
+
+[2021-09-21 19:49:49,537][root][INFO] - Accuracy : 0.7263969171483622
+[2021-09-21 19:49:49,540][root][INFO] - Weighted f1 score : 0.7233618012521755
+[2021-09-21 19:49:49,540][root][INFO] - RandomForestClassifier--criteriongini---max_featuresessqrt...estimator125
+[2021-09-21 19:49:50,508][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim125_ADASYN.png
+[2021-09-21 19:49:50,518][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.79      0.73      0.76       111
+     Discuss       0.81      0.63      0.71       163
+    Notagree       0.81      0.60      0.69        48
+   Unrelated       0.65      0.84      0.74       197
+
+    accuracy                           0.73       519
+   macro avg       0.76      0.70      0.72       519
+weighted avg       0.75      0.73      0.73       519
+
+[2021-09-21 19:49:50,519][root][INFO] - Accuracy : 0.7283236994219653
+[2021-09-21 19:49:50,521][root][INFO] - Weighted f1 score : 0.7268779840261049
+[2021-09-21 19:49:50,521][root][INFO] - RandomForestClassifier--criteriongini---max_featuresessqrt...estimator150
+[2021-09-21 19:49:51,670][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim150_ADASYN.png
+[2021-09-21 19:49:51,681][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.79      0.73      0.76       111
+     Discuss       0.81      0.61      0.70       163
+    Notagree       0.86      0.52      0.65        48
+   Unrelated       0.64      0.86      0.74       197
+
+    accuracy                           0.72       519
+   macro avg       0.78      0.68      0.71       519
+weighted avg       0.75      0.72      0.72       519
+
+[2021-09-21 19:49:51,682][root][INFO] - Accuracy : 0.7244701348747592
+[2021-09-21 19:49:51,685][root][INFO] - Weighted f1 score : 0.7216873513380881
+[2021-09-21 19:49:51,685][root][INFO] - RandomForestClassifier--criteriongini---max_featuresessqrt...estimator175
+[2021-09-21 19:49:52,954][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim175_ADASYN.png
+[2021-09-21 19:49:52,966][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.77      0.73      0.75       111
+     Discuss       0.81      0.63      0.71       163
+    Notagree       0.87      0.54      0.67        48
+   Unrelated       0.67      0.87      0.76       197
+
+    accuracy                           0.73       519
+   macro avg       0.78      0.69      0.72       519
+weighted avg       0.75      0.73      0.73       519
+
+[2021-09-21 19:49:52,967][root][INFO] - Accuracy : 0.7341040462427746
+[2021-09-21 19:49:52,970][root][INFO] - Weighted f1 score : 0.730731180867189
+[2021-09-21 19:49:52,970][root][INFO] - RandomForestClassifier--criteriongini---max_featureseslog2...estimator25
+[2021-09-21 19:49:53,387][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim25_ADASYN.png
+[2021-09-21 19:49:53,400][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.72      0.71       111
+     Discuss       0.73      0.63      0.68       163
+    Notagree       0.81      0.46      0.59        48
+   Unrelated       0.66      0.80      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.73      0.65      0.67       519
+weighted avg       0.71      0.70      0.69       519
+
+[2021-09-21 19:49:53,401][root][INFO] - Accuracy : 0.697495183044316
+[2021-09-21 19:49:53,404][root][INFO] - Weighted f1 score : 0.6937904327915319
+[2021-09-21 19:49:53,404][root][INFO] - RandomForestClassifier--criteriongini---max_featureseslog2...estimator50
+[2021-09-21 19:49:54,016][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim50_ADASYN.png
+[2021-09-21 19:49:54,039][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.75      0.69      0.72       111
+     Discuss       0.75      0.67      0.71       163
+    Notagree       0.83      0.52      0.64        48
+   Unrelated       0.65      0.80      0.72       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.67      0.70       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:49:54,042][root][INFO] - Accuracy : 0.7109826589595376
+[2021-09-21 19:49:54,047][root][INFO] - Weighted f1 score : 0.7095395044153963
+[2021-09-21 19:49:54,047][root][INFO] - RandomForestClassifier--criteriongini---max_featureseslog2...estimator75
+[2021-09-21 19:49:54,968][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim75_ADASYN.png
+[2021-09-21 19:49:54,979][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.72      0.73      0.72       111
+     Discuss       0.79      0.64      0.71       163
+    Notagree       0.85      0.48      0.61        48
+   Unrelated       0.67      0.83      0.74       197
+
+    accuracy                           0.72       519
+   macro avg       0.76      0.67      0.70       519
+weighted avg       0.73      0.72      0.72       519
+
+[2021-09-21 19:49:54,979][root][INFO] - Accuracy : 0.7186897880539499
+[2021-09-21 19:49:54,982][root][INFO] - Weighted f1 score : 0.7152576546298736
+[2021-09-21 19:49:54,982][root][INFO] - RandomForestClassifier--criteriongini---max_featureseslog2...estimator100
+[2021-09-21 19:49:55,808][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim100_ADASYN.png
+[2021-09-21 19:49:55,819][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.75      0.72      0.73       111
+     Discuss       0.76      0.64      0.69       163
+    Notagree       0.85      0.48      0.61        48
+   Unrelated       0.65      0.82      0.73       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.67      0.69       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 19:49:55,820][root][INFO] - Accuracy : 0.7109826589595376
+[2021-09-21 19:49:55,823][root][INFO] - Weighted f1 score : 0.7078129693771844
+[2021-09-21 19:49:55,823][root][INFO] - RandomForestClassifier--criteriongini---max_featureseslog2...estimator125
+[2021-09-21 19:49:56,724][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim125_ADASYN.png
+[2021-09-21 19:49:56,735][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.75      0.71      0.73       111
+     Discuss       0.77      0.65      0.70       163
+    Notagree       0.82      0.48      0.61        48
+   Unrelated       0.66      0.83      0.74       197
+
+    accuracy                           0.72       519
+   macro avg       0.75      0.67      0.69       519
+weighted avg       0.73      0.72      0.71       519
+
+[2021-09-21 19:49:56,736][root][INFO] - Accuracy : 0.7167630057803468
+[2021-09-21 19:49:56,739][root][INFO] - Weighted f1 score : 0.7133110333702085
+[2021-09-21 19:49:56,739][root][INFO] - RandomForestClassifier--criteriongini---max_featureseslog2...estimator150
+[2021-09-21 19:49:57,778][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim150_ADASYN.png
+[2021-09-21 19:49:57,787][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.76      0.72      0.74       111
+     Discuss       0.79      0.66      0.72       163
+    Notagree       0.81      0.46      0.59        48
+   Unrelated       0.66      0.84      0.74       197
+
+    accuracy                           0.72       519
+   macro avg       0.76      0.67      0.70       519
+weighted avg       0.74      0.72      0.72       519
+
+[2021-09-21 19:49:57,788][root][INFO] - Accuracy : 0.7225433526011561
+[2021-09-21 19:49:57,791][root][INFO] - Weighted f1 score : 0.718758190768118
+[2021-09-21 19:49:57,791][root][INFO] - RandomForestClassifier--criteriongini---max_featureseslog2...estimator175
+[2021-09-21 19:49:58,962][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfea[None, 'sqrt', 'log2']_estim175_ADASYN.png
+[2021-09-21 19:49:58,975][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.76      0.72      0.74       111
+     Discuss       0.78      0.64      0.70       163
+    Notagree       0.79      0.48      0.60        48
+   Unrelated       0.68      0.86      0.76       197
+
+    accuracy                           0.73       519
+   macro avg       0.75      0.68      0.70       519
+weighted avg       0.74      0.73      0.72       519
+
+[2021-09-21 19:49:58,977][root][INFO] - Accuracy : 0.7263969171483622
+[2021-09-21 19:49:58,980][root][INFO] - Weighted f1 score : 0.7220140412133274
+[2021-09-21 19:49:58,980][root][INFO] - RandomForestClassifier--criterionentropy---max_featuresesNone...estimator25
+[2021-09-21 19:49:59,774][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim25_ADASYN.png
+[2021-09-21 19:49:59,783][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.73      0.76      0.74       111
+     Discuss       0.76      0.58      0.66       163
+    Notagree       0.76      0.54      0.63        48
+   Unrelated       0.68      0.85      0.75       197
+
+    accuracy                           0.71       519
+   macro avg       0.73      0.68      0.70       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:49:59,785][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 19:49:59,788][root][INFO] - Weighted f1 score : 0.7096201263334758
+[2021-09-21 19:49:59,788][root][INFO] - RandomForestClassifier--criterionentropy---max_featuresesNone...estimator50
+[2021-09-21 19:50:01,160][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim50_ADASYN.png
+[2021-09-21 19:50:01,170][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.74      0.73      0.73       111
+     Discuss       0.77      0.63      0.69       163
+    Notagree       0.81      0.52      0.63        48
+   Unrelated       0.68      0.85      0.76       197
+
+    accuracy                           0.72       519
+   macro avg       0.75      0.68      0.70       519
+weighted avg       0.73      0.72      0.72       519
+
+[2021-09-21 19:50:01,172][root][INFO] - Accuracy : 0.7244701348747592
+[2021-09-21 19:50:01,174][root][INFO] - Weighted f1 score : 0.7206268126950732
+[2021-09-21 19:50:01,175][root][INFO] - RandomForestClassifier--criterionentropy---max_featuresesNone...estimator75
+[2021-09-21 19:50:03,362][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim75_ADASYN.png
+[2021-09-21 19:50:03,372][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.74      0.74      0.74       111
+     Discuss       0.76      0.63      0.69       163
+    Notagree       0.81      0.54      0.65        48
+   Unrelated       0.68      0.84      0.75       197
+
+    accuracy                           0.72       519
+   macro avg       0.75      0.69      0.71       519
+weighted avg       0.73      0.72      0.72       519
+
+[2021-09-21 19:50:03,374][root][INFO] - Accuracy : 0.7225433526011561
+[2021-09-21 19:50:03,376][root][INFO] - Weighted f1 score : 0.7191640776956852
+[2021-09-21 19:50:03,377][root][INFO] - RandomForestClassifier--criterionentropy---max_featuresesNone...estimator100
+[2021-09-21 19:50:05,584][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim100_ADASYN.png
+[2021-09-21 19:50:05,595][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.74      0.74      0.74       111
+     Discuss       0.75      0.61      0.67       163
+    Notagree       0.82      0.58      0.68        48
+   Unrelated       0.68      0.84      0.75       197
+
+    accuracy                           0.72       519
+   macro avg       0.75      0.69      0.71       519
+weighted avg       0.73      0.72      0.72       519
+
+[2021-09-21 19:50:05,597][root][INFO] - Accuracy : 0.720616570327553
+[2021-09-21 19:50:05,599][root][INFO] - Weighted f1 score : 0.7172840809245687
+[2021-09-21 19:50:05,599][root][INFO] - RandomForestClassifier--criterionentropy---max_featuresesNone...estimator125
+[2021-09-21 19:50:08,448][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim125_ADASYN.png
+[2021-09-21 19:50:08,459][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.72      0.73      0.73       111
+     Discuss       0.76      0.61      0.68       163
+    Notagree       0.84      0.56      0.68        48
+   Unrelated       0.68      0.85      0.76       197
+
+    accuracy                           0.72       519
+   macro avg       0.75      0.69      0.71       519
+weighted avg       0.73      0.72      0.72       519
+
+[2021-09-21 19:50:08,461][root][INFO] - Accuracy : 0.720616570327553
+[2021-09-21 19:50:08,463][root][INFO] - Weighted f1 score : 0.7168616480589167
+[2021-09-21 19:50:08,463][root][INFO] - RandomForestClassifier--criterionentropy---max_featuresesNone...estimator150
+[2021-09-21 19:50:11,927][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim150_ADASYN.png
+[2021-09-21 19:50:11,936][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.77      0.75      0.76       111
+     Discuss       0.77      0.62      0.69       163
+    Notagree       0.84      0.56      0.68        48
+   Unrelated       0.68      0.85      0.76       197
+
+    accuracy                           0.73       519
+   macro avg       0.77      0.70      0.72       519
+weighted avg       0.74      0.73      0.73       519
+
+[2021-09-21 19:50:11,937][root][INFO] - Accuracy : 0.7302504816955684
+[2021-09-21 19:50:11,939][root][INFO] - Weighted f1 score : 0.7269291926705429
+[2021-09-21 19:50:11,939][root][INFO] - RandomForestClassifier--criterionentropy---max_featuresesNone...estimator175
+[2021-09-21 19:50:16,636][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim175_ADASYN.png
+[2021-09-21 19:50:16,651][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.75      0.74      0.75       111
+     Discuss       0.74      0.61      0.67       163
+    Notagree       0.78      0.52      0.62        48
+   Unrelated       0.68      0.85      0.76       197
+
+    accuracy                           0.72       519
+   macro avg       0.74      0.68      0.70       519
+weighted avg       0.73      0.72      0.71       519
+
+[2021-09-21 19:50:16,652][root][INFO] - Accuracy : 0.7186897880539499
+[2021-09-21 19:50:16,655][root][INFO] - Weighted f1 score : 0.7141493096780414
+[2021-09-21 19:50:16,655][root][INFO] - RandomForestClassifier--criterionentropy---max_featuresessqrt...estimator25
+[2021-09-21 19:50:17,065][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim25_ADASYN.png
+[2021-09-21 19:50:17,076][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.74      0.73      0.74       111
+     Discuss       0.76      0.63      0.69       163
+    Notagree       0.85      0.46      0.59        48
+   Unrelated       0.66      0.84      0.74       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.66      0.69       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 19:50:17,076][root][INFO] - Accuracy : 0.7129094412331407
+[2021-09-21 19:50:17,079][root][INFO] - Weighted f1 score : 0.7084253212856232
+[2021-09-21 19:50:17,079][root][INFO] - RandomForestClassifier--criterionentropy---max_featuresessqrt...estimator50
+[2021-09-21 19:50:17,780][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim50_ADASYN.png
+[2021-09-21 19:50:17,792][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.78      0.73      0.75       111
+     Discuss       0.83      0.61      0.70       163
+    Notagree       0.83      0.50      0.62        48
+   Unrelated       0.65      0.88      0.75       197
+
+    accuracy                           0.73       519
+   macro avg       0.77      0.68      0.71       519
+weighted avg       0.75      0.73      0.72       519
+
+[2021-09-21 19:50:17,792][root][INFO] - Accuracy : 0.7283236994219653
+[2021-09-21 19:50:17,795][root][INFO] - Weighted f1 score : 0.7242482006850987
+[2021-09-21 19:50:17,795][root][INFO] - RandomForestClassifier--criterionentropy---max_featuresessqrt...estimator75
+[2021-09-21 19:50:18,474][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim75_ADASYN.png
+[2021-09-21 19:50:18,487][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.76      0.72      0.74       111
+     Discuss       0.80      0.61      0.69       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.64      0.86      0.73       197
+
+    accuracy                           0.72       519
+   macro avg       0.77      0.67      0.70       519
+weighted avg       0.74      0.72      0.71       519
+
+[2021-09-21 19:50:18,488][root][INFO] - Accuracy : 0.7167630057803468
+[2021-09-21 19:50:18,490][root][INFO] - Weighted f1 score : 0.7131721376784274
+[2021-09-21 19:50:18,490][root][INFO] - RandomForestClassifier--criterionentropy---max_featuresessqrt...estimator100
+[2021-09-21 19:50:19,342][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim100_ADASYN.png
+[2021-09-21 19:50:19,354][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.80      0.72      0.76       111
+     Discuss       0.82      0.63      0.71       163
+    Notagree       0.84      0.56      0.68        48
+   Unrelated       0.65      0.87      0.75       197
+
+    accuracy                           0.73       519
+   macro avg       0.78      0.69      0.72       519
+weighted avg       0.75      0.73      0.73       519
+
+[2021-09-21 19:50:19,355][root][INFO] - Accuracy : 0.7321772639691715
+[2021-09-21 19:50:19,357][root][INFO] - Weighted f1 score : 0.7298906804866429
+[2021-09-21 19:50:19,358][root][INFO] - RandomForestClassifier--criterionentropy---max_featuresessqrt...estimator125
+[2021-09-21 19:50:20,298][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim125_ADASYN.png
+[2021-09-21 19:50:20,310][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.75      0.71      0.73       111
+     Discuss       0.84      0.63      0.72       163
+    Notagree       0.88      0.48      0.62        48
+   Unrelated       0.64      0.87      0.74       197
+
+    accuracy                           0.72       519
+   macro avg       0.78      0.67      0.70       519
+weighted avg       0.75      0.72      0.72       519
+
+[2021-09-21 19:50:20,311][root][INFO] - Accuracy : 0.7225433526011561
+[2021-09-21 19:50:20,313][root][INFO] - Weighted f1 score : 0.7191178520171719
+[2021-09-21 19:50:20,313][root][INFO] - RandomForestClassifier--criterionentropy---max_featuresessqrt...estimator150
+[2021-09-21 19:50:21,412][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim150_ADASYN.png
+[2021-09-21 19:50:21,425][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.77      0.72      0.74       111
+     Discuss       0.80      0.60      0.68       163
+    Notagree       0.86      0.50      0.63        48
+   Unrelated       0.65      0.87      0.74       197
+
+    accuracy                           0.72       519
+   macro avg       0.77      0.67      0.70       519
+weighted avg       0.74      0.72      0.71       519
+
+[2021-09-21 19:50:21,426][root][INFO] - Accuracy : 0.7186897880539499
+[2021-09-21 19:50:21,430][root][INFO] - Weighted f1 score : 0.7139861450585161
+[2021-09-21 19:50:21,431][root][INFO] - RandomForestClassifier--criterionentropy---max_featuresessqrt...estimator175
+[2021-09-21 19:50:22,738][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim175_ADASYN.png
+[2021-09-21 19:50:22,753][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.79      0.73      0.76       111
+     Discuss       0.82      0.61      0.70       163
+    Notagree       0.84      0.54      0.66        48
+   Unrelated       0.66      0.88      0.75       197
+
+    accuracy                           0.73       519
+   macro avg       0.78      0.69      0.72       519
+weighted avg       0.75      0.73      0.73       519
+
+[2021-09-21 19:50:22,754][root][INFO] - Accuracy : 0.7321772639691715
+[2021-09-21 19:50:22,757][root][INFO] - Weighted f1 score : 0.7288251826670702
+[2021-09-21 19:50:22,757][root][INFO] - RandomForestClassifier--criterionentropy---max_featureseslog2...estimator25
+[2021-09-21 19:50:23,157][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim25_ADASYN.png
+[2021-09-21 19:50:23,169][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.75      0.71      0.73       111
+     Discuss       0.76      0.69      0.72       163
+    Notagree       0.86      0.40      0.54        48
+   Unrelated       0.66      0.82      0.73       197
+
+    accuracy                           0.71       519
+   macro avg       0.76      0.65      0.68       519
+weighted avg       0.73      0.71      0.71       519
+
+[2021-09-21 19:50:23,169][root][INFO] - Accuracy : 0.7148362235067437
+[2021-09-21 19:50:23,172][root][INFO] - Weighted f1 score : 0.7100092223570468
+[2021-09-21 19:50:23,172][root][INFO] - RandomForestClassifier--criterionentropy---max_featureseslog2...estimator50
+[2021-09-21 19:50:23,692][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim50_ADASYN.png
+[2021-09-21 19:50:23,701][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.74      0.71      0.72       111
+     Discuss       0.75      0.63      0.69       163
+    Notagree       0.86      0.52      0.65        48
+   Unrelated       0.68      0.85      0.75       197
+
+    accuracy                           0.72       519
+   macro avg       0.76      0.68      0.70       519
+weighted avg       0.73      0.72      0.72       519
+
+[2021-09-21 19:50:23,702][root][INFO] - Accuracy : 0.720616570327553
+[2021-09-21 19:50:23,704][root][INFO] - Weighted f1 score : 0.7169041538038351
+[2021-09-21 19:50:23,704][root][INFO] - RandomForestClassifier--criterionentropy---max_featureseslog2...estimator75
+[2021-09-21 19:50:24,425][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim75_ADASYN.png
+[2021-09-21 19:50:24,436][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.73      0.69      0.71       111
+     Discuss       0.76      0.66      0.70       163
+    Notagree       0.85      0.46      0.59        48
+   Unrelated       0.66      0.82      0.73       197
+
+    accuracy                           0.71       519
+   macro avg       0.75      0.66      0.69       519
+weighted avg       0.72      0.71      0.71       519
+
+[2021-09-21 19:50:24,437][root][INFO] - Accuracy : 0.7090558766859345
+[2021-09-21 19:50:24,439][root][INFO] - Weighted f1 score : 0.7055483761826931
+[2021-09-21 19:50:24,439][root][INFO] - RandomForestClassifier--criterionentropy---max_featureseslog2...estimator100
+[2021-09-21 19:50:25,277][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim100_ADASYN.png
+[2021-09-21 19:50:25,286][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.74      0.73      0.73       111
+     Discuss       0.75      0.67      0.71       163
+    Notagree       0.83      0.50      0.62        48
+   Unrelated       0.68      0.80      0.73       197
+
+    accuracy                           0.72       519
+   macro avg       0.75      0.68      0.70       519
+weighted avg       0.73      0.72      0.72       519
+
+[2021-09-21 19:50:25,287][root][INFO] - Accuracy : 0.7186897880539499
+[2021-09-21 19:50:25,289][root][INFO] - Weighted f1 score : 0.7163325021002865
+[2021-09-21 19:50:25,289][root][INFO] - RandomForestClassifier--criterionentropy---max_featureseslog2...estimator125
+[2021-09-21 19:50:26,263][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim125_ADASYN.png
+[2021-09-21 19:50:26,282][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.77      0.74      0.75       111
+     Discuss       0.78      0.64      0.70       163
+    Notagree       0.81      0.46      0.59        48
+   Unrelated       0.66      0.84      0.74       197
+
+    accuracy                           0.72       519
+   macro avg       0.75      0.67      0.70       519
+weighted avg       0.73      0.72      0.72       519
+
+[2021-09-21 19:50:26,283][root][INFO] - Accuracy : 0.720616570327553
+[2021-09-21 19:50:26,288][root][INFO] - Weighted f1 score : 0.7163979590354853
+[2021-09-21 19:50:26,288][root][INFO] - RandomForestClassifier--criterionentropy---max_featureseslog2...estimator150
+[2021-09-21 19:50:27,340][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim150_ADASYN.png
+[2021-09-21 19:50:27,350][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.77      0.72      0.74       111
+     Discuss       0.79      0.63      0.70       163
+    Notagree       0.80      0.50      0.62        48
+   Unrelated       0.67      0.86      0.75       197
+
+    accuracy                           0.72       519
+   macro avg       0.76      0.68      0.70       519
+weighted avg       0.74      0.72      0.72       519
+
+[2021-09-21 19:50:27,351][root][INFO] - Accuracy : 0.7244701348747592
+[2021-09-21 19:50:27,353][root][INFO] - Weighted f1 score : 0.7206065419675487
+[2021-09-21 19:50:27,353][root][INFO] - RandomForestClassifier--criterionentropy---max_featureseslog2...estimator175
+[2021-09-21 19:50:28,518][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrientropy_maxfea[None, 'sqrt', 'log2']_estim175_ADASYN.png
+[2021-09-21 19:50:28,528][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.79      0.71      0.75       111
+     Discuss       0.77      0.65      0.70       163
+    Notagree       0.85      0.48      0.61        48
+   Unrelated       0.67      0.86      0.75       197
+
+    accuracy                           0.73       519
+   macro avg       0.77      0.68      0.71       519
+weighted avg       0.74      0.73      0.72       519
+
+[2021-09-21 19:50:28,529][root][INFO] - Accuracy : 0.7283236994219653
+[2021-09-21 19:50:28,531][root][INFO] - Weighted f1 score : 0.7242329143355245
