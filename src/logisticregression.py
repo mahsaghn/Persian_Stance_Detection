@@ -80,17 +80,24 @@ def main(cfg: H2CBaselineConfig):
         if labels[l][0] == 'Disagree':
             labels[l][0] = "Notagree"
 
-    penaltys = ['l1','l2']
-    losss = ['hinge', 'squared_hinge']
-    for penalty in penaltys:
-        ranges =  np.arange(0.5, 5.0, 0.5)
-        for loss in losss:
-            if not (penalty == 'l1' and loss == 'hinge'):
-                for c in ranges:
-                    logging.info('LinearSVC---loss={}---penalty={}---c={}',format(loss,penalty,c))
-                    model = LinearSVC(C=c, class_weight='balanced', loss=loss,
-                                      penalty=penalty, tol=0.0001)
-                    common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
+    ranges = np.arange(0.5, 5.0, 0.5)
+    for c in ranges:
+        logging.info('LogisticRegression---penalty=elasticnet----solver=saga c={}'.format(c))
+        model = LogisticRegression(C=c,
+                                   intercept_scaling=1,
+                                   penalty='elasticnet',
+                                   solver='saga', tol=0.0001)
+        common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name+'elsticnet_c{}'.format(c))
+
+    solvers = ['newton-cg', 'sag', 'lbfgs']
+    for solver in solvers:
+        for c in ranges:
+            logging.info('LogisticRegression---penalty=l2----solver={} c={}'.format(solver, c))
+            model = LogisticRegression(C=c,
+                                       intercept_scaling=1,
+                                       penalty='l2',
+                                       solver=solver, tol=0.0001)
+            common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name+'l2_solv{}_c{}'.format(solver,c))
 
 
 main()
