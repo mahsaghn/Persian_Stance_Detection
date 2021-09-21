@@ -127,8 +127,7 @@ class PSFeatureExtractor():
         return df
 
     def __feature_vector_method(self, words, model, num_features):
-        #index2word_set = set(model.wv.index2word)
-        print(len(words),len(model[words[0]])) 
+        #index2word_set = set(model.wv.index2wor 
         featureVec = np.sum([model[word] for word in words if word in model],axis=0)# if word in index2word_set], axis=1)
         featureVec = np.divide(featureVec, len(words))
         return featureVec
@@ -425,4 +424,5 @@ class PSFeatureExtractor():
         if self.cfg.save_feature:
             joblib.dump(features, (self.cfg.save_path + '/' + file_name + '.pkl'))
             logging.info('Features saved successfully.')
+        print('max feature',max(features[0]))
         return features, file_name
