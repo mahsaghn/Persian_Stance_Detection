@@ -81,13 +81,15 @@ def main(cfg: H2CBaselineConfig):
             labels[l][0] = "Notagree"
 
     ranges = np.arange(0.5, 5.0, 0.5)
+    erange = np.arange(0,1, 0.1)
     for c in ranges:
-        logging.info('LogisticRegression---penalty=elasticnet----solver=saga c={}'.format(c))
-        model = LogisticRegression(C=c,
+        for e in erange:
+            logging.info('LogisticRegression---penalty=elasticnet----solver=saga c={}---erange{}'.format(c,e))
+            model = LogisticRegression(C=c,
                                    intercept_scaling=1,
                                    penalty='elasticnet',
-                                   solver='saga', tol=0.0001)
-        common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name+'elsticnet_c{}'.format(c))
+                                   solver='saga', tol=0.0001,l1_ratio=e)
+            common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name+'elsticnet_c{}_e{}'.format(c,e))
 
     solvers = ['newton-cg', 'sag', 'lbfgs']
     for solver in solvers:
