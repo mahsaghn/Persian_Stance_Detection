@@ -1,0 +1,41 @@
+save_path: /models/
+save_datasets: false
+load_path: /home/ubuntu/ghaderan/stc/stance_detection/dataset/seperated
+load_if_exist: false
+test_size: 0.2
+over_sample: false
+oversampling: ADASYN
+N_neighbors: 9
+Random_state: 88
+features:
+  dataset_path: /home/ubuntu/ghaderan/stc/stance_detection/dataset/h2c_new_dataset.csv
+  stopWord_path: /home/ubuntu/ghaderan/stc/stance_detection/dataset/stop-words/nonverbal.txt
+  ponctuations_path: /home/ubuntu/ghaderan/stc/stance_detection/dataset/ponctuations.txt
+  uniq_claims_path: /home/ubuntu/ghaderan/stc/stance_detection/dataset/uniq_claims.txt
+  bert_model_path: HooshvareLab/bert-fa-zwnj-base
+  stanford_models_path: /home/ubuntu/ghaderan/stc/stance_detection/dataset
+  polarity_dataset_path: /home/ubuntu/ghaderan/stc/stance_detection/dataset/PerSent.xlsx
+  clean_claims_headlines: ''
+  clean_claims: ''
+  clean_headlines: ''
+  claim_name: claim
+  headline_name: headline
+  question_name: question
+  label_name: label
+  part_name: parts
+  w2v_model_path: /home/ubuntu/ghaderan/stc/stance_detection/dataset/cc.fa.300.vec
+  save_load_path: ''
+  save_feature: false
+  load_path:
+  - ''
+  root_distance: false
+  load_if_exist: false
+  bow: false
+  w2v: false
+  polarity: true
+  tfidf: true
+  similarity: true
+  important_words: true
+  is_question: false
+  more_than2_parts: false
+  tokenize_method: hazm

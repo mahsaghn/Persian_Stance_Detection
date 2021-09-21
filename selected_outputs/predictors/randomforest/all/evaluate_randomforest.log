@@ -1,0 +1,42 @@
+[2021-09-21 14:18:45,876][root][INFO] - hazm tokenizer
+[2021-09-21 14:18:47,620][root][INFO] - End of tf_idf feature
+[2021-09-21 14:18:47,941][root][INFO] - End of similarity feature
+[2021-09-21 14:18:47,949][root][INFO] - End of important words feature
+[2021-09-21 14:18:47,954][root][INFO] - End of is_question feature
+[2021-09-21 14:18:47,959][root][INFO] - "more than tow parts" feature was added.
+[2021-09-21 14:18:47,962][stanza][INFO] - Loading these models for language: fa (Persian):
+=======================
+| Processor | Package |
+-----------------------
+| tokenize  | perdt   |
+| mwt       | perdt   |
+| pos       | perdt   |
+| lemma     | perdt   |
+| depparse  | perdt   |
+=======================
+
+[2021-09-21 14:18:47,968][stanza][INFO] - Use device: cpu
+[2021-09-21 14:18:47,968][stanza][INFO] - Loading: tokenize
+[2021-09-21 14:18:47,972][stanza][INFO] - Loading: mwt
+[2021-09-21 14:18:47,978][stanza][INFO] - Loading: pos
+[2021-09-21 14:18:48,178][stanza][INFO] - Loading: lemma
+[2021-09-21 14:18:48,219][stanza][INFO] - Loading: depparse
+[2021-09-21 14:18:48,613][stanza][INFO] - Done loading processors!
+[2021-09-21 14:24:14,415][root][INFO] - End of root distance feature
+[2021-09-21 14:24:14,548][root][INFO] - End of polarity feature
+[2021-09-21 14:24:14,550][root][INFO] - Feature set (2594, 840):
+[2021-09-21 14:24:14,551][root][INFO] - RandomForestClassifier
+[2021-09-21 14:24:15,177][root][INFO] - Model:RandomForestClassifier, Out_path:output_ADASYN.png
+[2021-09-21 14:24:15,186][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.70      0.71      0.71       111
+     Discuss       0.88      0.50      0.64       163
+    Notagree       0.72      0.65      0.68        48
+   Unrelated       0.62      0.86      0.72       197
+
+    accuracy                           0.69       519
+   macro avg       0.73      0.68      0.69       519
+weighted avg       0.73      0.69      0.69       519
+
+[2021-09-21 14:24:15,187][root][INFO] - Accuracy : 0.6936416184971098
+[2021-09-21 14:24:15,189][root][INFO] - Weighted f1 score : 0.6875311339396685

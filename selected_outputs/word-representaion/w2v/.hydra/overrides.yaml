@@ -1,0 +1,6 @@
+- save_datasets=False
+- load_if_exist=False
+- features.is_question=True
+- features.important_words=True
+- features.similarity=True
+- features.w2v=True

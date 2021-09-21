@@ -1,0 +1,37 @@
+[2021-09-21 14:26:27,035][root][INFO] - hazm tokenizer
+[2021-09-21 14:26:28,713][root][INFO] - End of tf_idf feature
+[2021-09-21 14:26:28,716][stanza][INFO] - Loading these models for language: fa (Persian):
+=======================
+| Processor | Package |
+-----------------------
+| tokenize  | perdt   |
+| mwt       | perdt   |
+| pos       | perdt   |
+| lemma     | perdt   |
+| depparse  | perdt   |
+=======================
+
+[2021-09-21 14:26:28,723][stanza][INFO] - Use device: cpu
+[2021-09-21 14:26:28,723][stanza][INFO] - Loading: tokenize
+[2021-09-21 14:26:28,727][stanza][INFO] - Loading: mwt
+[2021-09-21 14:26:28,733][stanza][INFO] - Loading: pos
+[2021-09-21 14:26:28,952][stanza][INFO] - Loading: lemma
+[2021-09-21 14:26:29,011][stanza][INFO] - Loading: depparse
+[2021-09-21 14:26:29,483][stanza][INFO] - Done loading processors!
+[2021-09-21 14:31:51,995][root][INFO] - End of root distance feature
+[2021-09-21 14:31:51,997][root][INFO] - Feature set (2594, 801):
+[2021-09-21 14:31:51,997][root][INFO] - SVC Model
+[2021-09-21 14:31:54,829][root][INFO] - Model:SVC, Out_path:output_ADASYN.png
+[2021-09-21 14:31:54,838][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.41      0.52      0.46       111
+     Discuss       0.65      0.54      0.59       163
+    Notagree       0.48      0.62      0.55        48
+   Unrelated       0.50      0.46      0.48       197
+
+    accuracy                           0.51       519
+   macro avg       0.51      0.54      0.52       519
+weighted avg       0.53      0.51      0.52       519
+
+[2021-09-21 14:31:54,839][root][INFO] - Accuracy : 0.51252408477842
+[2021-09-21 14:31:54,841][root][INFO] - Weighted f1 score : 0.5150868935391936

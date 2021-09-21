@@ -1,0 +1,42 @@
+[2021-09-21 14:32:32,589][root][INFO] - hazm tokenizer
+[2021-09-21 14:32:34,346][root][INFO] - End of tf_idf feature
+[2021-09-21 14:32:34,667][root][INFO] - End of similarity feature
+[2021-09-21 14:32:34,674][root][INFO] - End of important words feature
+[2021-09-21 14:32:34,679][root][INFO] - End of is_question feature
+[2021-09-21 14:32:34,684][root][INFO] - "more than tow parts" feature was added.
+[2021-09-21 14:32:34,687][stanza][INFO] - Loading these models for language: fa (Persian):
+=======================
+| Processor | Package |
+-----------------------
+| tokenize  | perdt   |
+| mwt       | perdt   |
+| pos       | perdt   |
+| lemma     | perdt   |
+| depparse  | perdt   |
+=======================
+
+[2021-09-21 14:32:34,693][stanza][INFO] - Use device: cpu
+[2021-09-21 14:32:34,693][stanza][INFO] - Loading: tokenize
+[2021-09-21 14:32:34,698][stanza][INFO] - Loading: mwt
+[2021-09-21 14:32:34,706][stanza][INFO] - Loading: pos
+[2021-09-21 14:32:34,910][stanza][INFO] - Loading: lemma
+[2021-09-21 14:32:34,951][stanza][INFO] - Loading: depparse
+[2021-09-21 14:32:35,347][stanza][INFO] - Done loading processors!
+[2021-09-21 14:37:58,734][root][INFO] - End of root distance feature
+[2021-09-21 14:37:58,867][root][INFO] - End of polarity feature
+[2021-09-21 14:37:58,869][root][INFO] - Feature set (2594, 840):
+[2021-09-21 14:37:58,869][root][INFO] - SVC Model
+[2021-09-21 14:38:01,468][root][INFO] - Model:SVC, Out_path:output_ADASYN.png
+[2021-09-21 14:38:01,478][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.73      0.70       111
+     Discuss       0.78      0.61      0.69       163
+    Notagree       0.58      0.75      0.65        48
+   Unrelated       0.70      0.74      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.68      0.71      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-21 14:38:01,478][root][INFO] - Accuracy : 0.697495183044316
+[2021-09-21 14:38:01,480][root][INFO] - Weighted f1 score : 0.6975260545507389

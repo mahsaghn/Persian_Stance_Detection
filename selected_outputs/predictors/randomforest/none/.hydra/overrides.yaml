@@ -1,0 +1,8 @@
+- save_datasets=False
+- load_if_exist=False
+- features.root_distance=False
+- features.is_question=False
+- features.important_words=False
+- features.similarity=False
+- features.polarity=False
+- features.tfidf=True

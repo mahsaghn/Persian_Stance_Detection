@@ -1,0 +1,19 @@
+[2021-09-21 14:18:31,534][root][INFO] - hazm tokenizer
+[2021-09-21 14:18:33,228][root][INFO] - End of tf_idf feature
+[2021-09-21 14:18:33,534][root][INFO] - End of similarity feature
+[2021-09-21 14:18:33,536][root][INFO] - Feature set (2594, 803):
+[2021-09-21 14:18:33,536][root][INFO] - RandomForestClassifier
+[2021-09-21 14:18:34,068][root][INFO] - Model:RandomForestClassifier, Out_path:output_ADASYN.png
+[2021-09-21 14:18:34,077][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.68      0.71      0.69       111
+     Discuss       0.86      0.48      0.61       163
+    Notagree       0.75      0.56      0.64        48
+   Unrelated       0.63      0.88      0.73       197
+
+    accuracy                           0.69       519
+   macro avg       0.73      0.66      0.67       519
+weighted avg       0.72      0.69      0.68       519
+
+[2021-09-21 14:18:34,077][root][INFO] - Accuracy : 0.6878612716763006
+[2021-09-21 14:18:34,080][root][INFO] - Weighted f1 score : 0.678804332675042

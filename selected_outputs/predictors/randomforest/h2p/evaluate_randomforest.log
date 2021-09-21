@@ -1,0 +1,19 @@
+[2021-09-21 14:18:26,878][root][INFO] - hazm tokenizer
+[2021-09-21 14:18:28,672][root][INFO] - End of tf_idf feature
+[2021-09-21 14:18:28,677][root][INFO] - "more than tow parts" feature was added.
+[2021-09-21 14:18:28,679][root][INFO] - Feature set (2594, 801):
+[2021-09-21 14:18:28,679][root][INFO] - RandomForestClassifier
+[2021-09-21 14:18:29,261][root][INFO] - Model:RandomForestClassifier, Out_path:output_ADASYN.png
+[2021-09-21 14:18:29,271][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.35      0.76      0.48       111
+     Discuss       0.82      0.48      0.61       163
+    Notagree       0.80      0.67      0.73        48
+   Unrelated       0.46      0.34      0.39       197
+
+    accuracy                           0.50       519
+   macro avg       0.61      0.56      0.55       519
+weighted avg       0.58      0.50      0.51       519
+
+[2021-09-21 14:18:29,272][root][INFO] - Accuracy : 0.5028901734104047
+[2021-09-21 14:18:29,274][root][INFO] - Weighted f1 score : 0.5087295215306878
