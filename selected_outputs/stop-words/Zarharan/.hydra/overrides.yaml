@@ -1,0 +1,7 @@
+- features.stopWord_path=/home/mahsa/Desktop/final_project/stance_detection/dataset/stop-words/stop_words.txt
+- save_datasets=False
+- load_if_exist=False
+- features.is_question=True
+- features.important_words=True
+- features.similarity=True
+- features.tfidf=True

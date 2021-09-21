@@ -150,9 +150,9 @@ class PSFeatureExtractor():
 
     def clean_tokens(self, target_list):
         assert isinstance(target_list, (list)) == True, "Type of target_list is not correct. It has to be list."
-        # normalizer = Normalizer()
-        # clean_words = [[i for i in item if normalizer.normalize(i) not in self.denied_words] for item in target_list]
-        clean_words = target_list
+        normalizer = Normalizer()
+        clean_words = [[i for i in item if normalizer.normalize(i) not in self.denied_words] for item in target_list]
+        # clean_words = target_list
         return clean_words
 
     def tokenize(self):
@@ -184,7 +184,7 @@ class PSFeatureExtractor():
         return self.tokens_claims, self.tokens_headlines
 
     def stanford_tokenize(self, just_get_tokenized_words=False):
-        nlp = stanza.Pipeline(lang='fa')
+        nlp = stanza.Pipeline(lang='fa', processors='tokenize')
         claims_processors_result = []
         headlines_processors_result = []
         claims_tokenize = []
