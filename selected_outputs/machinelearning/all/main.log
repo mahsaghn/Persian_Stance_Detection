@@ -1,0 +1,88 @@
+[2021-09-22 07:42:08,015][root][INFO] - hazm tokenizer
+[2021-09-22 07:42:09,843][root][INFO] - End of tf_idf feature
+[2021-09-22 07:42:10,172][root][INFO] - End of similarity feature
+[2021-09-22 07:42:10,180][root][INFO] - End of important words feature
+[2021-09-22 07:42:10,186][root][INFO] - End of is_question feature
+[2021-09-22 07:42:10,191][root][INFO] - "more than tow parts" feature was added.
+[2021-09-22 07:42:10,331][root][INFO] - End of polarity feature
+[2021-09-22 07:42:10,332][root][INFO] - Feature set (2594, 839):
+[2021-09-22 07:42:10,333][root][INFO] - SVC Model
+[2021-09-22 07:42:52,334][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-22 07:42:54,952][root][INFO] - Model:SVC, Out_path:outputc=2.5_ADASYN.png
+[2021-09-22 07:42:54,962][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.67      0.72      0.69       111
+     Discuss       0.77      0.63      0.69       163
+    Notagree       0.59      0.60      0.60        48
+   Unrelated       0.70      0.78      0.74       197
+
+    accuracy                           0.70       519
+   macro avg       0.68      0.68      0.68       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-22 07:42:54,963][root][INFO] - Accuracy : 0.7013487475915221
+[2021-09-22 07:42:54,965][root][INFO] - Weighted f1 score : 0.7005021641696527
+[2021-09-22 07:42:54,965][root][INFO] - RandomForestClassifier
+[2021-09-22 07:43:48,370][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-22 07:43:51,199][root][INFO] - Model:RandomForestClassifier, Out_path:outputcrigini_maxfeaNone_estim125_ADASYN.png
+[2021-09-22 07:43:51,210][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.75      0.77      0.76       111
+     Discuss       0.79      0.61      0.69       163
+    Notagree       0.83      0.60      0.70        48
+   Unrelated       0.67      0.84      0.75       197
+
+    accuracy                           0.73       519
+   macro avg       0.76      0.70      0.72       519
+weighted avg       0.74      0.73      0.73       519
+
+[2021-09-22 07:43:51,211][root][INFO] - Accuracy : 0.7283236994219653
+[2021-09-22 07:43:51,214][root][INFO] - Weighted f1 score : 0.7255352279482973
+[2021-09-22 07:43:51,214][root][INFO] - LinearSVC
+[2021-09-22 07:43:52,526][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-22 07:43:53,196][root][INFO] - Model:LinearSVC, Out_path:output_ADASYN.png
+[2021-09-22 07:43:53,206][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.66      0.74      0.69       111
+     Discuss       0.74      0.64      0.68       163
+    Notagree       0.59      0.67      0.63        48
+   Unrelated       0.69      0.70      0.69       197
+
+    accuracy                           0.68       519
+   macro avg       0.67      0.68      0.67       519
+weighted avg       0.69      0.68      0.68       519
+
+[2021-09-22 07:43:53,207][root][INFO] - Accuracy : 0.6840077071290944
+[2021-09-22 07:43:53,209][root][INFO] - Weighted f1 score : 0.6841765643096666
+[2021-09-22 07:43:53,209][root][INFO] - LogisticRegression
+[2021-09-22 07:44:10,118][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-22 07:44:12,752][root][INFO] - Model:LogisticRegression, Out_path:outputl2_solvsaga_c3.0_ADASYN.png
+[2021-09-22 07:44:12,773][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.69      0.72      0.70       111
+     Discuss       0.71      0.67      0.69       163
+    Notagree       0.89      0.50      0.64        48
+   Unrelated       0.68      0.77      0.72       197
+
+    accuracy                           0.70       519
+   macro avg       0.74      0.67      0.69       519
+weighted avg       0.71      0.70      0.70       519
+
+[2021-09-22 07:44:12,774][root][INFO] - Accuracy : 0.7032755298651252
+[2021-09-22 07:44:12,779][root][INFO] - Weighted f1 score : 0.7013443713711731
+[2021-09-22 07:44:12,779][root][INFO] - GaussianNB
+[2021-09-22 07:44:14,633][matplotlib.legend][WARNING] - No handles with labels found to put in legend.
+[2021-09-22 07:44:15,278][root][INFO] - Model:GaussianNB, Out_path:output_ADASYN.png
+[2021-09-22 07:44:15,287][root][INFO] -               precision    recall  f1-score   support
+
+       Agree       0.31      0.51      0.39       111
+     Discuss       0.43      0.37      0.40       163
+    Notagree       0.16      0.44      0.23        48
+   Unrelated       0.52      0.16      0.25       197
+
+    accuracy                           0.33       519
+   macro avg       0.35      0.37      0.32       519
+weighted avg       0.41      0.33      0.32       519
+
+[2021-09-22 07:44:15,287][root][INFO] - Accuracy : 0.32755298651252407
+[2021-09-22 07:44:15,290][root][INFO] - Weighted f1 score : 0.3224503497659632
