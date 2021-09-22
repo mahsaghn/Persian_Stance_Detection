@@ -186,9 +186,10 @@ def main(cfg: H2CBaselineConfig):
                       features_name=features_name + 'c={}'.format(cfg.svc.C))
 
     logging.info('RandomForestClassifier')
+    max_features=cfg.random_forest.max_features if cfg.random_forest.max_features != 'None' else None
     model = RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight='balanced', n_jobs=-1,
                                    criterion=cfg.random_forest.criterion,
-                                   max_features=cfg.random_forest.max_features,
+                                   max_features=max_features,
                                    n_estimators=cfg.random_forest.n_estimators
                                    )
     common_train_test(cfg=cfg, model=model, X=features, Y=labels,
@@ -205,9 +206,9 @@ def main(cfg: H2CBaselineConfig):
     model = LogisticRegression(C=cfg.logistic_regression.C,
                                intercept_scaling=1,
                                penalty='l2',
-                               solver=cfg.logistic_regression.Csolver, tol=0.0001)
+                               solver=cfg.logistic_regression.solver, tol=0.0001)
     common_train_test(cfg=cfg, model=model, X=features, Y=labels,
-                      features_name=features_name + 'l2_solv{}_c{}'.format(cfg.logistic_regression.Csolver, cfg.logistic_regression.C))
+                      features_name=features_name + 'l2_solv{}_c{}'.format(cfg.logistic_regression.solver, cfg.logistic_regression.C))
 
     logging.info('GaussianNB')
     model = GaussianNB()

@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
 
-basepath = '/home/mahsa/Desktop/final_project/stance_detection/'
+#basepath = '/home/mahsa/Desktop/final_project/stance_detection/'
+basepath = '/home/ubuntu/ghaderan/stc/stance_detection/'
+
 
 @dataclass
 class FeatureExtractorConf:
@@ -56,13 +58,13 @@ class LinearSVC:
 @dataclass
 class RandomForest:
   criterion : str = 'gini'
-  max_features = None
+  max_features : str = 'None'
   n_estimators : int = 125
 
 @dataclass
 class LogisticRegression:
   C: float =  3.0
-  solver: str = 'sega'
+  solver: str = 'saga'
 
 @dataclass
 class H2CBaselineConfig:
