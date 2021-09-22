@@ -69,7 +69,7 @@ def common_train_test(cfg:H2CBaselineConfig, model, X, Y, features_name=''):
     logging.info('Weighted f1 score : {}'.format(f1_score(y_test, y_pred, average='weighted')))
 
 
-@hydra.main(config_path="config", config_name="config")
+@hydra.main(config_path="../config", config_name="config")
 def main(cfg: H2CBaselineConfig):
     psf_extractor = FeatureExtractor(cfg=cfg.features)
     tokens_claims, tokens_headlines = psf_extractor.tokenize()

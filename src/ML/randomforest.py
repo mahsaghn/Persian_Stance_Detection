@@ -69,7 +69,7 @@ def common_train_test(cfg:H2CBaselineConfig, model, X, Y, features_name=''):
     logging.info('Weighted f1 score : {}'.format(f1_score(y_test, y_pred, average='weighted')))
 
 
-@hydra.main(config_path="config", config_name="config")
+@hydra.main(config_path="../config", config_name="config")
 def main(cfg: H2CBaselineConfig):
     psf_extractor = FeatureExtractor(cfg=cfg.features)
     tokens_claims, tokens_headlines = psf_extractor.tokenize()
@@ -80,26 +80,21 @@ def main(cfg: H2CBaselineConfig):
         if labels[l][0] == 'Disagree':
             labels[l][0] = "Notagree"
 
-    ranges = np.arange(0.5, 5.0, 0.5)
-    erange = np.arange(0,1, 0.1)
-    for c in ranges:
-        for e in erange:
-            logging.info('LogisticRegression---penalty=elasticnet----solver=saga c={}---erange{}'.format(c,e))
-            model = LogisticRegression(C=c,
-                                   intercept_scaling=1,
-                                   penalty='elasticnet',
-                                   solver='saga', tol=0.0001,l1_ratio=e)
-            common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name+'elsticnet_c{}_e{}'.format(c,e))
 
-    solvers = ['newton-cg', 'sag', 'lbfgs']
-    for solver in solvers:
-        for c in ranges:
-            logging.info('LogisticRegression---penalty=l2----solver={} c={}'.format(solver, c))
-            model = LogisticRegression(C=c,
-                                       intercept_scaling=1,
-                                       penalty='l2',
-                                       solver=solver, tol=0.0001)
-            common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name+'l2_solv{}_c{}'.format(solver,c))
-
+    estimators = np.arange(25,200,25)
+    # min_samples_split = np.arange(2,10,1)
+    criterions = ['gini','entropy']
+    max_featureses = [None, 'sqrt', 'log2']
+    for criterion in criterions:
+        for max_features in max_featureses:
+            for estimator in estimators:
+                logging.info('RandomForestClassifier--criterion{}---max_featureses{}...estimator{}'.format(criterion,max_features,estimator))
+                model = RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight='balanced',n_jobs=-1,
+                                               criterion=criterion,
+                                               max_features=max_features,
+                                               # min_samples_split=0.01,
+                                               n_estimators=estimator
+                                               )
+                common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name+'cri{}_maxfea{}_estim{}'.format(criterion,max_featureses,estimator))
 
 main()

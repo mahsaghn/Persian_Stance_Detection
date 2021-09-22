@@ -56,6 +56,7 @@ def common_train_test(cfg:H2CBaselineConfig, model, X, Y, features_name=''):
     model_name = model.__class__.__name__
     X_train,y_train, X_test, y_test = get_train_test(cfg, X, Y)
 
+
     model.fit(X_train, y_train)
     plot_confusion_matrix(estimator=model, X=X_test, y_true=y_test, cmap='OrRd')
     plt.savefig('output'+model_name+'_'+features_name+'_'+cfg.oversampling+'.png',bbox_inches='tight')
@@ -68,7 +69,7 @@ def common_train_test(cfg:H2CBaselineConfig, model, X, Y, features_name=''):
     logging.info('Weighted f1 score : {}'.format(f1_score(y_test, y_pred, average='weighted')))
 
 
-@hydra.main(config_path="config", config_name="config")
+@hydra.main(config_path="../config", config_name="config")
 def main(cfg: H2CBaselineConfig):
     psf_extractor = FeatureExtractor(cfg=cfg.features)
     tokens_claims, tokens_headlines = psf_extractor.tokenize()
@@ -79,24 +80,9 @@ def main(cfg: H2CBaselineConfig):
         if labels[l][0] == 'Disagree':
             labels[l][0] = "Notagree"
 
-    kernels = ['rbf', 'poly', 'sigmoid']
-    for kernel in kernels:
-        ranges =  np.arange(1.0, 5.0, 0.5)
-        for c in ranges:
-            if kernel == 'poly':
-                for degree in range(1,5):
-                    logging.info('SVC Model kernel={}, c={}, degree = {}'.format(kernel, c, degree))
-                    model = SVC(C=c, class_weight='balanced', coef0=cfg.svc.coef0,
-                                decision_function_shape='ovo', degree=degree, gamma='scale', kernel=kernel,
-                                max_iter=-1, shrinking=True, tol=cfg.svc.tol)
-                    common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name+'c={}'.format(c))
-            else:
-                logging.info('SVC Model kernel={}, c={}'.format(kernel, c))
-                model = SVC(C=c, class_weight='balanced', coef0=cfg.svc.coef0,
-                            decision_function_shape='ovo', degree=cfg.svc.degree, gamma='scale', kernel=kernel,
-                            max_iter=-1, shrinking=True, tol=cfg.svc.tol)
-                common_train_test(cfg=cfg, model=model, X=features, Y=labels,
-                                  features_name=features_name + 'c={}'.format(c))
+    logging.info('GaussianNB')
+    model = GaussianNB()
+    common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
 
 
 main()
