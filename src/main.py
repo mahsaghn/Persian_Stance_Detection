@@ -152,8 +152,7 @@ def common_train_test(cfg:H2CBaselineConfig, model, X, Y, features_name=''):
         features_name += 'os'
     else:
         cv = ShuffleSplit(n_splits=10, test_size=0.2, random_state=0)
-        estimator = SVC(gamma=0.001)
-        plot_learning_curves(estimator, X, Y,
+        plot_learning_curves(model, X, Y,
                             cv=cv, n_jobs=4,name_conf=model_name+'_'+features_name+'_'+cfg.oversampling)
 
     model.fit(X_train, y_train)
@@ -180,36 +179,35 @@ def main(cfg: H2CBaselineConfig):
             labels[l][0] = "Notagree"
     # print(metrics.SCORERS.keys())
     logging.info('SVC Model')
-    model = SVC(C=10, break_ties=False, cache_size=200, class_weight='balanced', coef0=0.0,
-                decision_function_shape='ovo', degree=3, gamma='scale', kernel='rbf',
-                max_iter=-1, probability=False, random_state=None, shrinking=True,
-                tol=0.001, verbose=False)
-    common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
+    model = SVC(C=cfg.svc.C, class_weight='balanced', coef0=cfg.svc.coef0,
+                decision_function_shape='ovo', degree=cfg.svc.degree, gamma='scale', kernel=cfg.svc.kernel,
+                max_iter=-1, shrinking=True, tol=cfg.svc.tol)
+    common_train_test(cfg=cfg, model=model, X=features, Y=labels,
+                      features_name=features_name + 'c={}'.format(cfg.svc.C))
 
     logging.info('RandomForestClassifier')
-    model = RandomForestClassifier(bootstrap=True, ccp_alpha=0.0,
-                                   class_weight='balanced_subsample', criterion='entropy',
-                                   max_depth=10, max_features='auto', max_leaf_nodes=None,
-                                   max_samples=None, min_impurity_decrease=0.0,
-                                   min_impurity_split=None, min_samples_leaf=1,
-                                   min_samples_split=2, min_weight_fraction_leaf=0.0,
-                                   n_estimators=75, n_jobs=None, oob_score=False,
-                                   random_state=None, verbose=0, warm_start=False)
-    common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
+    model = RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight='balanced', n_jobs=-1,
+                                   criterion=cfg.random_forest.criterion,
+                                   max_features=cfg.random_forest.max_features,
+                                   n_estimators=cfg.random_forest.n_estimators
+                                   )
+    common_train_test(cfg=cfg, model=model, X=features, Y=labels,
+                      features_name=features_name + 'cri{}_maxfea{}_estim{}'.format(cfg.random_forest.criterion, cfg.random_forest.max_features,
+                                                                                    cfg.random_forest.n_estimators))
 
     logging.info('LinearSVC')
-    model = LinearSVC(C=0.5, class_weight='balanced', dual=True, fit_intercept=True,
-                      intercept_scaling=1, loss='hinge', max_iter=1000, multi_class='ovr',
-                      penalty='l2', random_state=None, tol=0.0001, verbose=0)
+    model = LinearSVC(C=cfg.linear_svc.C, class_weight='balanced', dual=True, fit_intercept=True,
+                      intercept_scaling=1, loss=cfg.linear_svc.loss, max_iter=1000, multi_class='ovr',
+                      penalty=cfg.linear_svc.penalty, tol=cfg.linear_svc.tol)
     common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
 
     logging.info('LogisticRegression')
-    model = LogisticRegression(C=1, class_weight='balanced', dual=False, fit_intercept=True,
-                               intercept_scaling=1, l1_ratio=None, max_iter=1000,
-                               multi_class='ovr', n_jobs=None, penalty='elasticnet',
-                               random_state=None, solver='saga', tol=0.0001, verbose=0,
-                               warm_start=False)
-    common_train_test(cfg=cfg, model=model, X=features, Y=labels, features_name=features_name)
+    model = LogisticRegression(C=cfg.logistic_regression.C,
+                               intercept_scaling=1,
+                               penalty='l2',
+                               solver=cfg.logistic_regression.Csolver, tol=0.0001)
+    common_train_test(cfg=cfg, model=model, X=features, Y=labels,
+                      features_name=features_name + 'l2_solv{}_c{}'.format(cfg.logistic_regression.Csolver, cfg.logistic_regression.C))
 
     logging.info('GaussianNB')
     model = GaussianNB()
