@@ -18,8 +18,8 @@ from sklearn import metrics
 from sklearn.utils import shuffle
 from sklearn.pipeline import Pipeline
 from sklearn.feature_selection import SelectKBest
-from feature_extractor import PSFeatureExtractor as FeatureExtractor
-from config.baseline_h2c import H2CBaselineConfig, FeatureExtractorConf
+from src.feature_extractor import PSFeatureExtractor as FeatureExtractor
+from src.config.baseline_h2c import H2CBaselineConfig, FeatureExtractorConf
 from hydra.core.config_store import ConfigStore
 import numpy as np
 logging.basicConfig(filename='main.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
