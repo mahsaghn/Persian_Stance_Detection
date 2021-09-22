@@ -85,7 +85,12 @@ class PSFeatureExtractor():
         return words_polarity_fa
 
     def __generate_dataset(self):
+        deniedlist = [2609, 2627, 2678, 2685, 2727, 2786, 2805, 2823, 2857, 2947, 2949, 2987, 3045, 3061, 3092, 3139, 3231, 3249, 3254, 3260, 3279, 3345, 3360, 3389, 3399, 3403, 3406, 3417, 3437, 3442, 3539, 3568, 3586, 3609] 
         data = pd.read_csv(self.cfg.dataset_path, encoding='utf-8')
+        try:
+            data = data.drop(deniedlist)
+        except:
+            pass
         data = self.__remove_from_dataset(data)
         claims = np.array(data[self.cfg.claim_name].values)
         headlines = np.array(data[self.cfg.headline_name].values)
@@ -100,7 +105,7 @@ class PSFeatureExtractor():
         df = pd.read_csv(self.cfg.dataset_path, encoding='utf-8')
         df = self.__remove_from_dataset(df)
         claims = df[self.cfg.claim_name].values
-        headlines = df[self.cfg.headline_name].values
+        headlines =  df[self.cfg.headline_name].values
         isQuestion = df[self.cfg.question_name].values
         hasTowParts = df[self.cfg.part_name].values
         labels = df[self.cfg.label_name].values
