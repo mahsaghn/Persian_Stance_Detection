@@ -26,7 +26,7 @@ class FeatureExtractorConf:
   w2v_model_path: str = basepath + 'dataset/cc.fa.300.vec'
   save_load_path: str = ''
   save_feature: bool = False
-  load_path: bool = save_load_path,
+  load_path: bool = save_load_path
   root_distance: bool = False
   load_if_exist: bool = False
   bow: bool = False

@@ -207,7 +207,7 @@ def main(cfg: H2CDeepConfig):
             Callback.__init__(self)
 
         def on_epoch_end(self, epoch, logs={}):
-            msg = "Epoch: %i, %s" % (epoch, ", ".join("%s: %f" % (k, v) for k, v in logs.iteritems()))
+            msg = "Epoch: %i, %s" % (epoch, ", ".join("%s: %f" % (k, v) for k, v in logs.items()))
             logging.info(msg)
 
     callbacks_list = [
