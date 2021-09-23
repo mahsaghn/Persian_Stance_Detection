@@ -3,15 +3,24 @@
 echo "pwd: `pwd`"
 
 
-echo "_______________TFIDF"
-#python src/main.py  oversampling=False save_datasets=True load_if_exist=True features.is_question=True features.important_words=True features.similarity=True  features.tfidf=True
-python src/main.py  oversampling=True save_datasets=False load_if_exist=False features.is_question=True features.important_words=True features.similarity=True  features.tfidf=True
+echo "_______________adasyn"
+python src/main.py  over_sample=True oversampling='ADASYN'
+python src/main.py  over_sample=True oversampling='ADASYN'  features.dataset_path='/home/ubuntu/ghaderan/stc/stance_detection/dataset/stance+fever/h2c.csv'
 
-#echo "_______________BOW"
-#python src/main.py  oversampling=False save_datasets=True load_if_exist=True features.is_question=True features.important_words=True features.similarity=True features.bow=True
-#python src/main.py  oversampling=True save_datasets=True load_if_exist=True features.is_question=True features.important_words=True features.similarity=True  features.tfidf=True
-#
-#echo "_______________W2V"
-#python src/main.py  oversampling=False save_datasets=True load_if_exist=True features.is_question=True features.important_words=True features.similarity=True features.w2v=True
-#python src/main.py  oversampling=True save_datasets=True load_if_exist=True features.is_question=True features.important_words=True features.similarity=True  features.tfidf=True
-#
+echo "_______________SVMSMOTE"
+python src/main.py  over_sample=True oversampling='SVMSMOTE'
+python src/main.py  over_sample=True oversampling='SVMSMOTE' features.dataset_path='/home/ubuntu/ghaderan/stc/stance_detection/dataset/stance+fever/h2c.csv'
+
+echo "_______________RandomOverSampler"
+python src/main.py  over_sample=True oversampling='RandomOverSampler'
+python src/main.py  over_sample=True oversampling='RandomOverSampler' features.dataset_path='/home/ubuntu/ghaderan/stc/stance_detection/dataset/stance+fever/h2c.csv'
+
+echo "_______________SMOTE"
+python src/main.py  over_sample=True oversampling='SMOTE'
+python src/main.py  over_sample=True oversampling='SMOTE' features.dataset_path='/home/ubuntu/ghaderan/stc/stance_detection/dataset/stance+fever/h2c.csv'
+
+
+echo "_______________BorderlineSMOTE"
+python src/main.py  over_sample=True oversampling='BorderlineSMOTE'
+python src/main.py  over_sample=True oversampling='BorderlineSMOTE' features.dataset_path='/home/ubuntu/ghaderan/stc/stance_detection/dataset/stance+fever/h2c.csv'
+
