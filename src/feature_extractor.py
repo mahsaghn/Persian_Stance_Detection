@@ -218,6 +218,8 @@ class PSFeatureExtractor():
         headlines_result = [self.clean_sentence(headline) for headline in self.headlines]
         self.tokens_headlines = self.clean_tokens(target_list=[hazm_word_tokenize(headline_result) for headline_result in headlines_result])
         self.clean_claims_headlines = [ ' '.join(self.tokens_claims[i] + self.tokens_headlines[i]) for i in range(0, self.claims.shape[0])]
+        self.clean_claims = [ ' '.join(self.tokens_claims[i]) for i in range(0, self.claims.shape[0])]
+        self.clean_headlines = [ ' '.join(self.tokens_headlines[i]) for i in range(0, self.claims.shape[0])]
         return self.tokens_claims, self.tokens_headlines
 
     def nltk_tokenize(self):
