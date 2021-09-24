@@ -21,7 +21,7 @@ logging.basicConfig(filename='main_deep.log', filemode='w', format='%(name)s - %
 
 cs = ConfigStore.instance()
 cs.store(name="config", node=H2CDeepConfig)
-cs.store(group="",name="baseline_h2c", node=H2CDeepConfig)
+cs.store(group="",name="deep_h2c", node=H2CDeepConfig)
 cs.store(group="features",name='features',node=FeatureExtractorConf)
 
 
@@ -228,12 +228,17 @@ def main(cfg: H2CDeepConfig):
                         batch_size=cfg.batch_size, epochs=cfg.epochs, verbose=1, callbacks=callbacks_list)
 
 
-    plot.plot(history.history['val_accuracy'], label='test')
-    plot.plot(history.history['loss'], label='train')
-    plot.plot(history.history['val_loss'], label='test')
+    plot.plot(history.history['val_accuracy'], label='validation')
+    plot.plot(history.history['accuracy'], label='train')
     plot.legend()
-    plot.savefig('output' + '.png', bbox_inches='tight')
+    plot.savefig('output_acc' + '.png', bbox_inches='tight')
 
+    plot.plot(history.history['val_loss'], label='validation')
+    plot.plot(history.history['loss'], label='train')
+    plot.legend()
+    plot.savefig('output_loss' + '.png', bbox_inches='tight')
+
+ 
 
 if __name__ == '__main__':
     main()
