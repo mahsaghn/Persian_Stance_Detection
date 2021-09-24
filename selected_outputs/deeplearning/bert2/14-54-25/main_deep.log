@@ -1,0 +1,63 @@
+[2021-09-24 14:54:25,607][root][INFO] - hazm tokenizer
+[2021-09-24 14:54:41,018][tensorflow][WARNING] - The parameters `output_attentions`, `output_hidden_states` and `use_cache` cannot be updated when calling a model.They have to be set to True/False in the config object (i.e.: `config=XConfig.from_pretrained('name', output_attentions=True)`).
+[2021-09-24 14:54:42,003][tensorflow][WARNING] - The parameter `return_dict` cannot be set in graph mode and will always be set to `True`.
+[2021-09-24 14:54:44,970][root][INFO] - Model Summary:
+Model: "model"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_ids (InputLayer)          [(None, 32)]         0                                            
+__________________________________________________________________________________________________
+attention_mask (InputLayer)     [(None, 32)]         0                                            
+__________________________________________________________________________________________________
+token_type_ids (InputLayer)     [(None, 32)]         0                                            
+__________________________________________________________________________________________________
+tf_bert_model (TFBertModel)     TFBaseModelOutputWit 118297344   input_ids[0][0]                  
+                                                                 attention_mask[0][0]             
+                                                                 token_type_ids[0][0]             
+__________________________________________________________________________________________________
+tf.math.reduce_mean (TFOpLambda (None, 768)          0           tf_bert_model[0][0]              
+__________________________________________________________________________________________________
+dense (Dense)                   (None, 32)           24608       tf.math.reduce_mean[0][0]        
+__________________________________________________________________________________________________
+dropout_37 (Dropout)            (None, 32)           0           dense[0][0]                      
+__________________________________________________________________________________________________
+dense_1 (Dense)                 (None, 16)           528         dropout_37[0][0]                 
+__________________________________________________________________________________________________
+classifier (Dense)              (None, 4)            68          dense_1[0][0]                    
+==================================================================================================
+Total params: 118,322,548
+Trainable params: 118,322,548
+Non-trainable params: 0
+__________________________________________________________________________________________________
+[2021-09-24 14:54:45,081][tensorflow][WARNING] - The parameters `output_attentions`, `output_hidden_states` and `use_cache` cannot be updated when calling a model.They have to be set to True/False in the config object (i.e.: `config=XConfig.from_pretrained('name', output_attentions=True)`).
+[2021-09-24 14:54:45,132][tensorflow][WARNING] - The parameter `return_dict` cannot be set in graph mode and will always be set to `True`.
+[2021-09-24 14:54:50,377][tensorflow][WARNING] - Gradients do not exist for variables ['tf_bert_model/bert/pooler/dense/kernel:0', 'tf_bert_model/bert/pooler/dense/bias:0'] when minimizing the loss.
+[2021-09-24 14:54:51,394][tensorflow][WARNING] - AutoGraph could not transform <function get_f1 at 0x7f5f4a1e1200> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Unable to locate the source code of <function get_f1 at 0x7f5f4a1e1200>. Note that functions defined in certain environments, like the interactive Python shell, do not expose their source code. If that is the case, you should define them in a .py source file. If you are certain the code is graph-compatible, wrap the call using @tf.autograph.experimental.do_not_convert. Original error: could not get source code
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+[2021-09-24 14:54:52,727][tensorflow][WARNING] - The parameters `output_attentions`, `output_hidden_states` and `use_cache` cannot be updated when calling a model.They have to be set to True/False in the config object (i.e.: `config=XConfig.from_pretrained('name', output_attentions=True)`).
+[2021-09-24 14:54:52,781][tensorflow][WARNING] - The parameter `return_dict` cannot be set in graph mode and will always be set to `True`.
+[2021-09-24 14:54:57,968][tensorflow][WARNING] - Gradients do not exist for variables ['tf_bert_model/bert/pooler/dense/kernel:0', 'tf_bert_model/bert/pooler/dense/bias:0'] when minimizing the loss.
+[2021-09-24 14:55:27,966][tensorflow][WARNING] - The parameters `output_attentions`, `output_hidden_states` and `use_cache` cannot be updated when calling a model.They have to be set to True/False in the config object (i.e.: `config=XConfig.from_pretrained('name', output_attentions=True)`).
+[2021-09-24 14:55:28,020][tensorflow][WARNING] - The parameter `return_dict` cannot be set in graph mode and will always be set to `True`.
+[2021-09-24 14:55:35,096][root][INFO] - Epoch: 0, loss: 1.360750, accuracy: 0.321928, precision: 0.334975, recall: 0.032771, get_f1: 0.059057, val_loss: 1.277142, val_accuracy: 0.356455, val_precision: 0.555556, val_recall: 0.009634, val_get_f1: 0.015269
+[2021-09-24 14:56:03,295][root][INFO] - Epoch: 1, loss: 1.298090, accuracy: 0.385542, precision: 0.487500, recall: 0.075181, get_f1: 0.118902, val_loss: 1.259755, val_accuracy: 0.452794, val_precision: 0.000000, val_recall: 0.000000, val_get_f1: 0.000000
+[2021-09-24 14:56:31,363][root][INFO] - Epoch: 2, loss: 1.220327, accuracy: 0.417349, precision: 0.610278, recall: 0.137349, get_f1: 0.225233, val_loss: 1.098744, val_accuracy: 0.531792, val_precision: 0.709402, val_recall: 0.159923, val_get_f1: 0.211281
+[2021-09-24 14:56:59,441][root][INFO] - Epoch: 3, loss: 1.100064, accuracy: 0.506988, precision: 0.672393, recall: 0.264096, get_f1: 0.383268, val_loss: 0.954967, val_accuracy: 0.633911, val_precision: 0.800725, val_recall: 0.425819, val_get_f1: 0.448498
+[2021-09-24 14:57:25,950][root][INFO] - Epoch: 4, loss: 0.999479, accuracy: 0.566265, precision: 0.720562, recall: 0.395181, get_f1: 0.510061, val_loss: 0.946303, val_accuracy: 0.631985, val_precision: 0.747692, val_recall: 0.468208, val_get_f1: 0.580456
+[2021-09-24 14:57:54,003][root][INFO] - Epoch: 5, loss: 0.890247, accuracy: 0.616386, precision: 0.775753, recall: 0.471807, get_f1: 0.590092, val_loss: 0.873334, val_accuracy: 0.685934, val_precision: 0.753623, val_recall: 0.601156, val_get_f1: 0.625286
+[2021-09-24 14:58:20,453][root][INFO] - Epoch: 6, loss: 0.756371, accuracy: 0.680000, precision: 0.786358, recall: 0.588916, get_f1: 0.671241, val_loss: 0.956931, val_accuracy: 0.622351, val_precision: 0.686636, val_recall: 0.574181, val_get_f1: 0.601388
+[2021-09-24 14:58:48,542][root][INFO] - Epoch: 7, loss: 0.729609, accuracy: 0.693976, precision: 0.788522, recall: 0.609157, get_f1: 0.689914, val_loss: 0.853456, val_accuracy: 0.712909, val_precision: 0.775785, val_recall: 0.666667, val_get_f1: 0.675859
+[2021-09-24 14:59:15,027][root][INFO] - Epoch: 8, loss: 0.598830, accuracy: 0.754699, precision: 0.834380, recall: 0.704096, get_f1: 0.758924, val_loss: 0.864072, val_accuracy: 0.685934, val_precision: 0.752252, val_recall: 0.643545, val_get_f1: 0.624911
+[2021-09-24 14:59:41,579][root][INFO] - Epoch: 9, loss: 0.523936, accuracy: 0.793253, precision: 0.860582, recall: 0.740723, get_f1: 0.795805, val_loss: 0.863002, val_accuracy: 0.695568, val_precision: 0.737740, val_recall: 0.666667, val_get_f1: 0.630539
+[2021-09-24 15:00:09,593][root][INFO] - Epoch: 10, loss: 0.443063, accuracy: 0.826024, precision: 0.881974, recall: 0.792289, get_f1: 0.840490, val_loss: 0.970901, val_accuracy: 0.718690, val_precision: 0.745418, val_recall: 0.705202, val_get_f1: 0.645576
+[2021-09-24 15:00:36,060][root][INFO] - Epoch: 11, loss: 0.387166, accuracy: 0.846265, precision: 0.897916, recall: 0.809639, get_f1: 0.853908, val_loss: 0.940176, val_accuracy: 0.712909, val_precision: 0.732794, val_recall: 0.697495, val_get_f1: 0.695972
+[2021-09-24 15:01:02,553][root][INFO] - Epoch: 12, loss: 0.350390, accuracy: 0.863614, precision: 0.920064, recall: 0.837590, get_f1: 0.875697, val_loss: 1.178777, val_accuracy: 0.703276, val_precision: 0.707269, val_recall: 0.693642, val_get_f1: 0.649071
+[2021-09-24 15:01:30,574][root][INFO] - Epoch: 13, loss: 0.301073, accuracy: 0.883855, precision: 0.929130, recall: 0.859277, get_f1: 0.891500, val_loss: 1.080098, val_accuracy: 0.745665, val_precision: 0.754941, val_recall: 0.736031, val_get_f1: 0.712404
+[2021-09-24 15:01:57,130][root][INFO] - Epoch: 14, loss: 0.295294, accuracy: 0.889639, precision: 0.931842, recall: 0.863133, get_f1: 0.894083, val_loss: 1.344758, val_accuracy: 0.655106, val_precision: 0.665354, val_recall: 0.651252, val_get_f1: 0.650136
+[2021-09-24 15:02:23,617][root][INFO] - Epoch: 15, loss: 0.327593, accuracy: 0.875663, precision: 0.921066, recall: 0.849157, get_f1: 0.882636, val_loss: 1.243234, val_accuracy: 0.724470, val_precision: 0.744511, val_recall: 0.718690, val_get_f1: 0.674150
+[2021-09-24 15:02:50,128][root][INFO] - Epoch: 16, loss: 0.278084, accuracy: 0.896867, precision: 0.939990, recall: 0.875663, get_f1: 0.906588, val_loss: 1.186447, val_accuracy: 0.730250, val_precision: 0.746032, val_recall: 0.724470, val_get_f1: 0.758013
+[2021-09-24 15:03:16,647][root][INFO] - Epoch: 17, loss: 0.277103, accuracy: 0.897831, precision: 0.940476, recall: 0.875663, get_f1: 0.905695, val_loss: 1.195453, val_accuracy: 0.703276, val_precision: 0.715726, val_recall: 0.684008, val_get_f1: 0.648282
+[2021-09-24 15:03:44,761][root][INFO] - Epoch: 18, loss: 0.232191, accuracy: 0.910843, precision: 0.950777, recall: 0.884337, get_f1: 0.916483, val_loss: 1.171151, val_accuracy: 0.753372, val_precision: 0.764471, val_recall: 0.737958, val_get_f1: 0.690211
