@@ -232,11 +232,13 @@ def main(cfg: H2CDeepConfig):
     plot.plot(history.history['accuracy'], label='train')
     plot.legend()
     plot.savefig('output_acc' + '.png', bbox_inches='tight')
-
+    plot.close()
+    
     plot.plot(history.history['val_loss'], label='validation')
     plot.plot(history.history['loss'], label='train')
     plot.legend()
     plot.savefig('output_loss' + '.png', bbox_inches='tight')
+    plot.close()
 
  
 
