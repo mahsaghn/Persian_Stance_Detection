@@ -1,4 +1,4 @@
-# stance_detection_persian
+# Persian Stance Detection
 
 The purpose of this project is to find a suitable preprocessing for a Persian corpus; then apply machine learning techniques to detect the stance of a given claim to an arbitrary article. 
 The fuldocument is available [here](https://github.com/mahsaghn/UndergraduateThesis_LaTex/blob/main/main.pdf).
